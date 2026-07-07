@@ -1,0 +1,64 @@
+"""Cron SÁNG 7:00 VN — quét văn bản/tin chính sách qua đêm, tóm tắt bằng Gemini.
+Nguyên tắc: Gemini chỉ TÓM TẮT + GẮN NHÓM + ĐỀ XUẤT mức ảnh hưởng. Không tự đổi 🟠/🔴."""
+import os, requests, feedparser
+from utils import CONFIG, save_json, load_json, data_path, today_str, now_vn
+
+FEEDS = [
+    ("baochinhphu", "https://baochinhphu.vn/rss/kinh-te.rss"),
+    ("xdcs", "https://xaydungchinhsach.chinhphu.vn/rss/home.rss"),
+]
+GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_URL = ("https://generativelanguage.googleapis.com/v1beta/models/"
+              "gemini-2.0-flash:generateContent?key=" + GEMINI_KEY)
+NHOM = {k: v["ten"] for k, v in CONFIG["nhom_nganh"].items()}
+
+PROMPT = """Bạn là bộ lọc tin chính sách cho hệ thống radar đầu tư trung hạn 6-18 tháng tại VN.
+Nhóm ngành theo dõi: {nhom}.
+Với danh sách tiêu đề tin dưới đây, trả về JSON thuần (không markdown) dạng:
+{{"tin_lien_quan": [{{"tieu_de": "...", "nhom": "id-nhom", "muc_do": "theo-doi|trong-yeu",
+"ly_do": "1 câu", "loai": "du-thao|ban-hanh|thuc-thi|khac"}}]}}
+CHỈ giữ tin về nghị quyết/luật/quy hoạch/thông tư/giải ngân/cơ chế giá có ảnh hưởng các nhóm trên.
+Bỏ qua tin sự vụ, tin doanh nghiệp đơn lẻ, tin giật gân. Nếu không có tin nào: {{"tin_lien_quan": []}}
+DANH SÁCH TIN:
+{tin}"""
+
+def get_headlines():
+    items = []
+    for name, url in FEEDS:
+        try:
+            feed = feedparser.parse(url)
+            for e in feed.entries[:25]:
+                items.append({"nguon": name, "tieu_de": e.get("title", ""), "link": e.get("link", "")})
+        except Exception as ex:
+            items.append({"nguon": name, "tieu_de": f"[LỖI FEED: {ex}]", "link": ""})
+    return items
+
+def gemini_filter(items):
+    if not GEMINI_KEY:
+        return {"tin_lien_quan": [], "ghi_chu": "Thiếu GEMINI_API_KEY — bỏ qua lọc AI"}
+    tin_txt = "\n".join(f"- {i['tieu_de']}" for i in items if i["tieu_de"])
+    body = {"contents": [{"parts": [{"text": PROMPT.format(nhom=NHOM, tin=tin_txt)}]}]}
+    try:
+        r = requests.post(GEMINI_URL, json=body, timeout=60)
+        r.raise_for_status()
+        text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+        import json as _j
+        text = text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+        return _j.loads(text)
+    except Exception as e:
+        return {"tin_lien_quan": [], "ghi_chu": f"Lỗi Gemini: {e}"}
+
+def main():
+    items = get_headlines()
+    ket_qua = gemini_filter(items)
+    # gắn lại link theo tiêu đề
+    link_map = {i["tieu_de"]: i["link"] for i in items}
+    for t in ket_qua.get("tin_lien_quan", []):
+        t["link"] = link_map.get(t.get("tieu_de", ""), "")
+    out = {"ngay": today_str(), "cap_nhat": now_vn().isoformat(),
+           "tong_tin_quet": len(items), **ket_qua}
+    save_json(data_path("policy-latest.json"), out)
+    print(f"Quét {len(items)} tin, liên quan: {len(out.get('tin_lien_quan', []))}")
+
+if __name__ == "__main__":
+    main()

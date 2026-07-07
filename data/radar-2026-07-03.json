@@ -1,0 +1,84 @@
+{
+  "ngay": "2026-07-03",
+  "nhom": {
+    "chung-khoan": {
+      "ten": "Chứng khoán",
+      "trang_thai_nguoi_duyet": "cam",
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 12,
+      "ma_dang_chu_y": []
+    },
+    "ngan-hang": {
+      "ten": "Ngân hàng",
+      "trang_thai_nguoi_duyet": "vang",
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
+    },
+    "thep": {
+      "ten": "Thép",
+      "trang_thai_nguoi_duyet": "vang",
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 5,
+      "ma_dang_chu_y": []
+    },
+    "ha-tang": {
+      "ten": "Xây dựng hạ tầng",
+      "trang_thai_nguoi_duyet": "vang",
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 32,
+      "ma_dang_chu_y": [
+        {
+          "ma": "VCG",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.61
+        }
+      ]
+    },
+    "vlxd": {
+      "ten": "VLXD",
+      "trang_thai_nguoi_duyet": "vang",
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
+    },
+    "bds": {
+      "ten": "Bất động sản",
+      "trang_thai_nguoi_duyet": "vang",
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
+    },
+    "bds-kcn": {
+      "ten": "BĐS KCN",
+      "trang_thai_nguoi_duyet": "vang",
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
+    },
+    "dien": {
+      "ten": "Điện",
+      "trang_thai_nguoi_duyet": "vang",
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
+    },
+    "dau-khi": {
+      "ten": "Dầu khí",
+      "trang_thai_nguoi_duyet": "vang",
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
+    },
+    "cong-nghe": {
+      "ten": "Công nghệ - VT",
+      "trang_thai_nguoi_duyet": "vang",
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 5,
+      "ma_dang_chu_y": []
+    }
+  },
+  "errors": [
+    "DHA: mất kết nối (giả lập)"
+  ]
+}

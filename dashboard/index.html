@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radar Chính Sách — trước ATO</title>
+<style>
+  /* Ngôn ngữ bảng điện VN lúc 7h sáng: nền than chì trước bình minh,
+     mã màu trạng thái radar là chữ ký thị giác, số liệu dùng font đơn cách */
+  :root{
+    --bg:#101418; --panel:#171d24; --line:#232b34;
+    --ink:#d7dee6; --dim:#7a8794;
+    --trang:#4a545e; --vang:#e8c34a; --cam:#f08c3a; --do:#e5484d;
+    --tang:#26b16a; /* xanh tăng kiểu bảng điện VN */
+    --giam:#e5484d;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--ink);
+    font:15px/1.55 "Segoe UI",system-ui,sans-serif;padding:20px;max-width:880px;margin:auto}
+  .mono{font-family:"Cascadia Code",Consolas,monospace}
+  header{display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:16px}
+  h1{font-size:19px;letter-spacing:.04em;font-weight:600}
+  h1 .dot{color:var(--cam)}
+  #ngay{color:var(--dim);font-size:13px}
+  .flags{margin:0 0 14px}
+  .flag{background:#2a1d12;border:1px solid #6b4a1f;color:#f0b35c;
+    padding:8px 12px;border-radius:6px;font-size:13px;margin-bottom:6px}
+  section{background:var(--panel);border:1px solid var(--line);
+    border-radius:8px;padding:14px 16px;margin-bottom:14px}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.12em;
+    color:var(--dim);margin-bottom:10px;font-weight:600}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  td,th{padding:7px 8px;text-align:left;border-top:1px solid var(--line)}
+  th{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.08em;border-top:none}
+  .st{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px;vertical-align:-1px}
+  .st.trang{background:var(--trang)} .st.vang{background:var(--vang)}
+  .st.cam{background:var(--cam);box-shadow:0 0 8px var(--cam)}
+  .st.do{background:var(--do);box-shadow:0 0 10px var(--do)}
+  .up{color:var(--tang)} .dn{color:var(--giam)}
+  .dexuat{color:var(--cam);font-size:12px}
+  .tin{padding:8px 0;border-top:1px solid var(--line)}
+  .tin:first-of-type{border-top:none}
+  .tin a{color:var(--ink);text-decoration:none}
+  .tin a:hover{color:var(--vang)}
+  .badge{font-size:11px;padding:1px 7px;border-radius:10px;margin-right:8px}
+  .badge.ty{background:#3a2410;color:#f0a04a} .badge.td{background:#1e2a38;color:#7fb3e0}
+  .empty{color:var(--dim);font-style:italic;padding:6px 0}
+  footer{color:var(--dim);font-size:12px;text-align:center;margin-top:18px}
+</style>
+</head>
+<body>
+<header>
+  <h1>RADAR CHÍNH SÁCH <span class="dot">●</span> TRƯỚC ATO</h1>
+  <span id="ngay" class="mono">đang tải…</span>
+</header>
+<div class="flags" id="flags"></div>
+
+<section>
+  <h2>Bảng radar 10 nhóm — người duyệt trạng thái, máy đề xuất</h2>
+  <table>
+    <thead><tr><th>Nhóm</th><th>Trạng thái</th><th>Đề xuất máy</th><th>Mã dòng tiền chú ý</th></tr></thead>
+    <tbody id="radar"></tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Tin chính sách qua đêm (Gemini lọc — chỉ tin liên quan radar)</h2>
+  <div id="tin"></div>
+</section>
+
+<section>
+  <h2>Dòng tiền nổi bật phiên trước</h2>
+  <div id="dongtien"></div>
+</section>
+
+<footer>Tình báo, không phải khuyến nghị · Quyết định cuối cùng là của con người · Khung v1.1</footer>
+
+<script>
+const E = {trang:"⚪ Im lặng", vang:"🟡 Quan sát", cam:"🟠 Nóng", do:"🔴 Tín hiệu"};
+fetch("../data/report-latest.json").then(r=>r.json()).then(rp=>{
+  document.getElementById("ngay").textContent = rp.ngay + " · cập nhật " + (rp.cap_nhat||"").slice(11,16);
+  const fl = document.getElementById("flags");
+  (rp.flags||[]).forEach(f=>{const d=document.createElement("div");d.className="flag";d.textContent=f;fl.appendChild(d);});
+
+  const tb = document.getElementById("radar");
+  Object.values(rp.radar||{}).sort((a,b)=>b.diem_dong_tien_max-a.diem_dong_tien_max).forEach(n=>{
+    const tr=document.createElement("tr");
+    const dx = n.de_xuat_may!==n.trang_thai_nguoi_duyet
+      ? `<span class="dexuat">→ ${E[n.de_xuat_may]} (cần duyệt)</span>` : "—";
+    const ma = (n.ma_dang_chu_y||[]).map(m=>`<span class="mono">${m.ma}</span> <span class="up">×${m.kl_ratio}</span>`).join(" · ")||"—";
+    tr.innerHTML = `<td>${n.ten}</td>
+      <td><span class="st ${n.trang_thai_nguoi_duyet}"></span>${E[n.trang_thai_nguoi_duyet]}</td>
+      <td>${dx}</td><td>${ma}</td>`;
+    tb.appendChild(tr);
+  });
+
+  const tin = document.getElementById("tin");
+  const items = rp.tin_chinh_sach||[];
+  if(!items.length){tin.innerHTML='<div class="empty">Không có tin liên quan — ngày yên tĩnh, đúng tinh thần chống nhiễu.</div>';}
+  items.forEach(t=>{
+    const d=document.createElement("div");d.className="tin";
+    const b = t.muc_do==="trong-yeu"?'<span class="badge ty">TRỌNG YẾU</span>':'<span class="badge td">THEO DÕI</span>';
+    d.innerHTML = `${b}<a href="${t.link||"#"}" target="_blank">${t.tieu_de||""}</a>
+      <div style="color:var(--dim);font-size:12px">${t.ly_do||""} · ${t.loai||""}</div>`;
+    tin.appendChild(d);
+  });
+
+  const dt = document.getElementById("dongtien");
+  const nb = rp.dong_tien_noi_bat||[];
+  dt.innerHTML = nb.length? nb.map(x=>`<div class="tin mono">${x}</div>`).join("")
+    : '<div class="empty">Không có khối lượng đột biến vượt ngưỡng ×1.5 nền 20 phiên.</div>';
+}).catch(()=>{document.getElementById("ngay").textContent="chưa có dữ liệu — chạy workflow lần đầu";});
+</script>
+</body>
+</html>

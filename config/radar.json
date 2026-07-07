@@ -1,0 +1,24 @@
+{
+  "version": "1.1",
+  "thresholds": {
+    "gtgd_min_ty": 50,
+    "kl_dot_bien_x": 2.0,
+    "kl_manh_x": 1.5,
+    "chuoi_ngoai_mua": [7, 10],
+    "dong_tien_rut": [10, 15],
+    "nen_phien": 20
+  },
+  "nhom_nganh": {
+    "chung-khoan":  {"ten": "Chứng khoán", "ma": ["SSI", "VCI", "HCM", "VND"], "trang_thai": "cam"},
+    "ngan-hang":    {"ten": "Ngân hàng", "ma": ["VCB", "TCB", "MBB", "CTG", "STB"], "trang_thai": "vang"},
+    "thep":         {"ten": "Thép", "ma": ["HPG", "HSG", "NKG"], "trang_thai": "vang"},
+    "ha-tang":      {"ten": "Xây dựng hạ tầng", "ma": ["VCG", "HHV", "CTD", "FCN", "LCG"], "trang_thai": "vang"},
+    "vlxd":         {"ten": "VLXD", "ma": ["KSB", "HT1", "PLC"], "trang_thai": "vang"},
+    "bds":          {"ten": "Bất động sản", "ma": ["VHM", "KDH", "NLG", "DXG", "PDR"], "trang_thai": "vang"},
+    "bds-kcn":      {"ten": "BĐS KCN", "ma": ["KBC", "IDC", "BCM", "SZC", "VGC"], "trang_thai": "vang"},
+    "dien":         {"ten": "Điện", "ma": ["PC1", "REE", "POW", "GEG", "HDG"], "trang_thai": "vang"},
+    "dau-khi":      {"ten": "Dầu khí", "ma": ["GAS", "PVS", "PVD", "BSR"], "trang_thai": "vang"},
+    "cong-nghe":    {"ten": "Công nghệ - VT", "ma": ["FPT", "CTR", "CMG", "ELC"], "trang_thai": "vang"}
+  },
+  "trang_thai_map": {"trang": "⚪", "vang": "🟡", "cam": "🟠", "do": "🔴"}
+}

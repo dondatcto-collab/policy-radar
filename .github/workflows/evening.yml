@@ -1,0 +1,29 @@
+name: evening-eod
+on:
+  schedule:
+    - cron: '35 11 * * 1-5'   # 18:35 VN, thứ 2–6
+  workflow_dispatch: {}
+permissions: { contents: write }
+jobs:
+  eod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -r requirements.txt
+      - name: Fetch EOD + scoring
+        run: |
+          cd pipeline && python fetch_market.py && python scoring.py
+      - name: Commit data
+        run: |
+          git config user.name radar-bot && git config user.email bot@radar
+          git add data/ && git commit -m "eod $(date +%F)" || echo "no changes"
+          git push
+      - name: Báo lỗi về Telegram nếu fail
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          cd pipeline && python -c "from telegram_send import send; send('🔴 LỖI cron tối — kiểm tra Actions log')"
