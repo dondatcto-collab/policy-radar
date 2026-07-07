@@ -1,13 +1,7 @@
 {
-  "ngay": "2026-07-03",
-  "tin_lien_quan": [
-    {
-      "tieu_de": "Chính phủ họp thúc đẩy giải ngân đầu tư công quý III",
-      "nhom": "ha-tang",
-      "muc_do": "trong-yeu",
-      "ly_do": "Ảnh hưởng trực tiếp nhóm hạ tầng",
-      "loai": "thuc-thi",
-      "link": "#"
-    }
-  ]
+  "ngay": "2026-07-07",
+  "cap_nhat": "2026-07-07T13:52:58.350929+07:00",
+  "tong_tin_quet": 0,
+  "tin_lien_quan": [],
+  "ghi_chu": "Lỗi Gemini: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AQ.Ab8RN6L6L3hTpAKVwOOhkp4w_4wCFFcxFm47ybuNJDmV7GeCRg"
 }

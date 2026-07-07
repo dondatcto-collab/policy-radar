@@ -1,31 +1,18 @@
 {
-  "ngay": "2026-07-03",
-  "cap_nhat": "2026-07-03T19:24:26.325541+07:00",
+  "ngay": "2026-07-07",
+  "cap_nhat": "2026-07-07T13:52:58.392405+07:00",
   "flags": [
-    "⚠️ 1 mã lỗi dữ liệu: DHA: mất kết nối (giả lập)"
+    "⚠️ Lọc tin: Lỗi Gemini: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AQ.Ab8RN6L6L3hTpAKVwOOhkp4w_4wCFFcxFm47ybuNJDmV7GeCRg"
   ],
-  "dong_tien_noi_bat": [
-    "VCG (Xây dựng hạ tầng): KL ×2.61"
-  ],
-  "tin_chinh_sach": [
-    {
-      "tieu_de": "Chính phủ họp thúc đẩy giải ngân đầu tư công quý III",
-      "nhom": "ha-tang",
-      "muc_do": "trong-yeu",
-      "ly_do": "Ảnh hưởng trực tiếp nhóm hạ tầng",
-      "loai": "thuc-thi",
-      "link": "#"
-    }
-  ],
-  "de_xuat_trang_thai": [
-    "Xây dựng hạ tầng: 🟡→🟠"
-  ],
+  "dong_tien_noi_bat": [],
+  "tin_chinh_sach": [],
+  "de_xuat_trang_thai": [],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 12,
+      "diem_dong_tien_max": 10,
       "ma_dang_chu_y": []
     },
     "ngan-hang": {
@@ -39,27 +26,21 @@
       "ten": "Thép",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "vang",
-      "diem_dong_tien_max": 5,
+      "diem_dong_tien_max": 10,
       "ma_dang_chu_y": []
     },
     "ha-tang": {
       "ten": "Xây dựng hạ tầng",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
-      "ma_dang_chu_y": [
-        {
-          "ma": "VCG",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.61
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "vlxd": {
       "ten": "VLXD",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
+      "diem_dong_tien_max": 0,
       "ma_dang_chu_y": []
     },
     "bds": {
@@ -94,7 +75,7 @@
       "ten": "Công nghệ - VT",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "vang",
-      "diem_dong_tien_max": 5,
+      "diem_dong_tien_max": 10,
       "ma_dang_chu_y": []
     }
   }
