@@ -1,6 +1,8 @@
 """Cron SÁNG 7:00 VN — quét văn bản/tin chính sách qua đêm, tóm tắt bằng Gemini.
-Nguyên tắc: Gemini chỉ TÓM TẮT + GẮN NHÓM + ĐỀ XUẤT mức ảnh hưởng. Không tự đổi 🟠/🔴."""
-import os, requests, feedparser
+Nguyên tắc: Gemini chỉ TÓM TẮT + GẮN NHÓM + ĐỀ XUẤT mức ảnh hưởng. Không tự đổi 🟠/🔴.
+v1.1 — VÁ BẢO MẬT: key chuyển vào header (không lộ qua URL/log Actions), tẩy key
+  khỏi mọi thông báo lỗi trước khi ghi ra ghi_chu, tự chờ rồi thử lại khi bị 429."""
+import os, time, requests, feedparser
 from utils import CONFIG, save_json, load_json, data_path, today_str, now_vn
 
 FEEDS = [
@@ -9,7 +11,9 @@ FEEDS = [
 ]
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_URL = ("https://generativelanguage.googleapis.com/v1beta/models/"
-              "gemini-2.0-flash:generateContent?key=" + GEMINI_KEY)
+              "gemini-2.0-flash:generateContent")
+CHO_KHI_BI_CHAN = 65     # hết cửa sổ rate limit Gemini, giống quy ước fetch_market.py
+SO_LAN_THU = 3
 NHOM = {k: v["ten"] for k, v in CONFIG["nhom_nganh"].items()}
 
 PROMPT = """Bạn là bộ lọc tin chính sách cho hệ thống radar đầu tư trung hạn 6-18 tháng tại VN.
@@ -33,20 +37,33 @@ def get_headlines():
             items.append({"nguon": name, "tieu_de": f"[LỖI FEED: {ex}]", "link": ""})
     return items
 
+def _tay_key(msg):
+    """Tẩy GEMINI_API_KEY khỏi thông báo lỗi trước khi ghi vào ghi_chu/log."""
+    s = str(msg)
+    return s.replace(GEMINI_KEY, "***") if GEMINI_KEY else s
+
 def gemini_filter(items):
     if not GEMINI_KEY:
         return {"tin_lien_quan": [], "ghi_chu": "Thiếu GEMINI_API_KEY — bỏ qua lọc AI"}
     tin_txt = "\n".join(f"- {i['tieu_de']}" for i in items if i["tieu_de"])
     body = {"contents": [{"parts": [{"text": PROMPT.format(nhom=NHOM, tin=tin_txt)}]}]}
-    try:
-        r = requests.post(GEMINI_URL, json=body, timeout=60)
-        r.raise_for_status()
-        text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-        import json as _j
-        text = text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
-        return _j.loads(text)
-    except Exception as e:
-        return {"tin_lien_quan": [], "ghi_chu": f"Lỗi Gemini: {e}"}
+    headers = {"Content-Type": "application/json", "x-goog-api-key": GEMINI_KEY}
+    for lan in range(1, SO_LAN_THU + 1):
+        try:
+            r = requests.post(GEMINI_URL, json=body, headers=headers, timeout=60)
+            if r.status_code == 429:
+                if lan < SO_LAN_THU:
+                    print(f"Gemini: chạm rate limit, chờ {CHO_KHI_BI_CHAN}s (lần {lan})...")
+                    time.sleep(CHO_KHI_BI_CHAN)
+                    continue
+                return {"tin_lien_quan": [], "ghi_chu": "Lỗi Gemini: hết lượt thử lại (429 - rate limit)"}
+            r.raise_for_status()
+            text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+            import json as _j
+            text = text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+            return _j.loads(text)
+        except Exception as e:
+            return {"tin_lien_quan": [], "ghi_chu": f"Lỗi Gemini: {_tay_key(e)}"}
 
 def main():
     items = get_headlines()

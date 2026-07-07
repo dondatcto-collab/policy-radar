@@ -40,7 +40,9 @@ def build():
         lines.append(f"{icon} {t.get('tieu_de','')[:80]}")
     if len(lines) == 1:
         lines.append("Không có biến động đáng chú ý. Ngày yên tĩnh — đúng tinh thần chống nhiễu.")
-    lines.append("📊 Chi tiết: <DASHBOARD_URL>")
+    # Dòng "📊 Chi tiết" được telegram_send.py thêm vào lúc gửi (nơi duy nhất biết
+    # giá trị thật của DASHBOARD_URL) — tại đây KHÔNG chèn placeholder nữa, tránh
+    # in link rỗng/"<DASHBOARD_URL>" nếu report.py được chạy hoặc đọc riêng lẻ.
     text = "\n".join(lines[:15])
     with open(data_path("report-latest.txt"), "w", encoding="utf-8") as f:
         f.write(text)

@@ -36,6 +36,14 @@ Chạy trên GitHub Actions (miễn phí). Chủ dự án: Đạt. Ngôn ngữ l
 - Cron viết theo UTC; giờ VN = UTC+7. Cron GitHub có thể trễ 5–15 phút.
 
 ## VIỆC ĐANG MỞ (pha A.2)
+- [x] (2026-07-07) Vá bảo mật `fetch_policy.py` (GEMINI_API_KEY chuyển sang header
+      thay vì query `?key=` trong URL, tẩy key khỏi `ghi_chu`/log lỗi, tự chờ 65s
+      thử lại tối đa 3 lần khi Gemini trả 429) + áp cùng nguyên tắc tẩy secret/retry
+      429 cho `telegram_send.py` (token vốn nằm trong URL Telegram API — tẩy khỏi
+      exception trước khi raise). Đồng thời bỏ hẳn dòng "📊 Chi tiết:" khỏi tin
+      Telegram khi `DASHBOARD_URL` rỗng/"None" — logic build dòng này chuyển hẳn
+      sang `telegram_send.py` (nơi duy nhất có giá trị thật lúc gửi), `report.py`
+      không còn chèn placeholder `<DASHBOARD_URL>` nữa.
 - [ ] `backtest_verify.py`: dùng vnstock chốt số liệu 4 sự kiện backtest sơ bộ
       (SK1 PC1 sau QHĐ8 5/2023; SK3 NVL/PDR sau NĐ08 3/2023; SK4 KDH/NLG sau 1/8/2024;
       SK8 GEG 2023–2024) — so với VN-Index cùng kỳ mốc 3–6–12 tháng, ghi kết quả vào
