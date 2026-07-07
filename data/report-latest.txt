@@ -1,3 +1,2 @@
 📡 RADAR 2026-07-07 — trước ATO
-⚠️ Lọc tin: Lỗi Gemini: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AQ.Ab8RN6L6L3hTpAKVwOOhkp4w_4wCFFcxFm47ybuNJDmV7GeCRg
-📊 Chi tiết: <DASHBOARD_URL>
+⚠️ Lọc tin: Lỗi Gemini: hết lượt thử lại (429 - rate limit)

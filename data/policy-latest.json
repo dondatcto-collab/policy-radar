@@ -1,7 +1,7 @@
 {
   "ngay": "2026-07-07",
-  "cap_nhat": "2026-07-07T14:55:47.157885+07:00",
+  "cap_nhat": "2026-07-07T16:15:09.069635+07:00",
   "tong_tin_quet": 0,
   "tin_lien_quan": [],
-  "ghi_chu": "Lỗi Gemini: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AQ.Ab8RN6L6L3hTpAKVwOOhkp4w_4wCFFcxFm47ybuNJDmV7GeCRg"
+  "ghi_chu": "Lỗi Gemini: hết lượt thử lại (429 - rate limit)"
 }
