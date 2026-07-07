@@ -1,22 +1,22 @@
 {
   "ngay": "2026-07-07",
-  "cap_nhat": "2026-07-07T14:44:59.593851+07:00",
+  "cap_nhat": "2026-07-07T20:38:24.910884+07:00",
   "ma": {
     "SSI": {
-      "close": 27.05,
-      "change_pct": 1.1214953271028172,
-      "kl_ratio": 1.02,
+      "close": 27.15,
+      "change_pct": 1.495327102803734,
+      "kl_ratio": 1.12,
       "gtgd_tb20_ty": 366.7,
-      "vi_the_vs_nen20_pct": 0.6,
+      "vi_the_vs_nen20_pct": 0.9,
       "pass_thanh_khoan": true,
       "nhom": "chung-khoan"
     },
     "VCI": {
-      "close": 24.85,
-      "change_pct": 1.6359918200409052,
-      "kl_ratio": 0.82,
+      "close": 24.9,
+      "change_pct": 1.8404907975460016,
+      "kl_ratio": 0.86,
       "gtgd_tb20_ty": 150.1,
-      "vi_the_vs_nen20_pct": 2.1,
+      "vi_the_vs_nen20_pct": 2.3,
       "pass_thanh_khoan": true,
       "nhom": "chung-khoan"
     },
