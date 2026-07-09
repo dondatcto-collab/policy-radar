@@ -1,3 +1,5 @@
-📡 RADAR 2026-07-08 — trước ATO
-⚠️ Dữ liệu thị trường của ngày 2026-07-07 (cũ)
+📡 RADAR 2026-07-09 — trước ATO
+⚠️ Dữ liệu thị trường của ngày 2026-07-08 (cũ)
 ⚠️ Lọc tin: Lỗi Gemini: hết lượt thử lại (429 - rate limit)
+💰 Dòng tiền: SSI (Chứng khoán): KL ×1.59 | VCI (Chứng khoán): KL ×2.63 | MBB (Ngân hàng): KL ×1.68
+🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Bất động sản: 🟡→🟠 | Dầu khí: 🟡→🟠 (cần người duyệt)
