@@ -1,21 +1,19 @@
 {
-  "ngay": "2026-07-09",
-  "cap_nhat": "2026-07-09T08:49:16.859773+07:00",
+  "ngay": "2026-07-10",
+  "cap_nhat": "2026-07-10T08:47:55.531446+07:00",
   "flags": [
-    "⚠️ Dữ liệu thị trường của ngày 2026-07-08 (cũ)",
+    "⚠️ Dữ liệu thị trường của ngày 2026-07-09 (cũ)",
     "⚠️ Lọc tin: Lỗi Gemini: hết lượt thử lại (429 - rate limit)"
   ],
   "dong_tien_noi_bat": [
-    "SSI (Chứng khoán): KL ×1.59",
-    "VCI (Chứng khoán): KL ×2.63",
-    "MBB (Ngân hàng): KL ×1.68",
-    "PDR (Bất động sản): KL ×1.59",
-    "BSR (Dầu khí): KL ×1.53"
+    "VCG (Xây dựng hạ tầng): KL ×1.56",
+    "GAS (Dầu khí): KL ×1.86",
+    "PVD (Dầu khí): KL ×2.52",
+    "BSR (Dầu khí): KL ×2.43"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
-    "Ngân hàng: 🟡→🟠",
-    "Bất động sản: 🟡→🟠",
+    "Xây dựng hạ tầng: 🟡→🟠",
     "Dầu khí: 🟡→🟠"
   ],
   "radar": {
@@ -23,32 +21,15 @@
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
-      "ma_dang_chu_y": [
-        {
-          "ma": "SSI",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.59
-        },
-        {
-          "ma": "VCI",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.63
-        }
-      ]
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "MBB",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.68
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "thep": {
       "ten": "Thép",
@@ -60,9 +41,15 @@
     "ha-tang": {
       "ten": "Xây dựng hạ tầng",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "VCG",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.56
+        }
+      ]
     },
     "vlxd": {
       "ten": "VLXD",
@@ -74,15 +61,9 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "PDR",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.59
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
@@ -102,12 +83,22 @@
       "ten": "Dầu khí",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
+      "diem_dong_tien_max": 32,
       "ma_dang_chu_y": [
         {
-          "ma": "BSR",
+          "ma": "GAS",
           "diem_dong_tien": 22,
-          "kl_ratio": 1.53
+          "kl_ratio": 1.86
+        },
+        {
+          "ma": "PVD",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.52
+        },
+        {
+          "ma": "BSR",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.43
         }
       ]
     },
