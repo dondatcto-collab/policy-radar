@@ -10,8 +10,10 @@ FEEDS = [
     ("xdcs", "https://xaydungchinhsach.chinhphu.vn/rss/home.rss"),
 ]
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
+# gemini-2.0-flash bị Google tắt 01/06/2026 → đổi sang gemini-2.5-flash (free tier
+# 10 RPM, 250 RPD, sống đến 16/10/2026 — xem QUY ƯỚC CODE trong CLAUDE.md).
 GEMINI_URL = ("https://generativelanguage.googleapis.com/v1beta/models/"
-              "gemini-2.0-flash:generateContent")
+              "gemini-2.5-flash:generateContent")
 CHO_KHI_BI_CHAN = 65     # hết cửa sổ rate limit Gemini, giống quy ước fetch_market.py
 SO_LAN_THU = 3
 NHOM = {k: v["ten"] for k, v in CONFIG["nhom_nganh"].items()}

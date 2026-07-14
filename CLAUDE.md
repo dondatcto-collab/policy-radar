@@ -41,6 +41,8 @@ Chạy trên GitHub Actions (miễn phí). Chủ dự án: Đạt. Ngôn ngữ l
   vì môi trường CI mới gọi được API thật.
 - Secrets: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, GEMINI_API_KEY (GitHub Secrets). Không hardcode.
 - Cron viết theo UTC; giờ VN = UTC+7. Cron GitHub có thể trễ 5–15 phút.
+- Model Gemini phải kiểm tra lịch deprecation tại ai.google.dev/gemini-api/docs/deprecations
+  — gemini-2.5-flash hết hạn 16/10/2026, lúc đó chuyển sang gemini-3.5-flash.
 
 ## VIỆC ĐANG MỞ (pha A.2)
 - [x] (2026-07-07) Vá bảo mật `fetch_policy.py` (GEMINI_API_KEY chuyển sang header
@@ -72,6 +74,9 @@ Chạy trên GitHub Actions (miễn phí). Chủ dự án: Đạt. Ngôn ngữ l
       bước "Commit data" thêm `if: always()` để dữ liệu + lỗi chi tiết luôn được
       lưu lại dù bước fetch/scoring fail — tránh lặp lại tình trạng "mất bằng
       chứng" như lần 10/07.
+- [x] (2026-07-14) Đổi model Gemini `gemini-2.0-flash` (Google tắt 01/06/2026) →
+      `gemini-2.5-flash` (free tier 10 RPM, 250 RPD, hết hạn 16/10/2026) trong
+      `fetch_policy.py`. Đã ghi hạn dùng + bước chuyển tiếp vào QUY ƯỚC CODE.
 - [ ] `backtest_verify.py`: dùng vnstock chốt số liệu 4 sự kiện backtest sơ bộ
       (SK1 PC1 sau QHĐ8 5/2023; SK3 NVL/PDR sau NĐ08 3/2023; SK4 KDH/NLG sau 1/8/2024;
       SK8 GEG 2023–2024) — so với VN-Index cùng kỳ mốc 3–6–12 tháng, ghi kết quả vào
