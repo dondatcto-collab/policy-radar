@@ -16,6 +16,11 @@ jobs:
         run: |
           cd pipeline && python fetch_market.py && python scoring.py
       - name: Commit data
+        # always(): fetch_market.py ghi file JSON (kèm out["errors"] chi tiết) TRƯỚC
+        # khi tự exit(1) nếu quá nửa số mã lỗi — nếu bước trên fail mà bước này
+        # không chạy, dữ liệu + lý do lỗi bị mất trắng, không committed (đã xảy ra
+        # với lần fail 10/07, khiến không chẩn đoán được nguyên nhân sau đó).
+        if: always()
         run: |
           git config user.name radar-bot && git config user.email bot@radar
           git add data/ && git commit -m "eod $(date +%F)" || echo "no changes"

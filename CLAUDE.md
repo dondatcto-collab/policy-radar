@@ -57,10 +57,21 @@ Chạy trên GitHub Actions (miễn phí). Chủ dự án: Đạt. Ngôn ngữ l
       chấm/đề xuất khi data thật sự cũ; `report.py` ẩn Dòng tiền + đề xuất (kể cả
       trong bảng gửi dashboard) và rút tin Telegram còn cờ ⚠️ + dòng khóa.
       `morning.yml`: cron đổi '37 23 * * 0-4' (6:37 VN, tránh giờ cao điểm 0:00 UTC).
-- [ ] (2026-07-14, BỊ CHẶN) Chẩn đoán + vá lỗi evening-eod thất bại ngày 10/07:
-      chưa đọc được log vì máy chưa `gh auth login` (đã cài gh CLI qua winget) và
-      repo private nên không gọi API GitHub công khai được — cần Đạt tự đăng nhập
-      `gh auth login` hoặc dán log lỗi vào chat.
+- [x] (2026-07-14) Chẩn đoán + vá lỗi evening-eod thất bại ngày 10/07 (đọc log bằng
+      `gh run list --workflow=evening.yml` + `gh run view <id> --log-failed`):
+      log cho thấy `fetch_market.py` in "OK 9 mã, 34 lỗi" rồi tự `sys.exit(1)`
+      (đúng thiết kế, >50% mã lỗi) — NHƯNG không có mã lỗi nào khớp
+      `la_loi_rate_limit()` (không có dòng "chạm rate limit" nào trong log) nên
+      không lần nào được retry, và vì bước "Commit data" không chạy khi bước
+      trước fail, `market-2026-07-10.json` (đã ghi ra file, có chi tiết 34 lỗi)
+      KHÔNG được commit → mất luôn chi tiết lỗi thật, không thể xác định nguyên
+      nhân gốc chính xác của riêng ngày đó. Đã vá 3 chỗ: (1) `fetch_market.py` in
+      chi tiết từng lỗi ra log ngay lúc xảy ra thay vì chỉ gom âm thầm vào JSON;
+      (2) mở rộng `la_loi_rate_limit()`→`la_loi_tam_thoi()` nhận thêm
+      timeout/kết nối/50x để được thử lại thay vì fail ngay; (3) `evening.yml`:
+      bước "Commit data" thêm `if: always()` để dữ liệu + lỗi chi tiết luôn được
+      lưu lại dù bước fetch/scoring fail — tránh lặp lại tình trạng "mất bằng
+      chứng" như lần 10/07.
 - [ ] `backtest_verify.py`: dùng vnstock chốt số liệu 4 sự kiện backtest sơ bộ
       (SK1 PC1 sau QHĐ8 5/2023; SK3 NVL/PDR sau NĐ08 3/2023; SK4 KDH/NLG sau 1/8/2024;
       SK8 GEG 2023–2024) — so với VN-Index cùng kỳ mốc 3–6–12 tháng, ghi kết quả vào
