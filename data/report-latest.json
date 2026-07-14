@@ -1,42 +1,86 @@
 {
-  "ngay": "2026-07-13",
-  "cap_nhat": "2026-07-13T08:29:51.173209+07:00",
+  "ngay": "2026-07-14",
+  "cap_nhat": "2026-07-14T11:47:32.099155+07:00",
   "flags": [
-    "⚠️ Dữ liệu thị trường của ngày 2026-07-09 (cũ)",
     "⚠️ Lọc tin: Lỗi Gemini: hết lượt thử lại (429 - rate limit)"
   ],
+  "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "VCG (Xây dựng hạ tầng): KL ×1.56",
-    "GAS (Dầu khí): KL ×1.86",
-    "PVD (Dầu khí): KL ×2.52",
-    "BSR (Dầu khí): KL ×2.43"
+    "SSI (Chứng khoán): KL ×2.4",
+    "VCI (Chứng khoán): KL ×1.71",
+    "HCM (Chứng khoán): KL ×2.02",
+    "VCB (Ngân hàng): KL ×1.81",
+    "TCB (Ngân hàng): KL ×1.52",
+    "CTG (Ngân hàng): KL ×2.57",
+    "HPG (Thép): KL ×1.91",
+    "VCG (Xây dựng hạ tầng): KL ×1.6"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
+    "Ngân hàng: 🟡→🟠",
+    "Thép: 🟡→🟠",
     "Xây dựng hạ tầng: 🟡→🟠",
-    "Dầu khí: 🟡→🟠"
+    "Bất động sản: 🟡→🟠"
   ],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "diem_dong_tien_max": 32,
+      "ma_dang_chu_y": [
+        {
+          "ma": "SSI",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.4
+        },
+        {
+          "ma": "VCI",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.71
+        },
+        {
+          "ma": "HCM",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.02
+        }
+      ]
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 32,
+      "ma_dang_chu_y": [
+        {
+          "ma": "VCB",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.81
+        },
+        {
+          "ma": "TCB",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.52
+        },
+        {
+          "ma": "CTG",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.57
+        }
+      ]
     },
     "thep": {
       "ten": "Thép",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "HPG",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.91
+        }
+      ]
     },
     "ha-tang": {
       "ten": "Xây dựng hạ tầng",
@@ -47,7 +91,7 @@
         {
           "ma": "VCG",
           "diem_dong_tien": 22,
-          "kl_ratio": 1.56
+          "kl_ratio": 1.6
         }
       ]
     },
@@ -61,15 +105,26 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "KDH",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.78
+        },
+        {
+          "ma": "PDR",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.59
+        }
+      ]
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
+      "diem_dong_tien_max": 0,
       "ma_dang_chu_y": []
     },
     "dien": {
@@ -82,25 +137,9 @@
     "dau-khi": {
       "ten": "Dầu khí",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
-      "ma_dang_chu_y": [
-        {
-          "ma": "GAS",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.86
-        },
-        {
-          "ma": "PVD",
-          "diem_dong_tien": 27,
-          "kl_ratio": 2.52
-        },
-        {
-          "ma": "BSR",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.43
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "cong-nghe": {
       "ten": "Công nghệ - VT",

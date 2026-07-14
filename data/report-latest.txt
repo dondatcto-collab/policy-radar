@@ -1,5 +1,4 @@
-📡 RADAR 2026-07-13 — trước ATO
-⚠️ Dữ liệu thị trường của ngày 2026-07-09 (cũ)
+📡 RADAR 2026-07-14 — trước ATO
 ⚠️ Lọc tin: Lỗi Gemini: hết lượt thử lại (429 - rate limit)
-💰 Dòng tiền: VCG (Xây dựng hạ tầng): KL ×1.56 | GAS (Dầu khí): KL ×1.86 | PVD (Dầu khí): KL ×2.52
-🔺 Máy đề xuất: Xây dựng hạ tầng: 🟡→🟠 | Dầu khí: 🟡→🟠 (cần người duyệt)
+💰 Dòng tiền: SSI (Chứng khoán): KL ×2.4 | VCI (Chứng khoán): KL ×1.71 | HCM (Chứng khoán): KL ×2.02
+🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Thép: 🟡→🟠 | Xây dựng hạ tầng: 🟡→🟠 (cần người duyệt)
