@@ -1,7 +1,12 @@
 name: morning-report
 on:
   schedule:
-    - cron: '0 0 * * 1-5'     # 7:00 VN thứ 2–6 (0:00 UTC cùng ngày)
+    # 6:37 VN thứ 2–6 = 23:37 UTC ngày hôm TRƯỚC (tránh giờ cao điểm 0:00 UTC của
+    # GitHub Actions, hay bị trễ 15-30 phút). Ngày cron 0-4 = CN,T2,T3,T4,T5 (UTC)
+    # ứng với sáng T2,T3,T4,T5,T6 (VN, +7h). Không cần sửa code ngày: now_vn()/
+    # today_str() trong utils.py dùng datetime.now(VN_TZ) — luôn ra đúng NGÀY VN
+    # theo thời điểm chạy thật (UTC), bất kể cron nổ trước hay sau nửa đêm UTC.
+    - cron: '37 23 * * 0-4'
   workflow_dispatch: {}
 permissions: { contents: write }
 jobs:

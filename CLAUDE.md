@@ -26,6 +26,13 @@ Chạy trên GitHub Actions (miễn phí). Chủ dự án: Đạt. Ngôn ngữ l
    Không "tối ưu tốc độ" bằng cách giảm sleep trừ khi đã có key Community (60 req/phút).
 6. **Hệ thống tự báo bệnh:** mọi lỗi phải nổi lên Telegram hoặc cờ ⚠️ — không nuốt exception im lặng.
 7. **Dữ liệu quan trọng cần 2 nguồn đối chiếu**; lệch >5% → gắn cờ, không dùng đổi trạng thái.
+8. **Dữ liệu cũ = radar tự khóa.** So market data với PHIÊN GIAO DỊCH GẦN NHẤT
+   (`health_check.phien_gan_nhat()`, lùi ngày bỏ T7/CN) chứ không so cứng với ngày
+   hôm nay — sáng Thứ Hai dùng dữ liệu EOD Thứ Sáu là ĐÚNG, không phải cũ. Khi thật
+   sự cũ hơn phiên gần nhất (cron tối lỗi/chưa chạy lại): `scoring.py` không chấm/đề
+   xuất trạng thái mới (giữ nguyên trạng thái đã duyệt), `report.py` ẩn mục Dòng
+   tiền + đề xuất (kể cả trong bảng gửi dashboard), tin Telegram chỉ còn cờ ⚠️ +
+   dòng khóa. Lý do: lớp dòng tiền lỗi thời làm tín hiệu kép (#2) mất giá trị.
 
 ## QUY ƯỚC CODE
 - Python 3.11, tiếng Việt cho docstring/comment/log. Giữ pipeline KHÔNG framework,
@@ -44,6 +51,16 @@ Chạy trên GitHub Actions (miễn phí). Chủ dự án: Đạt. Ngôn ngữ l
       Telegram khi `DASHBOARD_URL` rỗng/"None" — logic build dòng này chuyển hẳn
       sang `telegram_send.py` (nơi duy nhất có giá trị thật lúc gửi), `report.py`
       không còn chèn placeholder `<DASHBOARD_URL>` nữa.
+- [x] (2026-07-14) Nguyên tắc mới #8 "dữ liệu cũ = radar tự khóa": thêm
+      `health_check.phien_gan_nhat()`/`du_lieu_cu()`, sửa lỗi cờ "dữ liệu cũ" báo
+      giả mỗi sáng Thứ Hai (Thứ Sáu không còn bị coi là cũ); `scoring.py` khóa
+      chấm/đề xuất khi data thật sự cũ; `report.py` ẩn Dòng tiền + đề xuất (kể cả
+      trong bảng gửi dashboard) và rút tin Telegram còn cờ ⚠️ + dòng khóa.
+      `morning.yml`: cron đổi '37 23 * * 0-4' (6:37 VN, tránh giờ cao điểm 0:00 UTC).
+- [ ] (2026-07-14, BỊ CHẶN) Chẩn đoán + vá lỗi evening-eod thất bại ngày 10/07:
+      chưa đọc được log vì máy chưa `gh auth login` (đã cài gh CLI qua winget) và
+      repo private nên không gọi API GitHub công khai được — cần Đạt tự đăng nhập
+      `gh auth login` hoặc dán log lỗi vào chat.
 - [ ] `backtest_verify.py`: dùng vnstock chốt số liệu 4 sự kiện backtest sơ bộ
       (SK1 PC1 sau QHĐ8 5/2023; SK3 NVL/PDR sau NĐ08 3/2023; SK4 KDH/NLG sau 1/8/2024;
       SK8 GEG 2023–2024) — so với VN-Index cùng kỳ mốc 3–6–12 tháng, ghi kết quả vào

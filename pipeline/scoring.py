@@ -1,6 +1,10 @@
 """Chấm trạng thái radar theo khung 03 v1.1 (đã hiệu chỉnh sau backtest).
-QUAN TRỌNG: máy chỉ tự động ⚪↔🟡 và ĐỀ XUẤT 🟠/🔴 — con người duyệt trong knowledge/."""
+QUAN TRỌNG: máy chỉ tự động ⚪↔🟡 và ĐỀ XUẤT 🟠/🔴 — con người duyệt trong knowledge/.
+v1.2 — nếu market data cũ hơn phiên giao dịch gần nhất (cron tối chưa chạy lại được):
+  KHÔNG chấm/đề xuất trạng thái mới, giữ nguyên trạng thái người đã duyệt. Tránh đề
+  xuất dựa trên dòng tiền lỗi thời — vi phạm nguyên tắc tín hiệu kép (CLAUDE.md #2)."""
 from utils import CONFIG, load_json, save_json, data_path, today_str
+from health_check import du_lieu_cu, phien_gan_nhat
 
 def diem_dong_tien(ind, th):
     """Lớp dòng tiền 40đ theo v1.1: KL 22 + khối ngoại cấp mã 8 + vị thế giá 10 (phạt -10 mua đuổi)."""
@@ -34,18 +38,30 @@ def trang_thai_nhom(nhom_id, nhom, market, th):
     return {"trang_thai_nguoi_duyet": hien_tai, "de_xuat_may": de_xuat,
             "diem_dong_tien_max": diem_max, "ma_dang_chu_y": ma_manh}
 
+def trang_thai_khoa(nhom):
+    """Data cũ: giữ nguyên trạng thái người đã duyệt, không đề xuất gì — không đủ
+    căn cứ vì lớp dòng tiền lỗi thời."""
+    hien_tai = nhom.get("trang_thai", "trang")
+    return {"trang_thai_nguoi_duyet": hien_tai, "de_xuat_may": hien_tai,
+            "diem_dong_tien_max": None, "ma_dang_chu_y": []}
+
 def main():
     th = CONFIG["thresholds"]
     market = load_json(data_path("market-latest.json"))
     if not market:
         raise SystemExit("Chưa có market-latest.json — chạy fetch_market trước")
-    radar = {"ngay": today_str(), "nhom": {}}
+    cu = du_lieu_cu(market)
+    radar = {"ngay": today_str(), "nhom": {}, "du_lieu_cu": cu}
     for nid, nhom in CONFIG["nhom_nganh"].items():
-        radar["nhom"][nid] = {"ten": nhom["ten"], **trang_thai_nhom(nid, nhom, market, th)}
+        than = trang_thai_khoa(nhom) if cu else trang_thai_nhom(nid, nhom, market, th)
+        radar["nhom"][nid] = {"ten": nhom["ten"], **than}
     radar["errors"] = market.get("errors", [])
     save_json(data_path("radar-latest.json"), radar)
     save_json(data_path(f"radar-{today_str()}.json"), radar)
-    print("Radar OK")
+    if cu:
+        print(f"Radar KHÓA — market data cũ hơn phiên gần nhất ({phien_gan_nhat()})")
+    else:
+        print("Radar OK")
 
 if __name__ == "__main__":
     main()
