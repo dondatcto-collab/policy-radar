@@ -77,6 +77,12 @@ Chạy trên GitHub Actions (miễn phí). Chủ dự án: Đạt. Ngôn ngữ l
 - [x] (2026-07-14) Đổi model Gemini `gemini-2.0-flash` (Google tắt 01/06/2026) →
       `gemini-2.5-flash` (free tier 10 RPM, 250 RPD, hết hạn 16/10/2026) trong
       `fetch_policy.py`. Đã ghi hạn dùng + bước chuyển tiếp vào QUY ƯỚC CODE.
+- [x] (2026-07-14) Vá lỗi `gemini_filter()` crash khi Gemini gọi thành công nhưng
+      trả text rỗng ("Expecting value: line 1 column 1" khi parse JSON): kiểm tra
+      candidates/parts/text tồn tại trước khi parse (rỗng → trả `ghi_chu` kèm
+      `finishReason` thay vì crash); luôn in text thô ra log TRƯỚC khi parse để
+      debug được lần sau; cắt bỏ text thừa trước dấu `{`/`[` đầu tiên nếu Gemini
+      trả lời kèm lời dẫn ngoài JSON.
 - [ ] `backtest_verify.py`: dùng vnstock chốt số liệu 4 sự kiện backtest sơ bộ
       (SK1 PC1 sau QHĐ8 5/2023; SK3 NVL/PDR sau NĐ08 3/2023; SK4 KDH/NLG sau 1/8/2024;
       SK8 GEG 2023–2024) — so với VN-Index cùng kỳ mốc 3–6–12 tháng, ghi kết quả vào

@@ -1,7 +1,11 @@
 """Cron SÁNG 7:00 VN — quét văn bản/tin chính sách qua đêm, tóm tắt bằng Gemini.
 Nguyên tắc: Gemini chỉ TÓM TẮT + GẮN NHÓM + ĐỀ XUẤT mức ảnh hưởng. Không tự đổi 🟠/🔴.
 v1.1 — VÁ BẢO MẬT: key chuyển vào header (không lộ qua URL/log Actions), tẩy key
-  khỏi mọi thông báo lỗi trước khi ghi ra ghi_chu, tự chờ rồi thử lại khi bị 429."""
+  khỏi mọi thông báo lỗi trước khi ghi ra ghi_chu, tự chờ rồi thử lại khi bị 429.
+v1.2 — VÁ PARSE RỖNG (sau lỗi thật "Expecting value: line 1 column 1" — gọi Gemini
+  thành công nhưng text rỗng): kiểm tra candidates/parts/text trước khi parse thay
+  vì để _j.loads() crash; luôn in text thô ra log trước khi parse để lần sau debug
+  được; cắt bỏ text thừa trước dấu { hoặc [ đầu tiên nếu Gemini trả lời kèm lời dẫn."""
 import os, time, requests, feedparser
 from utils import CONFIG, save_json, load_json, data_path, today_str, now_vn
 
@@ -60,9 +64,20 @@ def gemini_filter(items):
                     continue
                 return {"tin_lien_quan": [], "ghi_chu": "Lỗi Gemini: hết lượt thử lại (429 - rate limit)"}
             r.raise_for_status()
-            text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-            import json as _j
+            data = r.json()
+            candidates = data.get("candidates") or []
+            parts = (candidates[0].get("content", {}).get("parts", []) if candidates else [])
+            text = parts[0].get("text", "") if parts else ""
+            print(f"Gemini trả về (thô): {text!r}")
+            if not text.strip():
+                ly_do = candidates[0].get("finishReason", "không rõ") if candidates else "không có candidates"
+                return {"tin_lien_quan": [], "ghi_chu": f"Lỗi Gemini: response rỗng (finishReason={ly_do})"}
             text = text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+            if text and text[0] not in "{[":
+                vi_tri = next((i for i, c in enumerate(text) if c in "{["), None)
+                if vi_tri is not None:
+                    text = text[vi_tri:]
+            import json as _j
             return _j.loads(text)
         except Exception as e:
             return {"tin_lien_quan": [], "ghi_chu": f"Lỗi Gemini: {_tay_key(e)}"}
