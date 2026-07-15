@@ -1,3 +1,4 @@
-📡 RADAR 2026-07-14 — trước ATO
-💰 Dòng tiền: SSI (Chứng khoán): KL ×2.4 | VCI (Chứng khoán): KL ×1.71 | HCM (Chứng khoán): KL ×2.02
-🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Thép: 🟡→🟠 | Xây dựng hạ tầng: 🟡→🟠 (cần người duyệt)
+📡 RADAR 2026-07-15 — trước ATO
+⚠️ Lọc tin: Lỗi Gemini: Expecting value: line 1 column 1 (char 0)
+💰 Dòng tiền: CTG (Ngân hàng): KL ×1.54 | GAS (Dầu khí): KL ×2.16 | PVS (Dầu khí): KL ×2.65
+🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Dầu khí: 🟡→🟠 (cần người duyệt)
