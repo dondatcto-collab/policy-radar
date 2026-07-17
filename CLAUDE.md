@@ -93,10 +93,9 @@ Chạy trên GitHub Actions (miễn phí). Chủ dự án: Đạt. Ngôn ngữ l
       v1.1) quy đổi /4 về thang 0–10 để hiển thị, hệ số nằm ở `app/src/lib/constants.js`
       (đổi nếu khung chấm 03 v1.1 đổi thang — vẫn cần backtest trước theo nguyên tắc #4).
       Seed rỗng `feedback/feedback.json`, `feedback/decisions.json`,
-      `feedback/pending-tasks.json` (schemaVersion 1.0) — **CHƯA có gì sinh
-      `pending-tasks.json`**, cần một Action/script riêng (ngoài phạm vi task này) tạo
-      task `morning_feedback` mỗi sáng + `review_proposal` khi có đề xuất 🟠 mới, nếu
-      không hộp nhiệm vụ sẽ luôn rỗng. Deploy: workflow MỚI
+      `feedback/pending-tasks.json` (schemaVersion 1.0) — nguồn sinh
+      `pending-tasks.json` làm ở việc riêng bên dưới (2026-07-17, gen_pending_tasks.py).
+      Deploy: workflow MỚI
       `.github/workflows/app-build.yml` (không đụng evening/morning/weekend.yml) tự
       `npm run build` và commit `app/dist/` khi `app/src/**` đổi trên `main`; Pages vẫn
       giữ nguyên cấu hình cũ (source `main` `/(root)`), phục vụ tại
@@ -104,15 +103,35 @@ Chạy trên GitHub Actions (miễn phí). Chủ dự án: Đạt. Ngôn ngữ l
       ngày khóa null, streak, merge DEFAULT_STATE, hàng đợi offline + đồng bộ lại, 3 màn
       hình) bằng harness giả lập tạm thời rồi xóa trước khi bàn giao — KHÔNG sửa file
       nào trong `pipeline/`, `config/`, hay `data/`.
+- [x] (2026-07-17) `pipeline/gen_pending_tasks.py` (script MỚI) sinh
+      `feedback/pending-tasks.json` — gọi bằng ĐÚNG 1 step mới thêm vào cuối
+      `morning.yml` (không sửa 5 step cũ), tự commit+push file sau khi chạy, tự gửi
+      cảnh báo Telegram riêng nếu lỗi (vì step "Báo lỗi nếu fail" nằm trước, không
+      bắt được lỗi của step mới thêm sau nó). Mỗi sáng: 1 task `morning_feedback`
+      gắn `reportId = rpt-{ngày}` (id gắn ngày nên rerun cùng ngày không tạo trùng,
+      `context` tóm số tin/dòng tiền/cảnh báo trong report-latest.json). Task
+      `review_proposal` sinh cho nhóm ĐỦ CẢ HAI điều kiện: (a) `diem_dong_tien_max`
+      quy đổi /SCORE_RAW_MAX*10 vượt ngưỡng mức "khoe" — đọc THẲNG từ
+      `app/src/lib/constants.js` bằng regex (không hard-code lại số, đổi ngưỡng chỉ
+      cần sửa 1 chỗ), (b) `de_xuat_may != trang_thai_nguoi_duyet` trong
+      radar-latest.json (nhóm điểm cao nhưng máy/người đã khớp trạng thái rồi thì
+      KHÔNG tạo task — tránh nhắc lại việc đã xong, nguyên tắc #3 chống nhiễu).
+      Chống spam: bỏ qua nếu đã có task `review_proposal` chưa hết hạn cho đúng
+      signalId, hoặc `decisions.json` đã có approve/reject với dữ liệu hiện tại/mới
+      hơn, hoặc đang trong thời gian "Hoãn" (`deferUntil` tương lai). Task hết hạn
+      (`expiresAt` — 20h cho morning_feedback, 7 ngày cho review_proposal, khớp trần
+      "Hoãn" dài nhất trong app) bị lọc khỏi file mỗi lần chạy. Không có Python cài
+      cục bộ để chạy thử thật — đã kiểm chứng toàn bộ nhánh logic (bao gồm 5 kịch
+      bản decisions.json) bằng cách port sang Node chạy trên dữ liệu THẬT của repo
+      (`data/radar-latest.json` ngày 2026-07-16: đúng ra `bds` tạo task, `chung-khoan`
+      bị loại vì đã duyệt khớp `cam`/`cam`); CHƯA chạy qua Actions thật — theo dõi
+      lần cron sáng kế tiếp để xác nhận.
 - [ ] `backtest_verify.py`: dùng vnstock chốt số liệu 4 sự kiện backtest sơ bộ
       (SK1 PC1 sau QHĐ8 5/2023; SK3 NVL/PDR sau NĐ08 3/2023; SK4 KDH/NLG sau 1/8/2024;
       SK8 GEG 2023–2024) — so với VN-Index cùng kỳ mốc 3–6–12 tháng, ghi kết quả vào
       knowledge/04-TIN-HIEU-VA-NHAT-KY/backtest/
 - [ ] Nguồn khối ngoại theo mã ổn định (hiện scoring để trung tính 0đ — xem chú thích scoring.py)
 - [ ] Khi có key vnstock Community: SLEEP_GIUA_MA = 1.1
-- [ ] App đánh giá cần nguồn sinh `feedback/pending-tasks.json` (máy sinh theo thiết kế
-      SPEC mục 4) — chưa có Action/script nào tạo task `morning_feedback`/`review_proposal`,
-      hộp nhiệm vụ trong app hiện luôn rỗng cho tới khi việc này được làm
 
 ## KHI ĐƯỢC YÊU CẦU SỬA GÌ ĐÓ
 1. Đọc nhánh knowledge/00 nếu thay đổi chạm nghiệp vụ

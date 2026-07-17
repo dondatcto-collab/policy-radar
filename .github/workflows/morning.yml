@@ -40,3 +40,15 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           cd pipeline && python -c "from telegram_send import send; send('🔴 LỖI cron sáng — không có báo cáo hôm nay, kiểm tra Actions')"
+      - name: Sinh nhiệm vụ đánh giá cho app (feedback/pending-tasks.json)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          cd pipeline
+          python gen_pending_tasks.py || { python -c "from telegram_send import send; send('⚠️ Lỗi sinh feedback/pending-tasks.json — kiểm tra Actions')"; exit 1; }
+          cd ..
+          git config user.name radar-bot && git config user.email bot@radar
+          git add feedback/pending-tasks.json
+          git commit -m "tasks: pending-tasks $(date +%F)" || echo "no changes"
+          git push
