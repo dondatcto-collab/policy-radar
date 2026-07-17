@@ -1,16 +1,24 @@
 {
-  "ngay": "2026-07-16",
-  "cap_nhat": "2026-07-16T07:58:33.790165+07:00",
-  "flags": [],
+  "ngay": "2026-07-17",
+  "cap_nhat": "2026-07-17T08:04:48.461148+07:00",
+  "flags": [
+    "⚠️ Lọc tin: Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+  ],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "HCM (Chứng khoán): KL ×2.22",
-    "PVD (Dầu khí): KL ×1.85",
-    "FPT (Công nghệ - VT): KL ×2.74"
+    "SSI (Chứng khoán): KL ×2.29",
+    "VCI (Chứng khoán): KL ×1.97",
+    "HCM (Chứng khoán): KL ×2.12",
+    "VND (Chứng khoán): KL ×1.5",
+    "STB (Ngân hàng): KL ×1.76",
+    "KDH (Bất động sản): KL ×2.6",
+    "PDR (Bất động sản): KL ×1.65",
+    "FPT (Công nghệ - VT): KL ×1.57"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
-    "Dầu khí: 🟡→🟠",
+    "Ngân hàng: 🟡→🟠",
+    "Bất động sản: 🟡→🟠",
     "Công nghệ - VT: 🟡→🟠"
   ],
   "radar": {
@@ -21,18 +29,39 @@
       "diem_dong_tien_max": 32,
       "ma_dang_chu_y": [
         {
+          "ma": "SSI",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.29
+        },
+        {
+          "ma": "VCI",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.97
+        },
+        {
           "ma": "HCM",
           "diem_dong_tien": 32,
-          "kl_ratio": 2.22
+          "kl_ratio": 2.12
+        },
+        {
+          "ma": "VND",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.5
         }
       ]
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "STB",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.76
+        }
+      ]
     },
     "thep": {
       "ten": "Thép",
@@ -58,9 +87,20 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 32,
+      "ma_dang_chu_y": [
+        {
+          "ma": "KDH",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.6
+        },
+        {
+          "ma": "PDR",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.65
+        }
+      ]
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
@@ -79,26 +119,20 @@
     "dau-khi": {
       "ten": "Dầu khí",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "PVD",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.85
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "cong-nghe": {
       "ten": "Công nghệ - VT",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
+      "diem_dong_tien_max": 22,
       "ma_dang_chu_y": [
         {
           "ma": "FPT",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.74
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.57
         }
       ]
     }

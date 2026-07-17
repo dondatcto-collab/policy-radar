@@ -1,3 +1,4 @@
-📡 RADAR 2026-07-16 — trước ATO
-💰 Dòng tiền: HCM (Chứng khoán): KL ×2.22 | PVD (Dầu khí): KL ×1.85 | FPT (Công nghệ - VT): KL ×2.74
-🔺 Máy đề xuất: Dầu khí: 🟡→🟠 | Công nghệ - VT: 🟡→🟠 (cần người duyệt)
+📡 RADAR 2026-07-17 — trước ATO
+⚠️ Lọc tin: Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
+💰 Dòng tiền: SSI (Chứng khoán): KL ×2.29 | VCI (Chứng khoán): KL ×1.97 | HCM (Chứng khoán): KL ×2.12
+🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Bất động sản: 🟡→🟠 | Công nghệ - VT: 🟡→🟠 (cần người duyệt)
