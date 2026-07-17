@@ -83,12 +83,36 @@ Chạy trên GitHub Actions (miễn phí). Chủ dự án: Đạt. Ngôn ngữ l
       `finishReason` thay vì crash); luôn in text thô ra log TRƯỚC khi parse để
       debug được lần sau; cắt bỏ text thừa trước dấu `{`/`[` đầu tiên nếu Gemini
       trả lời kèm lời dẫn ngoài JSON.
+- [x] (2026-07-17) App đánh giá v1.0 theo `SPEC-app-danh-gia-v1.md`: Vite+React
+      trong `app/`, không backend/database,
+      ghi dữ liệu qua GitHub Contents API (fine-grained PAT lưu localStorage, nhập ở
+      màn Cài đặt). Đã làm UI cho `morning_feedback` + `review_proposal` (schema đủ 4
+      loại, `journal/` và `evals/` để v1.1/v1.2 sau). Tín hiệu sống (4 mức + hysteresis
+      0.3 điểm + xu hướng hồi quy tuyến tính + sparkline + decay độ tươi) tính từ lịch
+      sử `data/radar-*.json` — điểm `diem_dong_tien_max` (thang thiết kế 0–40 theo khung
+      v1.1) quy đổi /4 về thang 0–10 để hiển thị, hệ số nằm ở `app/src/lib/constants.js`
+      (đổi nếu khung chấm 03 v1.1 đổi thang — vẫn cần backtest trước theo nguyên tắc #4).
+      Seed rỗng `feedback/feedback.json`, `feedback/decisions.json`,
+      `feedback/pending-tasks.json` (schemaVersion 1.0) — **CHƯA có gì sinh
+      `pending-tasks.json`**, cần một Action/script riêng (ngoài phạm vi task này) tạo
+      task `morning_feedback` mỗi sáng + `review_proposal` khi có đề xuất 🟠 mới, nếu
+      không hộp nhiệm vụ sẽ luôn rỗng. Deploy: workflow MỚI
+      `.github/workflows/app-build.yml` (không đụng evening/morning/weekend.yml) tự
+      `npm run build` và commit `app/dist/` khi `app/src/**` đổi trên `main`; Pages vẫn
+      giữ nguyên cấu hình cũ (source `main` `/(root)`), phục vụ tại
+      `.../policy-radar/app/dist/`. Đã kiểm thử toàn bộ luồng (hysteresis đa bậc, lọc
+      ngày khóa null, streak, merge DEFAULT_STATE, hàng đợi offline + đồng bộ lại, 3 màn
+      hình) bằng harness giả lập tạm thời rồi xóa trước khi bàn giao — KHÔNG sửa file
+      nào trong `pipeline/`, `config/`, hay `data/`.
 - [ ] `backtest_verify.py`: dùng vnstock chốt số liệu 4 sự kiện backtest sơ bộ
       (SK1 PC1 sau QHĐ8 5/2023; SK3 NVL/PDR sau NĐ08 3/2023; SK4 KDH/NLG sau 1/8/2024;
       SK8 GEG 2023–2024) — so với VN-Index cùng kỳ mốc 3–6–12 tháng, ghi kết quả vào
       knowledge/04-TIN-HIEU-VA-NHAT-KY/backtest/
 - [ ] Nguồn khối ngoại theo mã ổn định (hiện scoring để trung tính 0đ — xem chú thích scoring.py)
 - [ ] Khi có key vnstock Community: SLEEP_GIUA_MA = 1.1
+- [ ] App đánh giá cần nguồn sinh `feedback/pending-tasks.json` (máy sinh theo thiết kế
+      SPEC mục 4) — chưa có Action/script nào tạo task `morning_feedback`/`review_proposal`,
+      hộp nhiệm vụ trong app hiện luôn rỗng cho tới khi việc này được làm
 
 ## KHI ĐƯỢC YÊU CẦU SỬA GÌ ĐÓ
 1. Đọc nhánh knowledge/00 nếu thay đổi chạm nghiệp vụ
