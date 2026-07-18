@@ -15,10 +15,22 @@ constants.js, VÀ (b) de_xuat_may != trang_thai_nguoi_duyet trong radar-latest.j
 (tức máy và người CHƯA khớp trạng thái — còn cái để duyệt thật). Nhóm điểm cao
 nhưng đã được duyệt khớp rồi (vd trang_thai=cam, de_xuat=cam) thì không tạo task
 nữa — tránh nhắc lại việc đã xong (nguyên tắc #3 chống nhiễu, CLAUDE.md).
+
+payload mở rộng (3 lớp hiển thị trong app, xem app/src/components/*):
+deltaVsYesterday, scoreHistory (0-10, tối đa 7 điểm), topNews ([{title,source,
+link}]), sectors ([{name,scoreToday,scoreYesterday,delta}] — TOÀN BỘ nhóm, dùng
+chung cho mọi task vì Lớp 2 là bảng so sánh cả thị trường, không riêng 1 ngành).
+Với review_proposal: deltaVsYesterday/scoreHistory là của riêng nhóm đó;
+topNews lọc theo đúng nhóm (rỗng nếu không có tin liên quan — không nhét tin
+ngành khác cho đủ số). Với morning_feedback (không gắn 1 nhóm cụ thể):
+deltaVsYesterday/scoreHistory dùng điểm CAO NHẤT toàn thị trường mỗi phiên (đại
+diện "tín hiệu nổi bật nhất"); topNews lấy top tin chung của báo cáo sáng.
+Không đổi schema — payload vẫn là object mở theo mục 5.1 SPEC.
 """
 import os
 import re
 from datetime import datetime, timedelta
+from urllib.parse import urlparse
 
 from utils import CONFIG, ROOT, load_json, save_json, data_path, today_str, now_vn
 
@@ -28,6 +40,8 @@ EMOJI = CONFIG["trang_thai_map"]
 
 MORNING_TTL_HOURS = 20   # hết hạn trước khi cron sáng hôm sau tạo bản mới
 PROPOSAL_TTL_DAYS = 7    # khớp trần lựa chọn "Hoãn" dài nhất trong app (1 tuần)
+RADAR_FNAME_RE = re.compile(r"^radar-(\d{4}-\d{2}-\d{2})\.json$")
+SCORE_HISTORY_LEN = 7
 
 
 def feedback_path(name):
@@ -82,6 +96,78 @@ def context_morning(report, today):
     return ctx
 
 
+def score10(diem, scale_max):
+    return round(diem / scale_max * 10, 1) if diem is not None else None
+
+
+def load_radar_history(limit=8):
+    """Đọc các file data/radar-YYYY-MM-DD.json đã có (kể cả bản hôm nay — scoring.py
+    luôn lưu trùng với radar-latest.json), sắp xếp tăng dần theo ngày, lấy tối đa
+    `limit` bản gần nhất — dùng tính scoreHistory/deltaVsYesterday cho payload."""
+    data_dir = os.path.join(ROOT, "data")
+    found = []
+    for fname in os.listdir(data_dir):
+        m = RADAR_FNAME_RE.match(fname)
+        if m:
+            found.append((m.group(1), fname))
+    found.sort()
+    hist = []
+    for date, fname in found[-limit:]:
+        d = load_json(os.path.join(data_dir, fname))
+        if d:
+            hist.append((date, d))
+    return hist
+
+
+def build_sectors_map(radar, yesterday_data, scale_max):
+    """{nid: {name, scoreToday, scoreYesterday, delta}} cho TOÀN BỘ nhóm — dùng
+    chung cho bảng Lớp 2 của mọi task, và để tra deltaVsYesterday riêng từng nhóm."""
+    yesterday_nhom = (yesterday_data or {}).get("nhom", {})
+    out = {}
+    for nid, n in radar.get("nhom", {}).items():
+        today_s = score10(n.get("diem_dong_tien_max"), scale_max)
+        yday_s = score10(yesterday_nhom.get(nid, {}).get("diem_dong_tien_max"), scale_max)
+        delta = round(today_s - yday_s, 1) if today_s is not None and yday_s is not None else None
+        out[nid] = {"name": n.get("ten", nid), "scoreToday": today_s, "scoreYesterday": yday_s, "delta": delta}
+    return out
+
+
+def score_history_for(history, scale_max, nid=None, limit=SCORE_HISTORY_LEN):
+    """Chuỗi điểm 0-10 gần nhất cho sparkline. nid=None → điểm CAO NHẤT toàn thị
+    trường mỗi phiên (đại diện morning_feedback, không gắn 1 nhóm cụ thể)."""
+    out = []
+    for _date, d in history:
+        nhom = d.get("nhom", {})
+        if nid is not None:
+            s = score10(nhom.get(nid, {}).get("diem_dong_tien_max"), scale_max)
+        else:
+            diems = [n.get("diem_dong_tien_max") for n in nhom.values() if n.get("diem_dong_tien_max") is not None]
+            s = score10(max(diems), scale_max) if diems else None
+        if s is not None:
+            out.append(s)
+    return out[-limit:]
+
+
+def news_source(link):
+    """Suy ra tên nguồn tin từ domain link — tin_lien_quan (fetch_policy.py) không
+    lưu sẵn trường 'nguon' nên không có cách nào khác ngoài suy từ URL."""
+    if not link:
+        return ""
+    try:
+        host = urlparse(link).netloc
+        return host[4:] if host.startswith("www.") else host
+    except Exception:
+        return ""
+
+
+def build_top_news(tin_list, nid=None, limit=3):
+    """Tối đa `limit` tin {title, source, link}. Với nid cụ thể: chỉ lấy tin đã
+    được Gemini gắn đúng nhóm đó — không có thì để rỗng, không nhét tin ngành khác."""
+    items = [t for t in tin_list if t.get("nhom") == nid] if nid is not None else tin_list
+    return [{"title": t.get("tieu_de", ""), "source": news_source(t.get("link", "")), "link": t.get("link", "")}
+            for t in items[:limit]]
+
+
 def build():
     now = now_vn()
     today = today_str()
@@ -91,6 +177,18 @@ def build():
     radar = load_json(data_path("radar-latest.json"), {"nhom": {}, "ngay": today})
     pending = load_json(feedback_path("pending-tasks.json"), {"schemaVersion": "1.0", "tasks": []})
     decisions = load_json(feedback_path("decisions.json"), {"schemaVersion": "1.0", "entries": []})
+
+    # Dữ liệu cho payload mở rộng 3 lớp (xem docstring đầu file)
+    history = load_radar_history(limit=SCORE_HISTORY_LEN + 1)
+    today_ngay = radar.get("ngay", today)
+    ngay_truoc = [(d, h) for d, h in history if d < today_ngay]
+    yesterday_data = ngay_truoc[-1][1] if ngay_truoc else None
+    sectors_map = build_sectors_map(radar, yesterday_data, scale_max)
+    sectors_list = list(sectors_map.values())
+    tin_list = report.get("tin_chinh_sach", [])
+    overall_history = score_history_for(history, scale_max, nid=None)
+    overall_delta = (round(overall_history[-1] - overall_history[-2], 1)
+                      if len(overall_history) >= 2 else None)
 
     # 1) Dọn task hết hạn (expiresAt < bây giờ) — nguyên tắc "task cũ hết hạn thì loại khỏi file"
     tasks = []
@@ -114,7 +212,13 @@ def build():
             "type": "morning_feedback",
             "signalId": None,
             "context": ctx,
-            "payload": {"score": None, "layer": None, "confidence": None, "summary": ctx},
+            "payload": {
+                "score": None, "layer": None, "confidence": None, "summary": ctx,
+                "deltaVsYesterday": overall_delta,
+                "scoreHistory": overall_history,
+                "topNews": build_top_news(tin_list),
+                "sectors": sectors_list,
+            },
             "createdAt": now.isoformat(),
             "expiresAt": (now + timedelta(hours=MORNING_TTL_HOURS)).isoformat(),
         })
@@ -124,8 +228,8 @@ def build():
         diem = n.get("diem_dong_tien_max")
         if diem is None:
             continue  # radar khóa (data cũ) hoặc chưa mã nào qua lọc thanh khoản — không đủ căn cứ
-        score10 = round(diem / scale_max * 10, 1)
-        if score10 < khoe_min:
+        score_now = score10(diem, scale_max)
+        if score_now < khoe_min:
             continue
         if n.get("de_xuat_may") == n.get("trang_thai_nguoi_duyet"):
             continue  # máy và người đã khớp trạng thái — không có gì để duyệt, khỏi nhắc lại (nguyên tắc #3)
@@ -148,7 +252,7 @@ def build():
         ma_list = ", ".join(f"{m['ma']} (KL×{m['kl_ratio']})" for m in n.get("ma_dang_chu_y", [])[:4]) or "—"
         trang_thai = n.get("trang_thai_nguoi_duyet", "trang")
         de_xuat = n.get("de_xuat_may", trang_thai)
-        context = (f"Dòng tiền nhóm {n.get('ten', nid)} đạt {score10}/10 (mức Khỏe, ngưỡng ≥{khoe_min:g}) — "
+        context = (f"Dòng tiền nhóm {n.get('ten', nid)} đạt {score_now}/10 (mức Khỏe, ngưỡng ≥{khoe_min:g}) — "
                    f"{ma_list}. Trạng thái hiện tại {EMOJI.get(trang_thai, trang_thai)}, "
                    f"máy đề xuất {EMOJI.get(de_xuat, de_xuat)}. Mở knowledge/ kiểm tra chân chính sách "
                    f"trước khi cân nhắc sửa config/radar.json.")
@@ -158,10 +262,14 @@ def build():
             "signalId": signal_id,
             "context": context,
             "payload": {
-                "score": score10,
+                "score": score_now,
                 "layer": 3,
-                "confidence": "high" if score10 >= khoe_min + 1.0 else "medium",
+                "confidence": "high" if score_now >= khoe_min + 1.0 else "medium",
                 "summary": ma_list,
+                "deltaVsYesterday": sectors_map.get(nid, {}).get("delta"),
+                "scoreHistory": score_history_for(history, scale_max, nid=nid),
+                "topNews": build_top_news(tin_list, nid=nid),
+                "sectors": sectors_list,
             },
             "createdAt": now.isoformat(),
             "expiresAt": (now + timedelta(days=PROPOSAL_TTL_DAYS)).isoformat(),
