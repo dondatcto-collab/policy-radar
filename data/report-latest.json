@@ -1,13 +1,62 @@
 {
   "ngay": "2026-07-18",
-  "cap_nhat": "2026-07-18T09:51:13.743526+07:00",
+  "cap_nhat": "2026-07-18T11:18:23.816036+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
     "STB (Ngân hàng): KL ×1.64",
     "KDH (Bất động sản): KL ×1.57"
   ],
-  "tin_chinh_sach": [],
+  "tin_chinh_sach": [
+    {
+      "tieu_de": "Chính phủ kiến nghị Quốc hội ban hành Luật Đất đai (sửa đổi) có hiệu lực từ 1/8/2024",
+      "nhom": "bds",
+      "muc_do": "trong-yeu",
+      "ly_do": "Luật Đất đai sửa đổi tác động sâu rộng đến toàn bộ thị trường bất động sản và các ngành liên quan.",
+      "loai": "thuc_thi",
+      "link": ""
+    },
+    {
+      "tieu_de": "Việt Nam có quy hoạch điện 8: Nhiều cơ hội cho điện gió, điện mặt trời",
+      "nhom": "dien",
+      "muc_do": "trong-yeu",
+      "ly_do": "Quy hoạch điện 8 định hướng phát triển ngành điện, đặc biệt là năng lượng tái tạo.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Bộ GTVT đẩy nhanh tiến độ đầu tư các dự án giao thông trọng điểm",
+      "nhom": "ha-tang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Đẩy mạnh giải ngân vốn đầu tư công trực tiếp thúc đẩy ngành xây dựng hạ tầng và vật liệu.",
+      "loai": "thuc_thi",
+      "link": ""
+    },
+    {
+      "tieu_de": "Ngân hàng Nhà nước hạ lãi suất điều hành lần thứ tư liên tiếp",
+      "nhom": "ngan-hang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Chính sách tiền tệ nới lỏng trực tiếp hỗ trợ tăng trưởng tín dụng và kích thích đầu tư.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Đề xuất sửa đổi Luật Các tổ chức tín dụng, tập trung vào xử lý nợ xấu",
+      "nhom": "ngan-hang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Sửa đổi luật có thể cải thiện năng lực xử lý nợ xấu, ổn định hệ thống ngân hàng.",
+      "loai": "du-thao",
+      "link": ""
+    },
+    {
+      "tieu_de": "Đầu tư công năm 2024 đặt mục tiêu giải ngân hơn 650 nghìn tỷ đồng",
+      "nhom": "ha-tang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Mục tiêu giải ngân đầu tư công cao sẽ là động lực lớn cho ngành hạ tầng và vật liệu xây dựng.",
+      "loai": "thuc_thi",
+      "link": ""
+    }
+  ],
   "de_xuat_trang_thai": [
     "Ngân hàng: 🟡→🟠",
     "Bất động sản: 🟡→🟠"
