@@ -1,4 +1,3 @@
-📡 RADAR 2026-07-17 — trước ATO
-⚠️ Lọc tin: Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
-💰 Dòng tiền: SSI (Chứng khoán): KL ×2.29 | VCI (Chứng khoán): KL ×1.97 | HCM (Chứng khoán): KL ×2.12
-🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Bất động sản: 🟡→🟠 | Công nghệ - VT: 🟡→🟠 (cần người duyệt)
+📡 RADAR 2026-07-18 — trước ATO
+💰 Dòng tiền: STB (Ngân hàng): KL ×1.64 | KDH (Bất động sản): KL ×1.57
+🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Bất động sản: 🟡→🟠 (cần người duyệt)
