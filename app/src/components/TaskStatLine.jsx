@@ -1,0 +1,20 @@
+// Lớp 1 — luôn hiện trên thẻ, không cần bấm: điểm chung + chênh lệch so hôm qua.
+export default function TaskStatLine({ payload }) {
+  const score = payload?.score;
+  const delta = payload?.deltaVsYesterday;
+  if (score == null && delta == null) return null;
+
+  const deltaColor = delta > 0 ? "var(--khoe)" : delta < 0 ? "var(--xau)" : "var(--dim)";
+  const arrow = delta > 0 ? "▲" : delta < 0 ? "▼" : "▬";
+
+  return (
+    <div className="task-stat-line mono">
+      {score != null && <span className="stat-score">{score}/10</span>}
+      {delta != null && (
+        <span className="stat-delta" style={{ color: deltaColor }}>
+          {arrow} {Math.abs(delta)} so hôm qua
+        </span>
+      )}
+    </div>
+  );
+}
