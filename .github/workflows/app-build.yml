@@ -1,9 +1,7 @@
 name: app-build
 
-# Tự build app/ (Vite+React) rồi PUSH thẳng sang repo Pages riêng
-# dondatcto-collab/policy-radar-app (nhánh main) — không còn commit app/dist/ vào
-# repo này. Pages phục vụ tại https://dondatcto-collab.github.io/policy-radar-app/.
-# Cần secret APP_DEPLOY_TOKEN (PAT có quyền Contents write vào repo policy-radar-app).
+# Tự build app/ (Vite+React) và commit thẳng output tĩnh vào app/dist/ để GitHub
+# Pages (source: main /(root), không đổi) phục vụ tại .../policy-radar/app/dist/.
 # Không đụng 3 workflow pipeline evening/morning/weekend.yml.
 on:
   push:
@@ -16,7 +14,7 @@ on:
       - "app/index.html"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: app-build
@@ -42,24 +40,14 @@ jobs:
         working-directory: app
         run: npm run build
 
-      - name: Clone repo policy-radar-app vào thư mục tạm
+      - name: Commit app/dist nếu có thay đổi
         run: |
-          git clone --depth 1 "https://x-access-token:${{ secrets.APP_DEPLOY_TOKEN }}@github.com/dondatcto-collab/policy-radar-app.git" "$RUNNER_TEMP/deploy-target"
-
-      - name: Copy app/dist vào thư mục gốc repo đích
-        run: |
-          rsync -a --delete --exclude=".git" app/dist/ "$RUNNER_TEMP/deploy-target/"
-
-      - name: Commit và push sang policy-radar-app
-        run: |
-          cd "$RUNNER_TEMP/deploy-target"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -B main
-          git add -A
+          git add app/dist
           if git diff --cached --quiet; then
-            echo "Không có thay đổi — bỏ qua commit"
+            echo "app/dist không đổi — bỏ qua commit"
           else
-            git commit -m "build: cập nhật từ policy-radar app/ ($(date -u +%F))"
-            git push origin main
+            git commit -m "build: cập nhật app/dist [skip ci]"
+            git push
           fi
