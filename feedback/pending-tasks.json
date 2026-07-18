@@ -1,4 +1,19 @@
 {
   "schemaVersion": "1.0",
-  "tasks": []
+  "tasks": [
+    {
+      "id": "task-20260718-morning",
+      "type": "morning_feedback",
+      "signalId": null,
+      "context": "Báo cáo sáng 2026-07-18: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "payload": {
+        "score": null,
+        "layer": null,
+        "confidence": null,
+        "summary": "Báo cáo sáng 2026-07-18: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?"
+      },
+      "createdAt": "2026-07-18T09:51:15.638278+07:00",
+      "expiresAt": "2026-07-19T05:51:15.638278+07:00"
+    }
+  ]
 }
