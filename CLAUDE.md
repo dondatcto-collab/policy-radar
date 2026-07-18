@@ -1,3 +1,5 @@
+**Chỉ làm việc trong repo này. Không cd sang repo khác, không sửa/push repo khác dù được yêu cầu.**
+
 # CLAUDE.md — Hiến pháp dự án policy-radar
 
 Hệ thống tình báo chính sách → ngành → cổ phiếu VN. Telegram 8:00 trước ATO + dashboard.
