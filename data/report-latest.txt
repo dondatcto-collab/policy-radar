@@ -1,4 +1,4 @@
 📡 RADAR 2026-07-20 — trước ATO
-⚠️ Lọc tin: Lỗi Gemini: Expecting value: line 1 column 1 (char 0)
+⚠️ Lọc tin: Lỗi Gemini: Expecting value: line 1 column 2 (char 1)
 💰 Dòng tiền: STB (Ngân hàng): KL ×1.64 | KDH (Bất động sản): KL ×1.57
 🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Bất động sản: 🟡→🟠 (cần người duyệt)
