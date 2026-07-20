@@ -12,6 +12,19 @@ export default function TaskDetails({ payload, color }) {
     <div className="task-details">
       {history.length >= 2 && <Sparkline points={history} color={color || "#4a90d9"} />}
 
+      {payload?.aiSummary && (
+        <div className="ai-summary">
+          <div className="ai-summary-label">Nhận định AI</div>
+          {payload.aiSummary
+            .split("\n")
+            .map((line) => line.replace(/^[-•*]\s*/, "").trim())
+            .filter(Boolean)
+            .map((line, i) => (
+              <div key={i} className="ai-summary-line">{line}</div>
+            ))}
+        </div>
+      )}
+
       {sectors.length > 0 && (
         <table className="sector-table">
           <thead>
@@ -34,7 +47,13 @@ export default function TaskDetails({ payload, color }) {
                     color: s.delta > 0 ? "var(--khoe)" : s.delta < 0 ? "var(--xau)" : "var(--dim)",
                   }}
                 >
-                  {s.delta == null ? "—" : `${s.delta > 0 ? "+" : ""}${s.delta}`}
+                  {s.delta == null
+                    ? "—"
+                    : s.delta > 0
+                    ? `↑ +${s.delta}`
+                    : s.delta < 0
+                    ? `↓ ${s.delta}`
+                    : "0"}
                 </td>
               </tr>
             ))}
