@@ -26,16 +26,25 @@ ngành khác cho đủ số). Với morning_feedback (không gắn 1 nhóm cụ 
 deltaVsYesterday/scoreHistory dùng điểm CAO NHẤT toàn thị trường mỗi phiên (đại
 diện "tín hiệu nổi bật nhất"); topNews lấy top tin chung của báo cáo sáng.
 
-aiSummary + aiRecommendation: gọi Gemini ĐÚNG 1 LẦN mỗi phiên chạy (không phải
-1 lần/task — free tier 10 RPM/250 RPD, xem CLAUDE.md) dựa trên TOÀN BỘ bảng
-sectors + topNews chung, rồi gắn CHUNG kết quả đó vào payload của mọi task
-trong lần chạy này. 1 lần gọi trả về cả 2 trường (tóm tắt + khuyến nghị hành
-động) — bắt Gemini trả lời theo định dạng "TÓM TẮT:"/"KHUYẾN NGHỊ:" cố định để
-tách được bằng regex, không khớp định dạng thì coi cả khối là tóm tắt, khuyến
-nghị để None (tránh đoán sai lẫn lộn 2 phần). Lỗi bất kỳ (thiếu key, mạng,
-parse) → cả 2 None, không chặn luồng sinh task chính (đây là tính năng phụ
-trợ, khác với fetch_policy.py — lỗi ở đó chặn cả tin). Key theo đúng vá bảo
-mật đã khóa: header x-goog-api-key, tẩy khỏi log lỗi.
+aiSummary + aiRecommendation + sectorNotes: gọi Gemini ĐÚNG 1 LẦN mỗi phiên
+chạy (không phải 1 lần/task — free tier 10 RPM/250 RPD, xem CLAUDE.md) dựa
+trên TOÀN BỘ bảng sectors + topNews chung, rồi gắn CHUNG kết quả đó vào
+payload của mọi task trong lần chạy này. 1 lần gọi trả về CẢ BA trường (tóm
+tắt + khuyến nghị hành động + giải thích riêng từng ngành biến động mạnh) —
+bắt Gemini trả lời theo định dạng "TÓM TẮT:"/"KHUYẾN NGHỊ:"/"GIẢI THÍCH
+NGÀNH:" cố định để tách được bằng regex, không khớp định dạng thì phần đó
+coi như không có (None) — không đoán mò tách sai lẫn lộn các phần.
+sectorNotes là object {tên ngành: 1 dòng giải thích}, chỉ nhận dòng có tên
+ngành khớp ĐÚNG với sectors[].name đang theo dõi (Gemini bịa tên khác/gõ sai
+thì bỏ qua dòng đó, không tạo key rác). Lỗi bất kỳ (thiếu key, mạng, parse) →
+cả 3 None, không chặn luồng sinh task chính (đây là tính năng phụ trợ, khác
+với fetch_policy.py — lỗi ở đó chặn cả tin). Key theo đúng vá bảo mật đã
+khóa: header x-goog-api-key, tẩy khỏi log lỗi.
+
+topNews mỗi phần tử có thêm "sector" (tên hiển thị ngành suy từ trường "nhom"
+Gemini đã gắn trong fetch_policy.py, None nếu tin không gắn nhóm nào/gắn nhóm
+lạ) — dùng để app lọc tin theo ngành khi mở accordion chi tiết từng dòng
+bảng, kèm fallback so khớp trong title ở phía app.
 
 Không đổi schema — payload vẫn là object mở theo mục 5.1 SPEC.
 """
@@ -178,12 +187,19 @@ def news_source(link):
         return ""
 
 
-def build_top_news(tin_list, nid=None, limit=3):
-    """Tối đa `limit` tin {title, source, link}. Với nid cụ thể: chỉ lấy tin đã
-    được Gemini gắn đúng nhóm đó — không có thì để rỗng, không nhét tin ngành khác."""
+def build_top_news(tin_list, name_map, nid=None, limit=3):
+    """Tối đa `limit` tin {title, source, link, sector}. Với nid cụ thể: chỉ lấy
+    tin đã được Gemini gắn đúng nhóm đó — không có thì để rỗng, không nhét tin
+    ngành khác. `sector` = tên hiển thị ngành (suy từ nhãn "nhom" nội bộ qua
+    name_map) để app lọc tin theo ngành khi mở accordion — None nếu tin không
+    gắn nhóm nào/gắn nhóm lạ không có trong name_map."""
     items = [t for t in tin_list if t.get("nhom") == nid] if nid is not None else tin_list
-    return [{"title": t.get("tieu_de", ""), "source": news_source(t.get("link", "")), "link": t.get("link", "")}
-            for t in items[:limit]]
+    return [{
+        "title": t.get("tieu_de", ""),
+        "source": news_source(t.get("link", "")),
+        "link": t.get("link", ""),
+        "sector": name_map.get(t.get("nhom")),
+    } for t in items[:limit]]
 
 
 def _tay_key(msg):
@@ -197,26 +213,57 @@ def _strip_label(s, label):
     return re.sub(rf"^\s*{label}\s*:?\s*\n?", "", s, flags=re.IGNORECASE).strip()
 
 
-def _parse_ai_response(text):
-    """Tách 'TÓM TẮT:' / 'KHUYẾN NGHỊ:' theo đúng định dạng đã yêu cầu Gemini trả
-    về (xem PROMPT). Gemini trả lệch định dạng (không có nhãn KHUYẾN NGHỊ) →
-    coi cả khối là tóm tắt, khuyến nghị để None — không đoán mò tách sai."""
-    m = re.search(r"KHUYẾN\s*NGHỊ\s*:?\s*\n?", text, re.IGNORECASE)
-    if not m:
-        return (_strip_label(text, "TÓM\\s*TẮT") or None), None
-    summary = _strip_label(text[: m.start()], "TÓM\\s*TẮT").strip() or None
-    recommendation = text[m.end():].strip() or None
-    return summary, recommendation
+def _parse_sector_notes(block, sector_names):
+    """Parse các dòng dạng 'Tên ngành: giải thích' trong block GIẢI THÍCH NGÀNH.
+    Chỉ nhận tên khớp ĐÚNG (không phân biệt hoa/thường) với sector_names đang
+    theo dõi — Gemini bịa tên/gõ sai thì bỏ qua dòng đó, không tạo key rác."""
+    notes = {}
+    for line in block.split("\n"):
+        line = line.strip().lstrip("-•*").strip()
+        if not line or ":" not in line:
+            continue
+        name, _, note = line.partition(":")
+        name = name.strip()
+        note = note.strip()
+        if not note:
+            continue
+        match = next((sn for sn in sector_names if sn.lower() == name.lower()), None)
+        if match:
+            notes[match] = note
+    return notes or None
+
+
+def _parse_ai_response(text, sector_names):
+    """Tách 'TÓM TẮT:' / 'KHUYẾN NGHỊ:' / 'GIẢI THÍCH NGÀNH:' theo đúng định
+    dạng đã yêu cầu Gemini trả về (xem PROMPT). Thiếu nhãn KHUYẾN NGHỊ → coi cả
+    khối là tóm tắt, 2 phần sau None — không đoán mò tách sai."""
+    m_kn = re.search(r"KHUYẾN\s*NGHỊ\s*:?\s*\n?", text, re.IGNORECASE)
+    if not m_kn:
+        return (_strip_label(text, "TÓM\\s*TẮT") or None), None, None
+
+    summary = _strip_label(text[: m_kn.start()], "TÓM\\s*TẮT").strip() or None
+
+    m_gt = re.search(r"GIẢI\s*THÍCH\s*NGÀNH\s*:?\s*\n?", text, re.IGNORECASE)
+    if m_gt and m_gt.start() >= m_kn.end():
+        recommendation = text[m_kn.end(): m_gt.start()].strip() or None
+        sector_notes = _parse_sector_notes(text[m_gt.end():].strip(), sector_names)
+    else:
+        recommendation = text[m_kn.end():].strip() or None
+        sector_notes = None
+
+    return summary, recommendation, sector_notes
 
 
 def call_gemini_ai_summary(sectors, news):
-    """Gọi Gemini ĐÚNG 1 LẦN: tóm 3-5 ý chính + 1-2 khuyến nghị hành động, dựa
-    trên bảng điểm ngành + tin nổi bật. Trả về (ai_summary, ai_recommendation).
-    Lỗi bất kỳ → (None, None), không crash script (tính năng phụ trợ, không
-    phải luồng sinh task chính)."""
+    """Gọi Gemini ĐÚNG 1 LẦN: tóm 3-5 ý chính + 1-2 khuyến nghị hành động +
+    giải thích riêng từng ngành biến động mạnh, dựa trên bảng điểm ngành + tin
+    nổi bật. Trả về (ai_summary, ai_recommendation, sector_notes). Lỗi bất kỳ
+    → (None, None, None), không crash script (tính năng phụ trợ, không phải
+    luồng sinh task chính)."""
     if not GEMINI_KEY:
         print("⚠️ Thiếu GEMINI_API_KEY — bỏ qua nhận định AI")
-        return None, None
+        return None, None, None
+    sector_names = [s["name"] for s in sectors]
     bang = "\n".join(
         f"- {s['name']}: hôm nay {s['scoreToday']}, hôm qua {s['scoreYesterday']}, chênh lệch {s['delta']}"
         for s in sectors
@@ -226,9 +273,12 @@ def call_gemini_ai_summary(sectors, news):
         "Dựa trên bảng điểm ngành hôm nay và tin tức liên quan, tóm tắt 3-5 ý "
         "chính, mỗi ý 1 dòng ngắn gọn, tập trung vào ngành thay đổi nhiều nhất "
         "và nguyên nhân. Sau phần tóm tắt, đưa 1-2 khuyến nghị hành động ngắn "
-        "gọn cho người theo dõi nhóm ngành này.\n\n"
+        "gọn cho người theo dõi nhóm ngành này. Với mỗi ngành có chênh lệch "
+        "lớn (trị tuyệt đối > 1), viết 1 dòng ngắn giải thích nguyên nhân.\n\n"
         "Trả lời bằng tiếng Việt ĐÚNG định dạng sau, không thêm chữ nào khác "
-        "ngoài 2 nhãn này:\nTÓM TẮT:\n(mỗi ý 1 dòng)\nKHUYẾN NGHỊ:\n(mỗi ý 1 dòng)"
+        "ngoài 3 nhãn này:\nTÓM TẮT:\n(mỗi ý 1 dòng)\nKHUYẾN NGHỊ:\n(mỗi ý 1 "
+        "dòng)\nGIẢI THÍCH NGÀNH:\n(mỗi dòng dạng \"Tên ngành: giải thích\", "
+        "chỉ liệt kê ngành có |chênh lệch| > 1)"
         "\n\nBẢNG ĐIỂM NGÀNH (thang 0-10):\n" + bang +
         "\n\nTIN NỔI BẬT:\n" + tin
     )
@@ -245,11 +295,11 @@ def call_gemini_ai_summary(sectors, news):
         parts = candidates[0].get("content", {}).get("parts", []) if candidates else []
         text = (parts[0].get("text", "") if parts else "").strip()
         if not text:
-            return None, None
-        return _parse_ai_response(text)
+            return None, None, None
+        return _parse_ai_response(text, sector_names)
     except Exception as e:
         print(f"⚠️ Lỗi gọi Gemini cho nhận định AI: {_tay_key(e)}")
-        return None, None
+        return None, None, None
 
 
 def build():
@@ -269,11 +319,14 @@ def build():
     yesterday_data = ngay_truoc[-1][1] if ngay_truoc else None
     sectors_map = build_sectors_map(radar, yesterday_data, scale_max)
     sectors_list = list(sectors_map.values())
+    name_map = {nid: n.get("ten", nid) for nid, n in radar.get("nhom", {}).items()}
     tin_list = report.get("tin_chinh_sach", [])
     overall_history = score_history_for(history, scale_max, nid=None)
     overall_delta = (round(overall_history[-1] - overall_history[-2], 1)
                       if len(overall_history) >= 2 else None)
-    ai_summary, ai_recommendation = call_gemini_ai_summary(sectors_list, build_top_news(tin_list))
+    ai_summary, ai_recommendation, sector_notes = call_gemini_ai_summary(
+        sectors_list, build_top_news(tin_list, name_map)
+    )
 
     # 1) Dọn task hết hạn (expiresAt < bây giờ) — nguyên tắc "task cũ hết hạn thì loại khỏi file"
     tasks = []
@@ -301,10 +354,11 @@ def build():
                 "score": None, "layer": None, "confidence": None, "summary": ctx,
                 "deltaVsYesterday": overall_delta,
                 "scoreHistory": overall_history,
-                "topNews": build_top_news(tin_list),
+                "topNews": build_top_news(tin_list, name_map),
                 "sectors": sectors_list,
                 "aiSummary": ai_summary,
                 "aiRecommendation": ai_recommendation,
+                "sectorNotes": sector_notes,
             },
             "createdAt": now.isoformat(),
             "expiresAt": (now + timedelta(hours=MORNING_TTL_HOURS)).isoformat(),
@@ -355,10 +409,11 @@ def build():
                 "summary": ma_list,
                 "deltaVsYesterday": sectors_map.get(nid, {}).get("delta"),
                 "scoreHistory": score_history_for(history, scale_max, nid=nid),
-                "topNews": build_top_news(tin_list, nid=nid),
+                "topNews": build_top_news(tin_list, name_map, nid=nid),
                 "sectors": sectors_list,
                 "aiSummary": ai_summary,
                 "aiRecommendation": ai_recommendation,
+                "sectorNotes": sector_notes,
             },
             "createdAt": now.isoformat(),
             "expiresAt": (now + timedelta(days=PROPOSAL_TTL_DAYS)).isoformat(),
