@@ -51,3 +51,17 @@ export const RETRY_MAX_ATTEMPTS = 3;
 export const RETRY_BASE_DELAY_MS = 1500;
 
 export const RADAR_HISTORY_DAYS = 14; // đủ để lấy 7 phiên gần nhất kể cả khi có ngày lỗi/thiếu
+
+// Cột "Tác động" bảng ngành Lớp 2 — dựa trên |chênh lệch|. Cao: >2.5, Vừa: 1-2.5,
+// Thấp: <1. Đổi ngưỡng ở đây, không hard-code lại nơi khác.
+export const IMPACT_LEVELS = [
+  { key: "cao", label: "Cao", min: 2.5, color: "#e5484d" }, // đỏ, > 2.5
+  { key: "vua", label: "Vừa", min: 1, color: "#e8c34a" }, // vàng, 1 – 2.5
+  { key: "thap", label: "Thấp", min: 0, color: "#7a8794" }, // xám, < 1
+];
+
+export function impactLevelFor(absDelta) {
+  if (absDelta > IMPACT_LEVELS[0].min) return IMPACT_LEVELS[0];
+  if (absDelta >= IMPACT_LEVELS[1].min) return IMPACT_LEVELS[1];
+  return IMPACT_LEVELS[2];
+}
