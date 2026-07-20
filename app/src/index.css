@@ -161,6 +161,17 @@ section.block { margin-bottom: 20px; }
 .task-details { margin-top: 8px; padding-top: 10px; border-top: 1px solid var(--line); }
 .task-details svg.spark { width: 100%; height: 32px; display: block; margin-bottom: 10px; }
 
+.ai-summary {
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px;
+  padding: 10px 12px; margin-bottom: 10px;
+}
+.ai-summary-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim);
+  margin-bottom: 6px; font-weight: 600;
+}
+.ai-summary-line { font-size: 13px; line-height: 1.5; color: var(--ink); }
+.ai-summary-line + .ai-summary-line { margin-top: 4px; }
+
 .sector-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 10px; }
 .sector-table th { text-align: left; color: var(--dim); font-weight: 500; padding: 4px 6px; font-size: 11px; }
 .sector-table td { padding: 4px 6px; border-top: 1px solid var(--line); }
