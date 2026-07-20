@@ -1,12 +1,23 @@
+import { useState, Fragment } from "react";
 import Sparkline from "./Sparkline";
 import { impactLevelFor } from "../lib/constants";
+
+// Lọc tin theo ngành: khớp đúng trường sector (Gemini gắn qua nhom), hoặc dự
+// phòng tên ngành xuất hiện trong tiêu đề (payload không có sector thì vẫn lọc
+// được phần nào nhờ fallback này).
+function newsForSector(news, sectorName) {
+  return news.filter((n) => n.sector === sectorName || (n.title && n.title.includes(sectorName)));
+}
 
 // Lớp 2 (bảng ngành + sparkline + tin gốc) và Lớp 3 (nút "Đọc tin gốc", chỉ hiện
 // khi có link thật — không để chỗ trống nếu không có).
 export default function TaskDetails({ payload, color }) {
+  const [expandedSector, setExpandedSector] = useState(null);
+
   const sectors = payload?.sectors || [];
   const history = payload?.scoreHistory || [];
   const news = payload?.topNews || [];
+  const sectorNotes = payload?.sectorNotes || {};
   const readMoreLink = news.find((n) => n.link)?.link;
 
   return (
@@ -40,29 +51,64 @@ export default function TaskDetails({ payload, color }) {
           <tbody>
             {sectors.map((s) => {
               const impact = s.delta == null ? null : impactLevelFor(Math.abs(s.delta));
+              const isOpen = expandedSector === s.name;
               return (
-                <tr key={s.name}>
-                  <td>{s.name}</td>
-                  <td className="mono">{s.scoreToday ?? "—"}</td>
-                  <td className="mono">{s.scoreYesterday ?? "—"}</td>
-                  <td
-                    className="mono"
-                    style={{
-                      color: s.delta > 0 ? "var(--khoe)" : s.delta < 0 ? "var(--xau)" : "var(--dim)",
-                    }}
+                <Fragment key={s.name}>
+                  <tr
+                    className="sector-row"
+                    onClick={() => setExpandedSector(isOpen ? null : s.name)}
                   >
-                    {s.delta == null
-                      ? "—"
-                      : s.delta > 0
-                      ? `↑ +${s.delta}`
-                      : s.delta < 0
-                      ? `↓ ${s.delta}`
-                      : "0"}
-                  </td>
-                  <td style={{ color: impact ? impact.color : "var(--dim)" }}>
-                    {impact ? impact.label : "—"}
-                  </td>
-                </tr>
+                    <td>{s.name}</td>
+                    <td className="mono">{s.scoreToday ?? "—"}</td>
+                    <td className="mono">{s.scoreYesterday ?? "—"}</td>
+                    <td
+                      className="mono"
+                      style={{
+                        color: s.delta > 0 ? "var(--khoe)" : s.delta < 0 ? "var(--xau)" : "var(--dim)",
+                      }}
+                    >
+                      {s.delta == null
+                        ? "—"
+                        : s.delta > 0
+                        ? `↑ +${s.delta}`
+                        : s.delta < 0
+                        ? `↓ ${s.delta}`
+                        : "0"}
+                    </td>
+                    <td style={{ color: impact ? impact.color : "var(--dim)" }}>
+                      {impact ? impact.label : "—"}
+                    </td>
+                  </tr>
+                  {isOpen && (
+                    <tr className="sector-accordion-row">
+                      <td colSpan={5}>
+                        <div className="sector-accordion">
+                          {sectorNotes[s.name] && (
+                            <div className="sector-note">{sectorNotes[s.name]}</div>
+                          )}
+                          {history.length >= 2 && (
+                            <Sparkline points={history} color={color || "#4a90d9"} />
+                          )}
+                          {(() => {
+                            const sectorNews = newsForSector(news, s.name);
+                            return sectorNews.length > 0 ? (
+                              <div className="news-list">
+                                {sectorNews.map((n, i) => (
+                                  <div key={i} className="news-item">
+                                    <div className="news-title">{n.title}</div>
+                                    {n.source && <div className="news-source">{n.source}</div>}
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              <div className="no-sector-news">Không có tin riêng cho ngành này</div>
+                            );
+                          })()}
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </Fragment>
               );
             })}
           </tbody>
