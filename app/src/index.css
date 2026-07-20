@@ -177,6 +177,18 @@ section.block { margin-bottom: 20px; }
 .sector-table td { padding: 4px 6px; border-top: 1px solid var(--line); }
 .sector-table th:not(:first-child), .sector-table td:not(:first-child) { text-align: right; }
 
+.ai-recommend {
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px;
+  padding: 10px 12px; margin-bottom: 10px;
+}
+.ai-recommend-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim);
+  margin-bottom: 6px; font-weight: 600;
+}
+.ai-recommend-line { font-size: 13px; line-height: 1.5; color: var(--ink); }
+.ai-recommend-line + .ai-recommend-line { margin-top: 4px; }
+.ai-recommend-disclaimer { font-size: 11px; color: var(--dim); margin-top: 8px; }
+
 .news-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; }
 .news-item { font-size: 13px; }
 .news-item .news-title { color: var(--ink); line-height: 1.4; }

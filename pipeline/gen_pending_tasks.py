@@ -26,12 +26,16 @@ ngành khác cho đủ số). Với morning_feedback (không gắn 1 nhóm cụ 
 deltaVsYesterday/scoreHistory dùng điểm CAO NHẤT toàn thị trường mỗi phiên (đại
 diện "tín hiệu nổi bật nhất"); topNews lấy top tin chung của báo cáo sáng.
 
-aiSummary: gọi Gemini ĐÚNG 1 LẦN mỗi phiên chạy (không phải 1 lần/task — free
-tier 10 RPM/250 RPD, xem CLAUDE.md) dựa trên TOÀN BỘ bảng sectors + topNews
-chung, rồi gắn CHUNG kết quả đó vào payload của mọi task trong lần chạy này.
-Lỗi bất kỳ (thiếu key, mạng, parse) → None, không chặn luồng sinh task chính
-(đây là tính năng phụ trợ, khác với fetch_policy.py — lỗi ở đó chặn cả tin).
-Key theo đúng vá bảo mật đã khóa: header x-goog-api-key, tẩy khỏi log lỗi.
+aiSummary + aiRecommendation: gọi Gemini ĐÚNG 1 LẦN mỗi phiên chạy (không phải
+1 lần/task — free tier 10 RPM/250 RPD, xem CLAUDE.md) dựa trên TOÀN BỘ bảng
+sectors + topNews chung, rồi gắn CHUNG kết quả đó vào payload của mọi task
+trong lần chạy này. 1 lần gọi trả về cả 2 trường (tóm tắt + khuyến nghị hành
+động) — bắt Gemini trả lời theo định dạng "TÓM TẮT:"/"KHUYẾN NGHỊ:" cố định để
+tách được bằng regex, không khớp định dạng thì coi cả khối là tóm tắt, khuyến
+nghị để None (tránh đoán sai lẫn lộn 2 phần). Lỗi bất kỳ (thiếu key, mạng,
+parse) → cả 2 None, không chặn luồng sinh task chính (đây là tính năng phụ
+trợ, khác với fetch_policy.py — lỗi ở đó chặn cả tin). Key theo đúng vá bảo
+mật đã khóa: header x-goog-api-key, tẩy khỏi log lỗi.
 
 Không đổi schema — payload vẫn là object mở theo mục 5.1 SPEC.
 """
@@ -189,22 +193,43 @@ def _tay_key(msg):
     return s.replace(GEMINI_KEY, "***") if GEMINI_KEY else s
 
 
+def _strip_label(s, label):
+    return re.sub(rf"^\s*{label}\s*:?\s*\n?", "", s, flags=re.IGNORECASE).strip()
+
+
+def _parse_ai_response(text):
+    """Tách 'TÓM TẮT:' / 'KHUYẾN NGHỊ:' theo đúng định dạng đã yêu cầu Gemini trả
+    về (xem PROMPT). Gemini trả lệch định dạng (không có nhãn KHUYẾN NGHỊ) →
+    coi cả khối là tóm tắt, khuyến nghị để None — không đoán mò tách sai."""
+    m = re.search(r"KHUYẾN\s*NGHỊ\s*:?\s*\n?", text, re.IGNORECASE)
+    if not m:
+        return (_strip_label(text, "TÓM\\s*TẮT") or None), None
+    summary = _strip_label(text[: m.start()], "TÓM\\s*TẮT").strip() or None
+    recommendation = text[m.end():].strip() or None
+    return summary, recommendation
+
+
 def call_gemini_ai_summary(sectors, news):
-    """Gọi Gemini ĐÚNG 1 LẦN, tóm 3-5 ý chính từ bảng điểm ngành + tin nổi bật.
-    Lỗi bất kỳ → None, không crash script (tính năng phụ trợ, không phải luồng
-    sinh task chính)."""
+    """Gọi Gemini ĐÚNG 1 LẦN: tóm 3-5 ý chính + 1-2 khuyến nghị hành động, dựa
+    trên bảng điểm ngành + tin nổi bật. Trả về (ai_summary, ai_recommendation).
+    Lỗi bất kỳ → (None, None), không crash script (tính năng phụ trợ, không
+    phải luồng sinh task chính)."""
     if not GEMINI_KEY:
         print("⚠️ Thiếu GEMINI_API_KEY — bỏ qua nhận định AI")
-        return None
+        return None, None
     bang = "\n".join(
         f"- {s['name']}: hôm nay {s['scoreToday']}, hôm qua {s['scoreYesterday']}, chênh lệch {s['delta']}"
         for s in sectors
     ) or "(không có dữ liệu ngành)"
     tin = "\n".join(f"- {n['title']} ({n['source']})" for n in news if n.get("title")) or "(không có tin nổi bật)"
     prompt = (
-        "Dựa trên bảng điểm ngành hôm nay, tóm tắt 3-5 ý chính bằng tiếng Việt, "
-        "mỗi ý 1 dòng ngắn gọn, tập trung vào ngành thay đổi nhiều nhất và nguyên "
-        "nhân nếu có.\n\nBẢNG ĐIỂM NGÀNH (thang 0-10):\n" + bang +
+        "Dựa trên bảng điểm ngành hôm nay và tin tức liên quan, tóm tắt 3-5 ý "
+        "chính, mỗi ý 1 dòng ngắn gọn, tập trung vào ngành thay đổi nhiều nhất "
+        "và nguyên nhân. Sau phần tóm tắt, đưa 1-2 khuyến nghị hành động ngắn "
+        "gọn cho người theo dõi nhóm ngành này.\n\n"
+        "Trả lời bằng tiếng Việt ĐÚNG định dạng sau, không thêm chữ nào khác "
+        "ngoài 2 nhãn này:\nTÓM TẮT:\n(mỗi ý 1 dòng)\nKHUYẾN NGHỊ:\n(mỗi ý 1 dòng)"
+        "\n\nBẢNG ĐIỂM NGÀNH (thang 0-10):\n" + bang +
         "\n\nTIN NỔI BẬT:\n" + tin
     )
     try:
@@ -219,10 +244,12 @@ def call_gemini_ai_summary(sectors, news):
         candidates = data.get("candidates") or []
         parts = candidates[0].get("content", {}).get("parts", []) if candidates else []
         text = (parts[0].get("text", "") if parts else "").strip()
-        return text or None
+        if not text:
+            return None, None
+        return _parse_ai_response(text)
     except Exception as e:
         print(f"⚠️ Lỗi gọi Gemini cho nhận định AI: {_tay_key(e)}")
-        return None
+        return None, None
 
 
 def build():
@@ -246,7 +273,7 @@ def build():
     overall_history = score_history_for(history, scale_max, nid=None)
     overall_delta = (round(overall_history[-1] - overall_history[-2], 1)
                       if len(overall_history) >= 2 else None)
-    ai_summary = call_gemini_ai_summary(sectors_list, build_top_news(tin_list))
+    ai_summary, ai_recommendation = call_gemini_ai_summary(sectors_list, build_top_news(tin_list))
 
     # 1) Dọn task hết hạn (expiresAt < bây giờ) — nguyên tắc "task cũ hết hạn thì loại khỏi file"
     tasks = []
@@ -277,6 +304,7 @@ def build():
                 "topNews": build_top_news(tin_list),
                 "sectors": sectors_list,
                 "aiSummary": ai_summary,
+                "aiRecommendation": ai_recommendation,
             },
             "createdAt": now.isoformat(),
             "expiresAt": (now + timedelta(hours=MORNING_TTL_HOURS)).isoformat(),
@@ -330,6 +358,7 @@ def build():
                 "topNews": build_top_news(tin_list, nid=nid),
                 "sectors": sectors_list,
                 "aiSummary": ai_summary,
+                "aiRecommendation": ai_recommendation,
             },
             "createdAt": now.isoformat(),
             "expiresAt": (now + timedelta(days=PROPOSAL_TTL_DAYS)).isoformat(),

@@ -1,4 +1,5 @@
 import Sparkline from "./Sparkline";
+import { impactLevelFor } from "../lib/constants";
 
 // Lớp 2 (bảng ngành + sparkline + tin gốc) và Lớp 3 (nút "Đọc tin gốc", chỉ hiện
 // khi có link thật — không để chỗ trống nếu không có).
@@ -33,32 +34,53 @@ export default function TaskDetails({ payload, color }) {
               <th>Hôm nay</th>
               <th>Hôm qua</th>
               <th>Chênh lệch</th>
+              <th>Tác động</th>
             </tr>
           </thead>
           <tbody>
-            {sectors.map((s) => (
-              <tr key={s.name}>
-                <td>{s.name}</td>
-                <td className="mono">{s.scoreToday ?? "—"}</td>
-                <td className="mono">{s.scoreYesterday ?? "—"}</td>
-                <td
-                  className="mono"
-                  style={{
-                    color: s.delta > 0 ? "var(--khoe)" : s.delta < 0 ? "var(--xau)" : "var(--dim)",
-                  }}
-                >
-                  {s.delta == null
-                    ? "—"
-                    : s.delta > 0
-                    ? `↑ +${s.delta}`
-                    : s.delta < 0
-                    ? `↓ ${s.delta}`
-                    : "0"}
-                </td>
-              </tr>
-            ))}
+            {sectors.map((s) => {
+              const impact = s.delta == null ? null : impactLevelFor(Math.abs(s.delta));
+              return (
+                <tr key={s.name}>
+                  <td>{s.name}</td>
+                  <td className="mono">{s.scoreToday ?? "—"}</td>
+                  <td className="mono">{s.scoreYesterday ?? "—"}</td>
+                  <td
+                    className="mono"
+                    style={{
+                      color: s.delta > 0 ? "var(--khoe)" : s.delta < 0 ? "var(--xau)" : "var(--dim)",
+                    }}
+                  >
+                    {s.delta == null
+                      ? "—"
+                      : s.delta > 0
+                      ? `↑ +${s.delta}`
+                      : s.delta < 0
+                      ? `↓ ${s.delta}`
+                      : "0"}
+                  </td>
+                  <td style={{ color: impact ? impact.color : "var(--dim)" }}>
+                    {impact ? impact.label : "—"}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
+      )}
+
+      {payload?.aiRecommendation && (
+        <div className="ai-recommend">
+          <div className="ai-recommend-label">Khuyến nghị</div>
+          {payload.aiRecommendation
+            .split("\n")
+            .map((line) => line.replace(/^[-•*]\s*/, "").trim())
+            .filter(Boolean)
+            .map((line, i) => (
+              <div key={i} className="ai-recommend-line">{line}</div>
+            ))}
+          <div className="ai-recommend-disclaimer">Gợi ý tham khảo, không phải tư vấn đầu tư.</div>
+        </div>
       )}
 
       {news.length > 0 && (
