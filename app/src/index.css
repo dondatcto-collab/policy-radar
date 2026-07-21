@@ -282,6 +282,22 @@ textarea.reason-input {
 .conn-status.ok { background: rgba(43,179,163,.12); color: var(--khoe); }
 .conn-status.err { background: rgba(229,72,77,.12); color: var(--xau); }
 
+.queue-toggle {
+  display: block; width: 100%; text-align: left; padding: 4px 0;
+  background: none; border: none; color: var(--on); font-size: 13px;
+}
+.queue-list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.queue-item {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px;
+}
+.queue-item-main { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.queue-item-main .queue-item-kind { font-size: 12px; color: var(--dim); }
+.queue-item-meta { font-size: 12px; color: var(--dim); margin-top: 4px; }
+.queue-item-delete {
+  width: 100%; margin-top: 8px; padding: 6px; border-radius: 6px; border: 1px solid var(--xau);
+  background: transparent; color: var(--xau); font-size: 12px;
+}
+
 .toast {
   position: fixed; bottom: 76px; left: 50%; transform: translateX(-50%);
   background: var(--panel-2); border: 1px solid var(--line); color: var(--ink);

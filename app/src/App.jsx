@@ -4,7 +4,7 @@ import ReviewProposal from "./pages/ReviewProposal";
 import Settings from "./pages/Settings";
 import Toast from "./components/Toast";
 import SyncBanner from "./components/SyncBanner";
-import { readJsonPublic, flushPendingWrites } from "./lib/github";
+import { readJsonPublic, flushPendingWrites, REASON_LABELS } from "./lib/github";
 import { mergeFeedback, mergeDecisions, getToken, getTokenExpiry, getPendingWrites } from "./lib/storage";
 import { computeStreak } from "./lib/streak";
 
@@ -16,10 +16,15 @@ export default function App() {
   const [toastMsg, setToastMsg] = useState("");
   const [streak, setStreak] = useState(0);
   const [pendingCount, setPendingCount] = useState(() => getPendingWrites().length);
+  const [pendingReason, setPendingReason] = useState(() => getPendingWrites()[0]?.reason || null);
   const [retrying, setRetrying] = useState(false);
 
   const showToast = useCallback((msg) => setToastMsg(msg), []);
-  const refreshPending = useCallback(() => setPendingCount(getPendingWrites().length), []);
+  const refreshPending = useCallback(() => {
+    const q = getPendingWrites();
+    setPendingCount(q.length);
+    setPendingReason(q[0]?.reason || null);
+  }, []);
 
   const refreshStreak = useCallback(async () => {
     try {
@@ -55,11 +60,15 @@ export default function App() {
 
   async function handleRetrySync() {
     setRetrying(true);
-    const { succeeded, remaining } = await flushPendingWrites(token);
+    const { succeeded, deduped, remaining, firstReason } = await flushPendingWrites(token);
     setRetrying(false);
     refreshPending();
-    if (succeeded > 0) showToast(`Đã đồng bộ ${succeeded} mục${remaining ? `, còn ${remaining}` : ""}`);
-    else showToast("Vẫn chưa đồng bộ được — thử lại sau");
+    if (succeeded > 0) {
+      const dedupNote = deduped > 0 ? ` (${deduped} trùng dữ liệu — đã tự xử lý)` : "";
+      showToast(`Đã đồng bộ ${succeeded} mục${dedupNote}${remaining ? `, còn ${remaining}` : ""}`);
+    } else {
+      showToast(`Vẫn chưa đồng bộ được — ${REASON_LABELS[firstReason] || "lỗi không xác định"}`);
+    }
   }
 
   function handleTokenUpdated(newToken, newExpiry) {
@@ -75,7 +84,7 @@ export default function App() {
       </header>
 
       <main>
-        <SyncBanner count={pendingCount} onRetry={handleRetrySync} retrying={retrying} />
+        <SyncBanner count={pendingCount} reason={pendingReason} onRetry={handleRetrySync} retrying={retrying} />
 
         {screen === "home" && (
           <Home
@@ -97,7 +106,12 @@ export default function App() {
           />
         )}
         {screen === "settings" && (
-          <Settings token={token} tokenExpiry={tokenExpiry} onTokenUpdated={handleTokenUpdated} />
+          <Settings
+            token={token}
+            tokenExpiry={tokenExpiry}
+            onTokenUpdated={handleTokenUpdated}
+            refreshPending={refreshPending}
+          />
         )}
       </main>
 

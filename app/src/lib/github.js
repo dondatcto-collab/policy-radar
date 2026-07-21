@@ -13,9 +13,27 @@ import {
   DEFAULT_FEEDBACK,
   DEFAULT_DECISIONS,
   getPendingWrites,
+  setPendingWrites,
   addPendingWrite,
   removePendingWrite,
 } from "./storage";
+
+// Lý do 1 mục hàng đợi vẫn chưa đồng bộ — dùng chung cho banner (Home) và màn
+// Cài đặt để người dùng nhìn là biết chuyện gì, không chỉ "vẫn chưa đồng bộ được".
+export const REASON_LABELS = {
+  network: "lỗi mạng",
+  conflict: "lỗi 409 — đang thử lại",
+  http: "lỗi máy chủ",
+  unknown: "lỗi không xác định",
+};
+
+class SyncError extends Error {
+  constructor(message, reason) {
+    super(message);
+    this.name = "SyncError";
+    this.reason = reason; // 'network' | 'conflict' | 'http'
+  }
+}
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -71,12 +89,17 @@ export async function testConnection(token) {
 }
 
 async function getFile(path, token) {
-  const res = await fetchWithRetry(
-    `${API_BASE}/contents/${path}?ref=${GITHUB_BRANCH}`,
-    { headers: authHeaders(token) }
-  );
+  let res;
+  try {
+    res = await fetchWithRetry(
+      `${API_BASE}/contents/${path}?ref=${GITHUB_BRANCH}`,
+      { headers: authHeaders(token) }
+    );
+  } catch (e) {
+    throw new SyncError(`Lỗi mạng khi đọc ${path}: ${e.message || e}`, "network");
+  }
   if (res.status === 404) return { data: null, sha: null };
-  if (!res.ok) throw new Error(`GET ${path} thất bại: HTTP ${res.status}`);
+  if (!res.ok) throw new SyncError(`GET ${path} thất bại: HTTP ${res.status}`, "http");
   const json = await res.json();
   return { data: JSON.parse(b64DecodeUnicode(json.content)), sha: json.sha };
 }
@@ -88,11 +111,15 @@ async function putFile(path, dataObj, sha, message, token) {
     branch: GITHUB_BRANCH,
   };
   if (sha) body.sha = sha;
-  return fetchWithRetry(`${API_BASE}/contents/${path}`, {
-    method: "PUT",
-    headers: { ...authHeaders(token), "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
+  try {
+    return await fetchWithRetry(`${API_BASE}/contents/${path}`, {
+      method: "PUT",
+      headers: { ...authHeaders(token), "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+  } catch (e) {
+    throw new SyncError(`Lỗi mạng khi ghi ${path}: ${e.message || e}`, "network");
+  }
 }
 
 // Liệt kê file trong 1 thư mục (dùng để tìm các file radar-YYYY-MM-DD.json có thật,
@@ -127,50 +154,86 @@ const FILE_CONFIG = {
   decisions: { path: "feedback/decisions.json", mergeFn: mergeDecisions, defaultState: DEFAULT_DECISIONS, listKey: "entries" },
 };
 
-// GET → merge DEFAULT_STATE → append entry → PUT. 409 (sha lệch) → GET lại, retry PUT 1 lần.
+const CONFLICT_RETRY_ATTEMPTS = 3;
+
+// GET → merge DEFAULT_STATE → (a) đã có entry cùng id thì coi như đã đồng bộ,
+// không ghi lại → (b) chưa có thì append + PUT; 409 (sha lệch, máy khác vừa ghi)
+// → GET lại lấy sha mới rồi thử lại, tối đa CONFLICT_RETRY_ATTEMPTS lần → (c)
+// lỗi mạng ném thẳng SyncError(reason='network'), không lặp ở đây — để nguyên
+// trong hàng đợi, không đoán mò retry thêm cho loại lỗi không phải xung đột ghi.
 async function appendEntry(kind, entry, message, token) {
   const cfg = FILE_CONFIG[kind];
-  const attempt = async () => {
+
+  for (let attempt = 0; attempt < CONFLICT_RETRY_ATTEMPTS; attempt++) {
     const { data, sha } = await getFile(cfg.path, token);
     const merged = data ? cfg.mergeFn(data) : structuredClone(cfg.defaultState);
+
+    const alreadySynced = merged[cfg.listKey].some((e) => e.id === entry.id);
+    if (alreadySynced) {
+      return { alreadySynced: true };
+    }
+
     merged[cfg.listKey] = [...merged[cfg.listKey], entry];
     const res = await putFile(cfg.path, merged, sha, message, token);
-    return { res, merged };
-  };
+    if (res.ok) return { alreadySynced: false };
 
-  let { res } = await attempt();
-  if (res.status === 409) {
-    ({ res } = await attempt());
+    if (res.status === 409) continue; // sha vừa lệch — vòng sau GET lại sha mới
+
+    throw new SyncError(`Ghi ${cfg.path} thất bại: HTTP ${res.status}`, "http");
   }
-  if (!res.ok) {
-    throw new Error(`Ghi ${cfg.path} thất bại: HTTP ${res.status}`);
-  }
-  return true;
+
+  throw new SyncError(
+    `Ghi ${cfg.path} thất bại: xung đột ghi (409) sau ${CONFLICT_RETRY_ATTEMPTS} lần thử`,
+    "conflict"
+  );
 }
 
 // Ghi 1 entry: thử ngay; lỗi mạng/API → xếp hàng localStorage (mục 8 bước 5).
 export async function writeEntryOrQueue(kind, entry, message, token) {
   try {
-    await appendEntry(kind, entry, message, token);
-    return { queued: false };
+    const result = await appendEntry(kind, entry, message, token);
+    return { queued: false, alreadySynced: result.alreadySynced };
   } catch (e) {
-    addPendingWrite({ localId: crypto.randomUUID(), kind, entry, message, error: String(e) });
-    return { queued: true, error: String(e) };
+    addPendingWrite({
+      localId: crypto.randomUUID(),
+      kind,
+      entry,
+      message,
+      error: e.message || String(e),
+      reason: e.reason || "unknown",
+    });
+    return { queued: true, error: e.message || String(e), reason: e.reason || "unknown" };
   }
 }
 
-// Thử ghi lại toàn bộ hàng đợi (gọi khi mở app hoặc người dùng bấm "thử lại")
+// Thử ghi lại toàn bộ hàng đợi (gọi khi mở app hoặc người dùng bấm "thử lại").
+// Mỗi mục vẫn lỗi thì cập nhật reason/error mới nhất ngay trong hàng đợi (Việc 2
+// — để banner/màn Cài đặt hiện được lý do thật của lần thử gần nhất).
 export async function flushPendingWrites(token) {
   const queue = getPendingWrites();
-  let succeeded = 0;
+  let synced = 0;
+  let deduped = 0;
   for (const item of queue) {
     try {
-      await appendEntry(item.kind, item.entry, item.message, token);
+      const result = await appendEntry(item.kind, item.entry, item.message, token);
       removePendingWrite(item.localId);
-      succeeded++;
-    } catch {
-      // giữ nguyên trong hàng đợi, thử lại lần sau
+      if (result.alreadySynced) deduped++;
+      else synced++;
+    } catch (e) {
+      const reason = e.reason || "unknown";
+      const errorMsg = e.message || String(e);
+      const updated = getPendingWrites().map((w) =>
+        w.localId === item.localId ? { ...w, error: errorMsg, reason } : w
+      );
+      setPendingWrites(updated);
     }
   }
-  return { succeeded, remaining: getPendingWrites().length };
+  const remainingList = getPendingWrites();
+  return {
+    succeeded: synced + deduped,
+    synced,
+    deduped,
+    remaining: remainingList.length,
+    firstReason: remainingList[0]?.reason || null,
+  };
 }
