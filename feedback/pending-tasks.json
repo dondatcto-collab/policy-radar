@@ -94,6 +94,486 @@
       },
       "createdAt": "2026-07-20T19:29:51.567413+07:00",
       "expiresAt": "2026-07-21T15:29:51.567413+07:00"
+    },
+    {
+      "id": "task-20260721-morning",
+      "type": "morning_feedback",
+      "signalId": null,
+      "context": "Báo cáo sáng 2026-07-21: 8 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "payload": {
+        "score": null,
+        "layer": null,
+        "confidence": null,
+        "summary": "Báo cáo sáng 2026-07-21: 8 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 2.5,
+        "scoreHistory": [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          5.5,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 8.0,
+            "scoreYesterday": 4.2,
+            "delta": 3.8
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Thép và Xây dựng hạ tầng tăng điểm mạnh nhất (+5.5), cho thấy kỳ vọng vào đầu tư công và phục hồi kinh tế.\nNguyên nhân chủ yếu do tâm lý thị trường lạc quan và khả năng đẩy mạnh giải ngân đầu tư công.\nCác nhóm ngành tài chính (Chứng khoán, Ngân hàng, Bất động sản) cũng ghi nhận mức tăng tích cực, phản ánh xu hướng chung.\nThị trường có tín hiệu hồi phục đồng loạt ở nhiều ngành trọng yếu, dù không có tin tức cụ thể hỗ trợ.",
+        "aiRecommendation": "Rà soát kỹ lưỡng yếu tố cơ bản của các doanh nghiệp trong ngành tăng điểm để đánh giá triển vọng bền vững.\nTheo dõi sát sao các chính sách vĩ mô và tiến độ giải ngân đầu tư công sắp tới.",
+        "sectorNotes": {
+          "Chứng khoán": "Tâm lý thị trường tích cực và thanh khoản cải thiện thúc đẩy hoạt động giao dịch.",
+          "Ngân hàng": "Kỳ vọng vào sự ổn định vĩ mô, tăng trưởng tín dụng và chất lượng tài sản được kiểm soát.",
+          "Thép": "Hưởng lợi từ kỳ vọng đầu tư công và nhu cầu vật liệu xây dựng phục hồi.",
+          "Xây dựng hạ tầng": "Động lực mạnh mẽ từ các dự án đầu tư công và phát triển hạ tầng.",
+          "Bất động sản": "Dấu hiệu phục hồi thị trường, giảm áp lực chính sách và lãi suất hỗ trợ."
+        }
+      },
+      "createdAt": "2026-07-21T08:01:16.810017+07:00",
+      "expiresAt": "2026-07-22T04:01:16.810017+07:00"
+    },
+    {
+      "id": "task-20260721-ngan-hang",
+      "type": "review_proposal",
+      "signalId": "sig-ngan-hang",
+      "context": "Dòng tiền nhóm Ngân hàng đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — VCB (KL×2.51), MBB (KL×1.58), CTG (KL×1.5). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
+      "payload": {
+        "score": 8.0,
+        "layer": 3,
+        "confidence": "high",
+        "summary": "VCB (KL×2.51), MBB (KL×1.58), CTG (KL×1.5)",
+        "deltaVsYesterday": 2.5,
+        "scoreHistory": [
+          2.5,
+          8.0,
+          5.5,
+          2.5,
+          5.5,
+          5.5,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 8.0,
+            "scoreYesterday": 4.2,
+            "delta": 3.8
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Thép và Xây dựng hạ tầng tăng điểm mạnh nhất (+5.5), cho thấy kỳ vọng vào đầu tư công và phục hồi kinh tế.\nNguyên nhân chủ yếu do tâm lý thị trường lạc quan và khả năng đẩy mạnh giải ngân đầu tư công.\nCác nhóm ngành tài chính (Chứng khoán, Ngân hàng, Bất động sản) cũng ghi nhận mức tăng tích cực, phản ánh xu hướng chung.\nThị trường có tín hiệu hồi phục đồng loạt ở nhiều ngành trọng yếu, dù không có tin tức cụ thể hỗ trợ.",
+        "aiRecommendation": "Rà soát kỹ lưỡng yếu tố cơ bản của các doanh nghiệp trong ngành tăng điểm để đánh giá triển vọng bền vững.\nTheo dõi sát sao các chính sách vĩ mô và tiến độ giải ngân đầu tư công sắp tới.",
+        "sectorNotes": {
+          "Chứng khoán": "Tâm lý thị trường tích cực và thanh khoản cải thiện thúc đẩy hoạt động giao dịch.",
+          "Ngân hàng": "Kỳ vọng vào sự ổn định vĩ mô, tăng trưởng tín dụng và chất lượng tài sản được kiểm soát.",
+          "Thép": "Hưởng lợi từ kỳ vọng đầu tư công và nhu cầu vật liệu xây dựng phục hồi.",
+          "Xây dựng hạ tầng": "Động lực mạnh mẽ từ các dự án đầu tư công và phát triển hạ tầng.",
+          "Bất động sản": "Dấu hiệu phục hồi thị trường, giảm áp lực chính sách và lãi suất hỗ trợ."
+        }
+      },
+      "createdAt": "2026-07-21T08:01:16.810017+07:00",
+      "expiresAt": "2026-07-28T08:01:16.810017+07:00"
+    },
+    {
+      "id": "task-20260721-thep",
+      "type": "review_proposal",
+      "signalId": "sig-thep",
+      "context": "Dòng tiền nhóm Thép đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — HPG (KL×3.02). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
+      "payload": {
+        "score": 8.0,
+        "layer": 3,
+        "confidence": "high",
+        "summary": "HPG (KL×3.02)",
+        "deltaVsYesterday": 5.5,
+        "scoreHistory": [
+          2.5,
+          5.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 8.0,
+            "scoreYesterday": 4.2,
+            "delta": 3.8
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Thép và Xây dựng hạ tầng tăng điểm mạnh nhất (+5.5), cho thấy kỳ vọng vào đầu tư công và phục hồi kinh tế.\nNguyên nhân chủ yếu do tâm lý thị trường lạc quan và khả năng đẩy mạnh giải ngân đầu tư công.\nCác nhóm ngành tài chính (Chứng khoán, Ngân hàng, Bất động sản) cũng ghi nhận mức tăng tích cực, phản ánh xu hướng chung.\nThị trường có tín hiệu hồi phục đồng loạt ở nhiều ngành trọng yếu, dù không có tin tức cụ thể hỗ trợ.",
+        "aiRecommendation": "Rà soát kỹ lưỡng yếu tố cơ bản của các doanh nghiệp trong ngành tăng điểm để đánh giá triển vọng bền vững.\nTheo dõi sát sao các chính sách vĩ mô và tiến độ giải ngân đầu tư công sắp tới.",
+        "sectorNotes": {
+          "Chứng khoán": "Tâm lý thị trường tích cực và thanh khoản cải thiện thúc đẩy hoạt động giao dịch.",
+          "Ngân hàng": "Kỳ vọng vào sự ổn định vĩ mô, tăng trưởng tín dụng và chất lượng tài sản được kiểm soát.",
+          "Thép": "Hưởng lợi từ kỳ vọng đầu tư công và nhu cầu vật liệu xây dựng phục hồi.",
+          "Xây dựng hạ tầng": "Động lực mạnh mẽ từ các dự án đầu tư công và phát triển hạ tầng.",
+          "Bất động sản": "Dấu hiệu phục hồi thị trường, giảm áp lực chính sách và lãi suất hỗ trợ."
+        }
+      },
+      "createdAt": "2026-07-21T08:01:16.810017+07:00",
+      "expiresAt": "2026-07-28T08:01:16.810017+07:00"
+    },
+    {
+      "id": "task-20260721-ha-tang",
+      "type": "review_proposal",
+      "signalId": "sig-ha-tang",
+      "context": "Dòng tiền nhóm Xây dựng hạ tầng đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — VCG (KL×2.49). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
+      "payload": {
+        "score": 8.0,
+        "layer": 3,
+        "confidence": "high",
+        "summary": "VCG (KL×2.49)",
+        "deltaVsYesterday": 5.5,
+        "scoreHistory": [
+          5.5,
+          5.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 8.0,
+            "scoreYesterday": 4.2,
+            "delta": 3.8
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Thép và Xây dựng hạ tầng tăng điểm mạnh nhất (+5.5), cho thấy kỳ vọng vào đầu tư công và phục hồi kinh tế.\nNguyên nhân chủ yếu do tâm lý thị trường lạc quan và khả năng đẩy mạnh giải ngân đầu tư công.\nCác nhóm ngành tài chính (Chứng khoán, Ngân hàng, Bất động sản) cũng ghi nhận mức tăng tích cực, phản ánh xu hướng chung.\nThị trường có tín hiệu hồi phục đồng loạt ở nhiều ngành trọng yếu, dù không có tin tức cụ thể hỗ trợ.",
+        "aiRecommendation": "Rà soát kỹ lưỡng yếu tố cơ bản của các doanh nghiệp trong ngành tăng điểm để đánh giá triển vọng bền vững.\nTheo dõi sát sao các chính sách vĩ mô và tiến độ giải ngân đầu tư công sắp tới.",
+        "sectorNotes": {
+          "Chứng khoán": "Tâm lý thị trường tích cực và thanh khoản cải thiện thúc đẩy hoạt động giao dịch.",
+          "Ngân hàng": "Kỳ vọng vào sự ổn định vĩ mô, tăng trưởng tín dụng và chất lượng tài sản được kiểm soát.",
+          "Thép": "Hưởng lợi từ kỳ vọng đầu tư công và nhu cầu vật liệu xây dựng phục hồi.",
+          "Xây dựng hạ tầng": "Động lực mạnh mẽ từ các dự án đầu tư công và phát triển hạ tầng.",
+          "Bất động sản": "Dấu hiệu phục hồi thị trường, giảm áp lực chính sách và lãi suất hỗ trợ."
+        }
+      },
+      "createdAt": "2026-07-21T08:01:16.810017+07:00",
+      "expiresAt": "2026-07-28T08:01:16.810017+07:00"
+    },
+    {
+      "id": "task-20260721-bds",
+      "type": "review_proposal",
+      "signalId": "sig-bds",
+      "context": "Dòng tiền nhóm Bất động sản đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — KDH (KL×2.11), DXG (KL×2.12), PDR (KL×2.08). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
+      "payload": {
+        "score": 8.0,
+        "layer": 3,
+        "confidence": "high",
+        "summary": "KDH (KL×2.11), DXG (KL×2.12), PDR (KL×2.08)",
+        "deltaVsYesterday": 2.5,
+        "scoreHistory": [
+          2.5,
+          5.5,
+          2.5,
+          2.5,
+          8.0,
+          5.5,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 8.0,
+            "scoreYesterday": 4.2,
+            "delta": 3.8
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Thép và Xây dựng hạ tầng tăng điểm mạnh nhất (+5.5), cho thấy kỳ vọng vào đầu tư công và phục hồi kinh tế.\nNguyên nhân chủ yếu do tâm lý thị trường lạc quan và khả năng đẩy mạnh giải ngân đầu tư công.\nCác nhóm ngành tài chính (Chứng khoán, Ngân hàng, Bất động sản) cũng ghi nhận mức tăng tích cực, phản ánh xu hướng chung.\nThị trường có tín hiệu hồi phục đồng loạt ở nhiều ngành trọng yếu, dù không có tin tức cụ thể hỗ trợ.",
+        "aiRecommendation": "Rà soát kỹ lưỡng yếu tố cơ bản của các doanh nghiệp trong ngành tăng điểm để đánh giá triển vọng bền vững.\nTheo dõi sát sao các chính sách vĩ mô và tiến độ giải ngân đầu tư công sắp tới.",
+        "sectorNotes": {
+          "Chứng khoán": "Tâm lý thị trường tích cực và thanh khoản cải thiện thúc đẩy hoạt động giao dịch.",
+          "Ngân hàng": "Kỳ vọng vào sự ổn định vĩ mô, tăng trưởng tín dụng và chất lượng tài sản được kiểm soát.",
+          "Thép": "Hưởng lợi từ kỳ vọng đầu tư công và nhu cầu vật liệu xây dựng phục hồi.",
+          "Xây dựng hạ tầng": "Động lực mạnh mẽ từ các dự án đầu tư công và phát triển hạ tầng.",
+          "Bất động sản": "Dấu hiệu phục hồi thị trường, giảm áp lực chính sách và lãi suất hỗ trợ."
+        }
+      },
+      "createdAt": "2026-07-21T08:01:16.810017+07:00",
+      "expiresAt": "2026-07-28T08:01:16.810017+07:00"
     }
   ]
 }
