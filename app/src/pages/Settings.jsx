@@ -1,6 +1,14 @@
 import { useState } from "react";
-import { testConnection } from "../lib/github";
-import { setToken as saveToken, clearToken, setTokenExpiry as saveExpiry } from "../lib/storage";
+import { testConnection, REASON_LABELS } from "../lib/github";
+import {
+  setToken as saveToken,
+  clearToken,
+  setTokenExpiry as saveExpiry,
+  getPendingWrites,
+  removePendingWrite,
+} from "../lib/storage";
+
+const KIND_LABELS = { feedback: "Phản hồi tin sáng", decisions: "Quyết định đề xuất" };
 
 function daysUntil(dateStr) {
   if (!dateStr) return null;
@@ -10,11 +18,29 @@ function daysUntil(dateStr) {
   return Math.round((target - today) / 86400000);
 }
 
-export default function Settings({ token, tokenExpiry, onTokenUpdated }) {
+function queueItemDate(item) {
+  const raw = item.entry?.createdAt || item.entry?.decidedAt || "";
+  return raw.slice(0, 10) || "—";
+}
+
+export default function Settings({ token, tokenExpiry, onTokenUpdated, refreshPending }) {
   const [tokenInput, setTokenInput] = useState(token || "");
   const [expiryInput, setExpiryInput] = useState(tokenExpiry || "");
   const [status, setStatus] = useState(null); // {ok, text}
   const [checking, setChecking] = useState(false);
+  const [queueOpen, setQueueOpen] = useState(false);
+  const [queue, setQueue] = useState(() => getPendingWrites());
+
+  function toggleQueue() {
+    if (!queueOpen) setQueue(getPendingWrites());
+    setQueueOpen((v) => !v);
+  }
+
+  function handleDeleteQueueItem(localId) {
+    removePendingWrite(localId);
+    setQueue(getPendingWrites());
+    refreshPending?.();
+  }
 
   function handleSave() {
     saveToken(tokenInput.trim());
@@ -88,6 +114,35 @@ export default function Settings({ token, tokenExpiry, onTokenUpdated }) {
 
         <div style={{ height: 12 }} />
         <button className="btn-danger" onClick={handleDelete}>Xóa token</button>
+      </section>
+
+      <section className="block">
+        <button className="queue-toggle" onClick={toggleQueue}>
+          {queueOpen ? "Ẩn hàng đợi ▴" : "Xem hàng đợi ▾"}
+        </button>
+        {queueOpen && (
+          queue.length === 0 ? (
+            <div className="hint">Hàng đợi trống.</div>
+          ) : (
+            <div className="queue-list">
+              {queue.map((item) => (
+                <div key={item.localId} className="queue-item">
+                  <div className="queue-item-main">
+                    <span className="mono">{item.entry?.id || item.localId}</span>
+                    <span className="queue-item-kind">{KIND_LABELS[item.kind] || item.kind}</span>
+                  </div>
+                  <div className="queue-item-meta">
+                    {queueItemDate(item)}
+                    {item.reason ? ` · ${REASON_LABELS[item.reason] || item.reason}` : ""}
+                  </div>
+                  <button className="queue-item-delete" onClick={() => handleDeleteQueueItem(item.localId)}>
+                    Xóa mục này
+                  </button>
+                </div>
+              ))}
+            </div>
+          )
+        )}
       </section>
     </>
   );
