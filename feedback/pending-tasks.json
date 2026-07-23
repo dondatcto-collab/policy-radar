@@ -386,103 +386,6 @@
       "expiresAt": "2026-07-28T08:01:16.810017+07:00"
     },
     {
-      "id": "task-20260722-morning",
-      "type": "morning_feedback",
-      "signalId": null,
-      "context": "Báo cáo sáng 2026-07-22: 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-      "payload": {
-        "score": null,
-        "layer": null,
-        "confidence": null,
-        "summary": "Báo cáo sáng 2026-07-22: 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 0.0,
-        "scoreHistory": [
-          8.0,
-          8.0,
-          8.0,
-          8.0,
-          5.5,
-          8.0,
-          8.0
-        ],
-        "topNews": [],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          }
-        ],
-        "aiSummary": "Nhiều ngành trọng yếu như Chứng khoán, Ngân hàng, Bất động sản, Thép và Xây dựng hạ tầng đồng loạt giảm mạnh 5.5 điểm, cho thấy tâm lý thị trường tiêu cực diện rộng.\nNgược lại, ngành Dầu khí ghi nhận mức tăng trưởng nổi bật 5.5 điểm, cho thấy sự dịch chuyển dòng tiền hoặc yếu tố nội tại tích cực.\nSự phân hóa rõ rệt này diễn ra trong bối cảnh không có tin tức nổi bật được công bố, gợi ý động thái dựa trên tâm lý hoặc kỹ thuật.",
-        "aiRecommendation": "Cân nhắc giảm tỷ trọng hoặc thận trọng với các ngành đang chịu áp lực giảm điểm lớn.\nTheo dõi sát diễn biến ngành Dầu khí để đánh giá mức độ bền vững của đà tăng.",
-        "sectorNotes": {
-          "Chứng khoán": "Giảm điểm mạnh có thể phản ánh tâm lý thị trường chung tiêu cực, ảnh hưởng trực tiếp đến triển vọng ngành.",
-          "Ngân hàng": "Giảm điểm mạnh có thể do lo ngại về tình hình kinh tế vĩ mô hoặc áp lực lên lợi nhuận trong bối cảnh thị trường kém khả quan.",
-          "Thép": "Giảm điểm mạnh có thể do lo ngại về nhu cầu tiêu thụ hoặc biến động giá nguyên vật liệu đầu vào.",
-          "Xây dựng hạ tầng": "Giảm điểm mạnh có thể liên quan đến kỳ vọng về giải ngân đầu tư công hoặc triển vọng dự án hạ tầng.",
-          "Bất động sản": "Giảm điểm mạnh có thể do các yếu tố vĩ mô, chính sách hoặc tâm lý nhà đầu tư về triển vọng ngành.",
-          "Dầu khí": "Tăng điểm mạnh có thể do kỳ vọng tích cực về giá dầu thế giới hoặc yếu tố cung cầu đặc thù của ngành."
-        }
-      },
-      "createdAt": "2026-07-22T07:58:04.437042+07:00",
-      "expiresAt": "2026-07-23T03:58:04.437042+07:00"
-    },
-    {
       "id": "task-20260722-dau-khi",
       "type": "review_proposal",
       "signalId": "sig-dau-khi",
@@ -578,6 +481,101 @@
       },
       "createdAt": "2026-07-22T07:58:04.437042+07:00",
       "expiresAt": "2026-07-29T07:58:04.437042+07:00"
+    },
+    {
+      "id": "task-20260723-morning",
+      "type": "morning_feedback",
+      "signalId": null,
+      "context": "Báo cáo sáng 2026-07-23: 8 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "payload": {
+        "score": null,
+        "layer": null,
+        "confidence": null,
+        "summary": "Báo cáo sáng 2026-07-23: 8 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 0.0,
+        "scoreHistory": [
+          8.0,
+          8.0,
+          8.0,
+          5.5,
+          8.0,
+          8.0,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 5.5,
+            "scoreYesterday": 2.5,
+            "delta": 3.0
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 8.0,
+            "scoreYesterday": 8.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Ngân hàng, Thép và Bất động sản dẫn đầu đà tăng mạnh với chênh lệch điểm 5.5.\nNgành Chứng khoán cũng ghi nhận phục hồi đáng kể, tăng 3.0 điểm.\nCác ngành còn lại hầu hết duy trì trạng thái ổn định, không có biến động đáng kể.\nĐà phục hồi tập trung vào các nhóm ngành nhạy cảm với chính sách và chu kỳ kinh tế.\nSự tăng điểm diễn ra trong bối cảnh không có tin tức nổi bật cụ thể hỗ trợ trực tiếp.",
+        "aiRecommendation": "Người theo dõi nên quan sát kỹ dòng tiền và các yếu tố vĩ mô để đánh giá tính bền vững của đà tăng.\nNên đánh giá lại cơ hội đầu tư trong các ngành tăng điểm mạnh, chú trọng nền tảng cơ bản.",
+        "sectorNotes": {
+          "Chứng khoán": "Điểm số tăng cho thấy tâm lý lạc quan của nhà đầu tư và sự gia tăng thanh khoản trên thị trường.",
+          "Ngân hàng": "Điểm số cải thiện mạnh mẽ cho thấy dòng tiền quay trở lại và kỳ vọng tích cực vào triển vọng phục hồi kinh tế.",
+          "Thép": "Đà tăng điểm mạnh phản ánh kỳ vọng về sự phục hồi của nhu cầu đầu tư công và xây dựng.",
+          "Bất động sản": "Sự tăng điểm mạnh mẽ có thể đến từ kỳ vọng về các chính sách hỗ trợ và tín hiệu phục hồi của thị trường."
+        }
+      },
+      "createdAt": "2026-07-23T08:04:16.479952+07:00",
+      "expiresAt": "2026-07-24T04:04:16.479952+07:00"
     }
   ]
 }
