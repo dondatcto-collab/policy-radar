@@ -483,21 +483,21 @@
       "expiresAt": "2026-07-29T07:58:04.437042+07:00"
     },
     {
-      "id": "task-20260723-morning",
+      "id": "task-20260724-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-07-23: 8 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-07-24: 6 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-07-23: 8 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "summary": "Báo cáo sáng 2026-07-24: 6 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
         "deltaVsYesterday": 0.0,
         "scoreHistory": [
           8.0,
           8.0,
-          8.0,
           5.5,
+          8.0,
           8.0,
           8.0,
           8.0
@@ -507,20 +507,20 @@
           {
             "name": "Chứng khoán",
             "scoreToday": 5.5,
-            "scoreYesterday": 2.5,
-            "delta": 3.0
+            "scoreYesterday": 5.5,
+            "delta": 0.0
           },
           {
             "name": "Ngân hàng",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
+            "scoreToday": 5.5,
+            "scoreYesterday": 8.0,
+            "delta": -2.5
           },
           {
             "name": "Thép",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
+            "scoreToday": 5.5,
+            "scoreYesterday": 8.0,
+            "delta": -2.5
           },
           {
             "name": "Xây dựng hạ tầng",
@@ -537,8 +537,8 @@
           {
             "name": "Bất động sản",
             "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
+            "scoreYesterday": 8.0,
+            "delta": 0.0
           },
           {
             "name": "BĐS KCN",
@@ -554,9 +554,9 @@
           },
           {
             "name": "Dầu khí",
-            "scoreToday": 8.0,
+            "scoreToday": 2.5,
             "scoreYesterday": 8.0,
-            "delta": 0.0
+            "delta": -5.5
           },
           {
             "name": "Công nghệ - VT",
@@ -565,17 +565,16 @@
             "delta": 0.0
           }
         ],
-        "aiSummary": "Ngành Ngân hàng, Thép và Bất động sản dẫn đầu đà tăng mạnh với chênh lệch điểm 5.5.\nNgành Chứng khoán cũng ghi nhận phục hồi đáng kể, tăng 3.0 điểm.\nCác ngành còn lại hầu hết duy trì trạng thái ổn định, không có biến động đáng kể.\nĐà phục hồi tập trung vào các nhóm ngành nhạy cảm với chính sách và chu kỳ kinh tế.\nSự tăng điểm diễn ra trong bối cảnh không có tin tức nổi bật cụ thể hỗ trợ trực tiếp.",
-        "aiRecommendation": "Người theo dõi nên quan sát kỹ dòng tiền và các yếu tố vĩ mô để đánh giá tính bền vững của đà tăng.\nNên đánh giá lại cơ hội đầu tư trong các ngành tăng điểm mạnh, chú trọng nền tảng cơ bản.",
+        "aiSummary": "Ngành Dầu khí giảm mạnh nhất với -5.5 điểm, cho thấy áp lực bán và tâm lý bi quan.\nCác ngành Ngân hàng và Thép cũng giảm đáng kể, mỗi ngành -2.5 điểm, phản ánh sự điều chỉnh chung.\nThiếu tin tức nổi bật có thể cho thấy sự điều chỉnh nội tại của thị trường hoặc thiếu xúc tác tăng trưởng.\nCác ngành còn lại giữ điểm ổn định hoặc không có thay đổi đáng kể.",
+        "aiRecommendation": "Theo dõi chặt chẽ diễn biến giá và thanh khoản của các cổ phiếu trong ngành Dầu khí, Ngân hàng và Thép để đánh giá xu hướng.\nCân nhắc phòng ngừa rủi ro và thận trọng với các vị thế mua mới trong các nhóm ngành đang giảm điểm mạnh.",
         "sectorNotes": {
-          "Chứng khoán": "Điểm số tăng cho thấy tâm lý lạc quan của nhà đầu tư và sự gia tăng thanh khoản trên thị trường.",
-          "Ngân hàng": "Điểm số cải thiện mạnh mẽ cho thấy dòng tiền quay trở lại và kỳ vọng tích cực vào triển vọng phục hồi kinh tế.",
-          "Thép": "Đà tăng điểm mạnh phản ánh kỳ vọng về sự phục hồi của nhu cầu đầu tư công và xây dựng.",
-          "Bất động sản": "Sự tăng điểm mạnh mẽ có thể đến từ kỳ vọng về các chính sách hỗ trợ và tín hiệu phục hồi của thị trường."
+          "Ngân hàng": "Có thể do áp lực bán chốt lời hoặc tâm lý thận trọng của nhà đầu tư khi không có tin tức hỗ trợ tích cực.",
+          "Thép": "Khả năng phản ánh sự lo ngại về triển vọng nhu cầu và giá nguyên liệu, cùng với áp lực điều chỉnh chung.",
+          "Dầu khí": "Ghi nhận mức giảm mạnh nhất, cho thấy tâm lý bi quan và áp lực bán chốt lời lớn trong ngành."
         }
       },
-      "createdAt": "2026-07-23T08:04:16.479952+07:00",
-      "expiresAt": "2026-07-24T04:04:16.479952+07:00"
+      "createdAt": "2026-07-24T07:57:29.933234+07:00",
+      "expiresAt": "2026-07-25T03:57:29.933234+07:00"
     }
   ]
 }
