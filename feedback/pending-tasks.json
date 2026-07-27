@@ -483,44 +483,44 @@
       "expiresAt": "2026-07-29T07:58:04.437042+07:00"
     },
     {
-      "id": "task-20260724-morning",
+      "id": "task-20260727-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-07-24: 6 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-07-27: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-07-24: 6 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 0.0,
+        "summary": "Báo cáo sáng 2026-07-27: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
+        "deltaVsYesterday": -5.5,
         "scoreHistory": [
-          8.0,
           8.0,
           5.5,
           8.0,
           8.0,
           8.0,
-          8.0
+          8.0,
+          2.5
         ],
         "topNews": [],
         "sectors": [
           {
             "name": "Chứng khoán",
-            "scoreToday": 5.5,
+            "scoreToday": 2.5,
             "scoreYesterday": 5.5,
-            "delta": 0.0
+            "delta": -3.0
           },
           {
             "name": "Ngân hàng",
-            "scoreToday": 5.5,
-            "scoreYesterday": 8.0,
-            "delta": -2.5
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
           },
           {
             "name": "Thép",
-            "scoreToday": 5.5,
-            "scoreYesterday": 8.0,
-            "delta": -2.5
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
           },
           {
             "name": "Xây dựng hạ tầng",
@@ -536,9 +536,9 @@
           },
           {
             "name": "Bất động sản",
-            "scoreToday": 8.0,
+            "scoreToday": 2.5,
             "scoreYesterday": 8.0,
-            "delta": 0.0
+            "delta": -5.5
           },
           {
             "name": "BĐS KCN",
@@ -555,8 +555,8 @@
           {
             "name": "Dầu khí",
             "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "Công nghệ - VT",
@@ -565,16 +565,17 @@
             "delta": 0.0
           }
         ],
-        "aiSummary": "Ngành Dầu khí giảm mạnh nhất với -5.5 điểm, cho thấy áp lực bán và tâm lý bi quan.\nCác ngành Ngân hàng và Thép cũng giảm đáng kể, mỗi ngành -2.5 điểm, phản ánh sự điều chỉnh chung.\nThiếu tin tức nổi bật có thể cho thấy sự điều chỉnh nội tại của thị trường hoặc thiếu xúc tác tăng trưởng.\nCác ngành còn lại giữ điểm ổn định hoặc không có thay đổi đáng kể.",
-        "aiRecommendation": "Theo dõi chặt chẽ diễn biến giá và thanh khoản của các cổ phiếu trong ngành Dầu khí, Ngân hàng và Thép để đánh giá xu hướng.\nCân nhắc phòng ngừa rủi ro và thận trọng với các vị thế mua mới trong các nhóm ngành đang giảm điểm mạnh.",
+        "aiSummary": "*   Các ngành nhạy cảm như Bất động sản, Chứng khoán, Ngân hàng và Thép giảm điểm mạnh nhất hôm nay.\n*   Ngành Bất động sản chịu mức sụt giảm nghiêm trọng nhất (-5.5), phản ánh tâm lý lo ngại sâu sắc của nhà đầu tư.\n*   Sự sụt giảm đồng loạt của nhóm tài chính và vật liệu xây dựng cho thấy tâm lý thận trọng bao trùm thị trường.\n*   Các ngành như Xây dựng hạ tầng, Điện, Dầu khí, Công nghệ - VT và BĐS KCN giữ nguyên điểm số, ít biến động.",
+        "aiRecommendation": "*   Nhà đầu tư nên thận trọng tối đa, hạn chế giải ngân mới vào các ngành đang suy yếu và theo dõi sát diễn biến vĩ mô.\n*   Cân nhắc cơ cấu danh mục sang các ngành phòng thủ hoặc ổn định hơn trong bối cảnh thiếu thông tin hỗ trợ thị trường.",
         "sectorNotes": {
-          "Ngân hàng": "Có thể do áp lực bán chốt lời hoặc tâm lý thận trọng của nhà đầu tư khi không có tin tức hỗ trợ tích cực.",
-          "Thép": "Khả năng phản ánh sự lo ngại về triển vọng nhu cầu và giá nguyên liệu, cùng với áp lực điều chỉnh chung.",
-          "Dầu khí": "Ghi nhận mức giảm mạnh nhất, cho thấy tâm lý bi quan và áp lực bán chốt lời lớn trong ngành."
+          "Chứng khoán": "Điểm số giảm do tâm lý thị trường tiêu cực và thanh khoản sụt giảm, phản ánh lo ngại về triển vọng kinh tế.",
+          "Ngân hàng": "Chịu áp lực từ lo ngại về chất lượng tài sản, đặc biệt liên quan đến nợ xấu từ ngành Bất động sản và triển vọng tín dụng yếu.",
+          "Thép": "Sụt giảm do nhu cầu yếu từ ngành xây dựng và bất động sản đang gặp khó khăn, cùng với áp lực về giá và tồn kho.",
+          "Bất động sản": "Giảm mạnh nhất do những lo ngại dai dẳng về pháp lý, thanh khoản doanh nghiệp và khả năng hấp thụ của thị trường."
         }
       },
-      "createdAt": "2026-07-24T07:57:29.933234+07:00",
-      "expiresAt": "2026-07-25T03:57:29.933234+07:00"
+      "createdAt": "2026-07-27T08:10:58.991154+07:00",
+      "expiresAt": "2026-07-28T04:10:58.991154+07:00"
     }
   ]
 }
