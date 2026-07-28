@@ -1,11 +1,15 @@
 {
-  "ngay": "2026-07-27",
-  "cap_nhat": "2026-07-27T08:10:56.832463+07:00",
+  "ngay": "2026-07-28",
+  "cap_nhat": "2026-07-28T07:57:36.541776+07:00",
   "flags": [],
   "du_lieu_cu": false,
-  "dong_tien_noi_bat": [],
+  "dong_tien_noi_bat": [
+    "DXG (Bất động sản): KL ×1.67"
+  ],
   "tin_chinh_sach": [],
-  "de_xuat_trang_thai": [],
+  "de_xuat_trang_thai": [
+    "Bất động sản: 🟡→🟠"
+  ],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
@@ -45,9 +49,15 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "DXG",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.67
+        }
+      ]
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
