@@ -1,10 +1,11 @@
 {
-  "ngay": "2026-07-28",
-  "cap_nhat": "2026-07-28T07:57:36.541776+07:00",
+  "ngay": "2026-07-29",
+  "cap_nhat": "2026-07-29T08:00:48.174215+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "DXG (Bất động sản): KL ×1.67"
+    "VCI (Chứng khoán): KL ×1.86",
+    "PDR (Bất động sản): KL ×2.19"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
@@ -15,8 +16,14 @@
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "VCI",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.86
+        }
+      ]
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
@@ -50,12 +57,12 @@
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
+      "diem_dong_tien_max": 32,
       "ma_dang_chu_y": [
         {
-          "ma": "DXG",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.67
+          "ma": "PDR",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.19
         }
       ]
     },
