@@ -1,14 +1,15 @@
 {
-  "ngay": "2026-07-29",
-  "cap_nhat": "2026-07-29T08:00:48.174215+07:00",
+  "ngay": "2026-07-30",
+  "cap_nhat": "2026-07-30T07:56:03.121469+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "VCI (Chứng khoán): KL ×1.86",
-    "PDR (Bất động sản): KL ×2.19"
+    "HPG (Thép): KL ×1.59",
+    "VHM (Bất động sản): KL ×1.69"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
+    "Thép: 🟡→🟠",
     "Bất động sản: 🟡→🟠"
   ],
   "radar": {
@@ -16,14 +17,8 @@
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "VCI",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.86
-        }
-      ]
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
@@ -35,9 +30,15 @@
     "thep": {
       "ten": "Thép",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "HPG",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.59
+        }
+      ]
     },
     "ha-tang": {
       "ten": "Xây dựng hạ tầng",
@@ -57,12 +58,12 @@
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
+      "diem_dong_tien_max": 22,
       "ma_dang_chu_y": [
         {
-          "ma": "PDR",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.19
+          "ma": "VHM",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.69
         }
       ]
     },
