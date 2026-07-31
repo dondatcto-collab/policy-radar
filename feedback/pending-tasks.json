@@ -95,23 +95,23 @@
       "expiresAt": "2026-08-05T08:00:50.261464+07:00"
     },
     {
-      "id": "task-20260730-morning",
+      "id": "task-20260731-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-07-30: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-07-31: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-07-30: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": -2.5,
+        "summary": "Báo cáo sáng 2026-07-31: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 0.0,
         "scoreHistory": [
-          8.0,
           8.0,
           8.0,
           2.5,
           5.5,
           8.0,
+          5.5,
           5.5
         ],
         "topNews": [],
@@ -119,20 +119,20 @@
           {
             "name": "Chứng khoán",
             "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 2.5,
             "scoreYesterday": 2.5,
             "delta": 0.0
           },
           {
-            "name": "Thép",
+            "name": "Ngân hàng",
             "scoreToday": 5.5,
             "scoreYesterday": 2.5,
             "delta": 3.0
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
           },
           {
             "name": "Xây dựng hạ tầng",
@@ -148,9 +148,9 @@
           },
           {
             "name": "Bất động sản",
-            "scoreToday": 5.5,
-            "scoreYesterday": 8.0,
-            "delta": -2.5
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
           },
           {
             "name": "BĐS KCN",
@@ -177,16 +177,16 @@
             "delta": 0.0
           }
         ],
-        "aiSummary": "Ngành Chứng khoán và Bất động sản giảm điểm mạnh, cho thấy áp lực tiêu cực lên các nhóm nhạy cảm thị trường.\nNgành Thép ghi nhận mức tăng điểm tích cực nhất, tạo điểm nhấn trái chiều so với xu hướng chung.\nThị trường chứng kiến sự phân hóa rõ rệt, với chỉ ba ngành có biến động đáng kể (>1 điểm).",
-        "aiRecommendation": "Tiếp tục theo dõi sát diễn biến dòng tiền và tin tức cụ thể cho các ngành có biến động lớn để đánh giá xu hướng.\nXem xét cơ hội ở ngành Thép nếu đà tăng được xác nhận, đồng thời thận trọng với Chứng khoán và Bất động sản.",
+        "aiSummary": "Ngân hàng tăng mạnh (+3.0 điểm), cho thấy kỳ vọng tích cực của thị trường vào triển vọng ngành.\nNgành Thép và Bất động sản giảm sâu (-3.0 điểm), phản ánh tâm lý lo ngại và thách thức nội tại.\nThị trường ghi nhận sự phân hóa rõ rệt, dòng tiền có dấu hiệu dịch chuyển giữa các nhóm ngành.",
+        "aiRecommendation": "Theo dõi sát sao động thái chính sách và yếu tố vĩ mô ảnh hưởng đến ngành Ngân hàng.\nCân nhắc rủi ro và cơ cấu danh mục với các ngành đang chịu áp lực như Bất động sản và Thép.",
         "sectorNotes": {
-          "Chứng khoán": "Giảm điểm do tâm lý thận trọng của nhà đầu tư hoặc áp lực chốt lời ngắn hạn.",
-          "Thép": "Tăng điểm mạnh mẽ cho thấy dòng tiền đang hướng đến nhóm ngành vật liệu cơ bản.",
-          "Bất động sản": "Giảm điểm do áp lực điều chỉnh và tâm lý thận trọng bao trùm thị trường."
+          "Ngân hàng": "Điểm số tăng mạnh cho thấy kỳ vọng tích cực của thị trường vào triển vọng kinh doanh hoặc chính sách hỗ trợ.",
+          "Thép": "Giảm điểm sâu phản ánh lo ngại về nhu cầu tiêu thụ yếu, giá nguyên liệu hoặc cạnh tranh gay gắt.",
+          "Bất động sản": "Điểm số sụt giảm cho thấy sự e ngại về tình hình thị trường, thanh khoản và áp lực lãi suất còn lớn."
         }
       },
-      "createdAt": "2026-07-30T07:56:05.684478+07:00",
-      "expiresAt": "2026-07-31T03:56:05.684478+07:00"
+      "createdAt": "2026-07-31T08:07:40.816759+07:00",
+      "expiresAt": "2026-08-01T04:07:40.816759+07:00"
     }
   ]
 }
