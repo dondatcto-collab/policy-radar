@@ -1,16 +1,14 @@
 {
-  "ngay": "2026-07-30",
-  "cap_nhat": "2026-07-30T07:56:03.121469+07:00",
+  "ngay": "2026-07-31",
+  "cap_nhat": "2026-07-31T08:07:38.845330+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "HPG (Thép): KL ×1.59",
-    "VHM (Bất động sản): KL ×1.69"
+    "TCB (Ngân hàng): KL ×1.59"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
-    "Thép: 🟡→🟠",
-    "Bất động sản: 🟡→🟠"
+    "Ngân hàng: 🟡→🟠"
   ],
   "radar": {
     "chung-khoan": {
@@ -23,22 +21,22 @@
     "ngan-hang": {
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
-    },
-    "thep": {
-      "ten": "Thép",
-      "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
       "diem_dong_tien_max": 22,
       "ma_dang_chu_y": [
         {
-          "ma": "HPG",
+          "ma": "TCB",
           "diem_dong_tien": 22,
           "kl_ratio": 1.59
         }
       ]
+    },
+    "thep": {
+      "ten": "Thép",
+      "trang_thai_nguoi_duyet": "vang",
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "ha-tang": {
       "ten": "Xây dựng hạ tầng",
@@ -57,15 +55,9 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "VHM",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.69
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
