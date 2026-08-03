@@ -1,10 +1,11 @@
 {
-  "ngay": "2026-07-31",
-  "cap_nhat": "2026-07-31T08:07:38.845330+07:00",
+  "ngay": "2026-08-03",
+  "cap_nhat": "2026-08-03T08:08:23.967113+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "TCB (Ngân hàng): KL ×1.59"
+    "VCB (Ngân hàng): KL ×4.68",
+    "CTG (Ngân hàng): KL ×1.75"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
@@ -22,12 +23,17 @@
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
+      "diem_dong_tien_max": 32,
       "ma_dang_chu_y": [
         {
-          "ma": "TCB",
+          "ma": "VCB",
+          "diem_dong_tien": 32,
+          "kl_ratio": 4.68
+        },
+        {
+          "ma": "CTG",
           "diem_dong_tien": 22,
-          "kl_ratio": 1.59
+          "kl_ratio": 1.75
         }
       ]
     },
