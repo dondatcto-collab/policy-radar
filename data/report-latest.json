@@ -1,15 +1,20 @@
 {
-  "ngay": "2026-08-03",
-  "cap_nhat": "2026-08-03T08:08:23.967113+07:00",
-  "flags": [],
+  "ngay": "2026-08-04",
+  "cap_nhat": "2026-08-04T08:01:42.603441+07:00",
+  "flags": [
+    "⚠️ Lọc tin: Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+  ],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "VCB (Ngân hàng): KL ×4.68",
-    "CTG (Ngân hàng): KL ×1.75"
+    "MBB (Ngân hàng): KL ×1.61",
+    "HPG (Thép): KL ×1.77",
+    "FPT (Công nghệ - VT): KL ×2.11"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
-    "Ngân hàng: 🟡→🟠"
+    "Ngân hàng: 🟡→🟠",
+    "Thép: 🟡→🟠",
+    "Công nghệ - VT: 🟡→🟠"
   ],
   "radar": {
     "chung-khoan": {
@@ -23,26 +28,27 @@
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
+      "diem_dong_tien_max": 22,
       "ma_dang_chu_y": [
         {
-          "ma": "VCB",
-          "diem_dong_tien": 32,
-          "kl_ratio": 4.68
-        },
-        {
-          "ma": "CTG",
+          "ma": "MBB",
           "diem_dong_tien": 22,
-          "kl_ratio": 1.75
+          "kl_ratio": 1.61
         }
       ]
     },
     "thep": {
       "ten": "Thép",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "HPG",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.77
+        }
+      ]
     },
     "ha-tang": {
       "ten": "Xây dựng hạ tầng",
@@ -89,9 +95,15 @@
     "cong-nghe": {
       "ten": "Công nghệ - VT",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 27,
+      "ma_dang_chu_y": [
+        {
+          "ma": "FPT",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.11
+        }
+      ]
     }
   }
 }

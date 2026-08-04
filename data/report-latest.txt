@@ -1,3 +1,4 @@
-📡 RADAR 2026-08-03 — trước ATO
-💰 Dòng tiền: VCB (Ngân hàng): KL ×4.68 | CTG (Ngân hàng): KL ×1.75
-🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 (cần người duyệt)
+📡 RADAR 2026-08-04 — trước ATO
+⚠️ Lọc tin: Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
+💰 Dòng tiền: MBB (Ngân hàng): KL ×1.61 | HPG (Thép): KL ×1.77 | FPT (Công nghệ - VT): KL ×2.11
+🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Thép: 🟡→🟠 | Công nghệ - VT: 🟡→🟠 (cần người duyệt)
