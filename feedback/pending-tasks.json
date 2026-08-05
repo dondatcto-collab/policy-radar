@@ -187,26 +187,45 @@
       "expiresAt": "2026-08-10T08:08:25.832735+07:00"
     },
     {
-      "id": "task-20260804-morning",
+      "id": "task-20260805-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-08-04: 3 dòng tiền nổi bật, 1 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-08-05: 6 tin chính sách. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-08-04: 3 dòng tiền nổi bật, 1 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": -1.2,
+        "summary": "Báo cáo sáng 2026-08-05: 6 tin chính sách. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": -4.3,
         "scoreHistory": [
-          2.5,
           5.5,
           8.0,
           5.5,
           5.5,
           8.0,
-          6.8
+          6.8,
+          2.5
         ],
-        "topNews": [],
+        "topNews": [
+          {
+            "title": "Ngân hàng Nhà nước hạ lãi suất tái cấp vốn lần 2 từ 4.5% xuống 4% từ 3/4/2023.",
+            "source": "",
+            "link": "",
+            "sector": "Ngân hàng"
+          },
+          {
+            "title": "Dự án đường cao tốc Biên Hòa - Vũng Tàu khởi công trong tháng 6/2023.",
+            "source": "",
+            "link": "",
+            "sector": "Xây dựng hạ tầng"
+          },
+          {
+            "title": "Chính phủ ban hành Nghị định số 10/2023/NĐ-CP sửa đổi, bổ sung một số điều của các Nghị định hướng dẫn thi hành Luật Đất đai.",
+            "source": "",
+            "link": "",
+            "sector": "Bất động sản"
+          }
+        ],
         "sectors": [
           {
             "name": "Chứng khoán",
@@ -216,15 +235,15 @@
           },
           {
             "name": "Ngân hàng",
-            "scoreToday": 5.5,
-            "scoreYesterday": 8.0,
-            "delta": -2.5
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
           },
           {
             "name": "Thép",
-            "scoreToday": 5.5,
-            "scoreYesterday": 2.5,
-            "delta": 3.0
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
           },
           {
             "name": "Xây dựng hạ tầng",
@@ -264,21 +283,21 @@
           },
           {
             "name": "Công nghệ - VT",
-            "scoreToday": 6.8,
-            "scoreYesterday": 2.5,
-            "delta": 4.3
+            "scoreToday": 1.2,
+            "scoreYesterday": 6.8,
+            "delta": -5.6
           }
         ],
-        "aiSummary": "Ngành Công nghệ - Viễn thông tăng điểm mạnh nhất, phản ánh sự dịch chuyển dòng tiền và kỳ vọng tăng trưởng.\nNgành Thép cũng ghi nhận mức tăng đáng kể, khả năng do kỳ vọng phục hồi nhu cầu hoặc diễn biến tích cực của giá.\nNgành Ngân hàng sụt giảm điểm mạnh nhất, cho thấy áp lực điều chỉnh hoặc tâm lý thận trọng của thị trường.\nSự phân hóa rõ rệt giữa các ngành khi dòng tiền tập trung vào một số lĩnh vực có biến động lớn.",
-        "aiRecommendation": "Theo dõi sát sao các yếu tố vĩ mô và vi mô, đặc biệt là tin tức nội tại có thể ảnh hưởng đến ngành Công nghệ và Thép.\nCẩn trọng với ngành Ngân hàng, đánh giá kỹ các rủi ro tiềm ẩn về lợi nhuận và chất lượng tài sản.",
+        "aiSummary": "Ngành Công nghệ - Viễn thông giảm mạnh nhất, phản ánh tâm lý thận trọng hoặc áp lực từ các yếu tố không được đề cập.\nNgân hàng và Thép cũng giảm điểm đáng kể, có thể do lo ngại về biên lợi nhuận hoặc triển vọng kinh tế vĩ mô.\nViệc Ngân hàng Nhà nước hạ lãi suất tái cấp vốn chưa tạo hiệu ứng tích cực rõ rệt lên nhóm ngành Ngân hàng.\nTin tức hỗ trợ hạ tầng và pháp lý đất đai chưa đủ để vực dậy các ngành liên quan như Bất động sản và Xây dựng.",
+        "aiRecommendation": "Nhà đầu tư cần theo dõi sát các chính sách vĩ mô và báo cáo tài chính quý tiếp theo để đánh giá tác động thực tế.\nNên ưu tiên các doanh nghiệp có nền tảng tài chính vững chắc và khả năng chống chịu trong bối cảnh thị trường nhiều biến động.",
         "sectorNotes": {
-          "Ngân hàng": "Mức giảm mạnh cho thấy tâm lý thị trường tiêu cực hoặc áp lực bán, có thể phản ánh lo ngại về triển vọng lợi nhuận hoặc chất lượng tài sản trong bối cảnh vĩ mô hiện tại.",
-          "Thép": "Mức tăng điểm đáng kể cho thấy kỳ vọng vào sự phục hồi của nhu cầu đầu tư công và xây dựng, hoặc diễn biến tích cực của giá nguyên liệu đầu vào.",
-          "Công nghệ - VT": "Mức tăng đột biến phản ánh sự quan tâm trở lại của dòng tiền vào nhóm ngành có tốc độ tăng trưởng cao, hoặc kỳ vọng vào các đột phá công nghệ và chuyển đổi số."
+          "Ngân hàng": "Mặc dù lãi suất tái cấp vốn giảm, thị trường có thể lo ngại về áp lực lên biên lợi nhuận ròng (NIM) hoặc tín hiệu về tăng trưởng tín dụng chậm lại.",
+          "Thép": "Dù có tin tức về khởi công dự án hạ tầng, ngành vẫn chịu ảnh hưởng tiêu cực từ tổng thể kinh tế vĩ mô chưa khởi sắc và vấn đề tồn kho.",
+          "Công nghệ - VT": "Sự sụt giảm mạnh nhất có thể do lo ngại về triển vọng tăng trưởng toàn cầu, áp lực cạnh tranh hoặc tin tức riêng của các doanh nghiệp đầu ngành không được cung cấp."
         }
       },
-      "createdAt": "2026-08-04T08:01:44.711214+07:00",
-      "expiresAt": "2026-08-05T04:01:44.711214+07:00"
+      "createdAt": "2026-08-05T07:57:22.307684+07:00",
+      "expiresAt": "2026-08-06T03:57:22.307684+07:00"
     }
   ]
 }
