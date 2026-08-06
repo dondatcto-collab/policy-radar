@@ -1,67 +1,30 @@
 {
-  "ngay": "2026-08-05",
-  "cap_nhat": "2026-08-05T07:57:20.174551+07:00",
+  "ngay": "2026-08-06",
+  "cap_nhat": "2026-08-06T07:53:58.656038+07:00",
   "flags": [],
   "du_lieu_cu": false,
-  "dong_tien_noi_bat": [],
-  "tin_chinh_sach": [
-    {
-      "tieu_de": "Ngân hàng Nhà nước hạ lãi suất tái cấp vốn lần 2 từ 4.5% xuống 4% từ 3/4/2023.",
-      "nhom": "ngan-hang",
-      "muc_do": "trong-yeu",
-      "ly_do": "Thay đổi lãi suất tái cấp vốn ảnh hưởng trực tiếp đến chi phí vốn và chính sách tiền tệ của hệ thống ngân hàng.",
-      "loai": "ban-hanh",
-      "link": ""
-    },
-    {
-      "tieu_de": "Dự án đường cao tốc Biên Hòa - Vũng Tàu khởi công trong tháng 6/2023.",
-      "nhom": "ha-tang",
-      "muc_do": "trong-yeu",
-      "ly_do": "Dự án hạ tầng lớn khởi công sẽ thúc đẩy hoạt động xây dựng và tiêu thụ vật liệu, tạo động lực tăng trưởng cho nhóm hạ tầng và VLXD.",
-      "loai": "thuc-thi",
-      "link": ""
-    },
-    {
-      "tieu_de": "Chính phủ ban hành Nghị định số 10/2023/NĐ-CP sửa đổi, bổ sung một số điều của các Nghị định hướng dẫn thi hành Luật Đất đai.",
-      "nhom": "bds",
-      "muc_do": "trong-yeu",
-      "ly_do": "Nghị định mới trực tiếp tháo gỡ vướng mắc pháp lý liên quan đến đất đai, tác động lớn đến thị trường bất động sản.",
-      "loai": "ban-hanh",
-      "link": ""
-    },
-    {
-      "tieu_de": "Bộ Xây dựng lấy ý kiến về dự thảo Luật Nhà ở (sửa đổi).",
-      "nhom": "bds",
-      "muc_do": "theo-doi",
-      "ly_do": "Dự thảo luật có thể định hình lại khung pháp lý cho thị trường nhà ở trong tương lai, cần theo dõi quá trình thông qua.",
-      "loai": "du-thao",
-      "link": ""
-    },
-    {
-      "tieu_de": "Hàng loạt dự án điện mặt trời được chấp thuận chủ trương đầu tư tại Ninh Thuận.",
-      "nhom": "dien",
-      "muc_do": "trong-yeu",
-      "ly_do": "Việc chấp thuận chủ trương đầu tư mở ra cơ hội lớn cho các doanh nghiệp trong ngành điện và các ngành liên quan.",
-      "loai": "thuc-thi",
-      "link": ""
-    },
-    {
-      "tieu_de": "Bộ Tài chính đề xuất giảm thuế VAT 2% đối với nhiều mặt hàng, dự kiến áp dụng từ tháng 7/2023.",
-      "nhom": "khac",
-      "muc_do": "theo-doi",
-      "ly_do": "Chính sách giảm thuế VAT có thể kích thích tiêu dùng và gián tiếp hỗ trợ nhiều ngành kinh tế, bao gồm cả các ngành được theo dõi.",
-      "loai": "du-thao",
-      "link": ""
-    }
+  "dong_tien_noi_bat": [
+    "HCM (Chứng khoán): KL ×1.6",
+    "VHM (Bất động sản): KL ×2.45",
+    "NLG (Bất động sản): KL ×1.58"
   ],
-  "de_xuat_trang_thai": [],
+  "tin_chinh_sach": [],
+  "de_xuat_trang_thai": [
+    "Bất động sản: 🟡→🟠"
+  ],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "HCM",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.6
+        }
+      ]
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
@@ -94,9 +57,20 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 27,
+      "ma_dang_chu_y": [
+        {
+          "ma": "VHM",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.45
+        },
+        {
+          "ma": "NLG",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.58
+        }
+      ]
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
@@ -123,7 +97,7 @@
       "ten": "Công nghệ - VT",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "vang",
-      "diem_dong_tien_max": 5,
+      "diem_dong_tien_max": 10,
       "ma_dang_chu_y": []
     }
   }
