@@ -1,12 +1,10 @@
 {
-  "ngay": "2026-08-06",
-  "cap_nhat": "2026-08-06T07:53:58.656038+07:00",
+  "ngay": "2026-08-07",
+  "cap_nhat": "2026-08-07T08:52:14.247507+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "HCM (Chứng khoán): KL ×1.6",
-    "VHM (Bất động sản): KL ×2.45",
-    "NLG (Bất động sản): KL ×1.58"
+    "VHM (Bất động sản): KL ×3.51"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
@@ -17,14 +15,8 @@
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "HCM",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.6
-        }
-      ]
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
@@ -63,12 +55,7 @@
         {
           "ma": "VHM",
           "diem_dong_tien": 27,
-          "kl_ratio": 2.45
-        },
-        {
-          "ma": "NLG",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.58
+          "kl_ratio": 3.51
         }
       ]
     },
