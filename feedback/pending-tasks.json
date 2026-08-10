@@ -94,38 +94,57 @@
       "expiresAt": "2026-08-10T08:08:25.832735+07:00"
     },
     {
-      "id": "task-20260807-morning",
+      "id": "task-20260810-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-08-07: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-08-10: 6 tin chính sách, 4 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-08-07: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "summary": "Báo cáo sáng 2026-08-10: 6 tin chính sách, 4 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
         "deltaVsYesterday": 0.0,
         "scoreHistory": [
-          5.5,
           5.5,
           8.0,
           6.8,
           2.5,
           6.8,
+          6.8,
           6.8
         ],
-        "topNews": [],
+        "topNews": [
+          {
+            "title": "ADB sẽ cung cấp 200 triệu USD hỗ trợ tín dụng cho doanh nghiệp vừa và nhỏ của Việt Nam",
+            "source": "",
+            "link": "",
+            "sector": "Ngân hàng"
+          },
+          {
+            "title": "Chính phủ ban hành quy hoạch điện VIII, ưu tiên phát triển năng lượng tái tạo",
+            "source": "",
+            "link": "",
+            "sector": "Điện"
+          },
+          {
+            "title": "Bộ Xây dựng trình Chính phủ về đề án phát triển 1 triệu căn nhà ở xã hội",
+            "source": "",
+            "link": "",
+            "sector": "Bất động sản"
+          }
+        ],
         "sectors": [
           {
             "name": "Chứng khoán",
             "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "Ngân hàng",
-            "scoreToday": 2.5,
+            "scoreToday": 5.5,
             "scoreYesterday": 2.5,
-            "delta": 0.0
+            "delta": 3.0
           },
           {
             "name": "Thép",
@@ -147,9 +166,9 @@
           },
           {
             "name": "Bất động sản",
-            "scoreToday": 6.8,
+            "scoreToday": 5.5,
             "scoreYesterday": 6.8,
-            "delta": 0.0
+            "delta": -1.3
           },
           {
             "name": "BĐS KCN",
@@ -165,25 +184,23 @@
           },
           {
             "name": "Dầu khí",
-            "scoreToday": 2.5,
+            "scoreToday": 6.8,
             "scoreYesterday": 2.5,
-            "delta": 0.0
+            "delta": 4.3
           },
           {
             "name": "Công nghệ - VT",
-            "scoreToday": 2.5,
+            "scoreToday": 1.2,
             "scoreYesterday": 2.5,
-            "delta": 0.0
+            "delta": -1.3
           }
         ],
-        "aiSummary": "Ngành Chứng khoán ghi nhận mức sụt giảm điểm mạnh nhất với chênh lệch -3.0.\nSự biến động này cho thấy tâm lý thị trường đang chuyển biến tiêu cực đối với ngành Chứng khoán.\nViệc thiếu vắng tin tức hỗ trợ nổi bật có thể góp phần vào sự thận trọng của nhà đầu tư.\nCác ngành còn lại giữ vững điểm số, cho thấy sự ổn định tương đối trong bối cảnh chung.",
-        "aiRecommendation": "Theo dõi sát sao diễn biến thị trường chung và các yếu tố vĩ mô ảnh hưởng đến ngành Chứng khoán.\nCân nhắc chiến lược phòng thủ hoặc nắm giữ tiền mặt trong giai đoạn thị trường biến động.",
-        "sectorNotes": {
-          "Chứng khoán": "Điểm số giảm sâu phản ánh tâm lý thị trường tiêu cực và thiếu vắng thông tin hỗ trợ tích cực."
-        }
+        "aiSummary": null,
+        "aiRecommendation": null,
+        "sectorNotes": null
       },
-      "createdAt": "2026-08-07T08:52:17.193857+07:00",
-      "expiresAt": "2026-08-08T04:52:17.193857+07:00"
+      "createdAt": "2026-08-10T07:01:02.163098+07:00",
+      "expiresAt": "2026-08-11T03:01:02.163098+07:00"
     }
   ]
 }
