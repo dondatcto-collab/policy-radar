@@ -2,19 +2,112 @@
   "schemaVersion": "1.0",
   "tasks": [
     {
-      "id": "task-20260803-ngan-hang",
+      "id": "task-20260811-morning",
+      "type": "morning_feedback",
+      "signalId": null,
+      "context": "Báo cáo sáng 2026-08-11: 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "payload": {
+        "score": null,
+        "layer": null,
+        "confidence": null,
+        "summary": "Báo cáo sáng 2026-08-11: 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 1.2,
+        "scoreHistory": [
+          8.0,
+          6.8,
+          2.5,
+          6.8,
+          6.8,
+          6.8,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 6.8,
+            "scoreYesterday": 6.8,
+            "delta": 0.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 1.2,
+            "scoreYesterday": 1.2,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Bất động sản giảm mạnh nhất (-3.0 điểm), cho thấy áp lực tiêu cực đáng kể.\nNgành Ngân hàng có mức tăng điểm tích cực nhất (+2.5 điểm), cải thiện vị thế.\nBất động sản là ngành có biến động lớn nhất về trị tuyệt đối trong ngày hôm nay.\nCác ngành còn lại duy trì sự ổn định, không có thay đổi đáng kể về điểm số.\nKhông có tin tức nổi bật cụ thể được công bố để giải thích chi tiết cho các biến động này.",
+        "aiRecommendation": "Người theo dõi nên tìm hiểu sâu hơn về các yếu tố nội tại và vĩ mô ảnh hưởng đến ngành Bất động sản và Ngân hàng.\nCần thận trọng với ngành Bất động sản và tiếp tục quan sát ngành Ngân hàng để xác định xu hướng bền vững.",
+        "sectorNotes": {
+          "Ngân hàng": "tăng điểm nhờ kỳ vọng vào sự phục hồi kinh tế hoặc thông tin hỗ trợ từ chính sách vĩ mô.",
+          "Bất động sản": "giảm mạnh do áp lực từ việc siết tín dụng, lãi suất hoặc lo ngại về thanh khoản thị trường."
+        }
+      },
+      "createdAt": "2026-08-11T07:02:32.667665+07:00",
+      "expiresAt": "2026-08-12T03:02:32.667665+07:00"
+    },
+    {
+      "id": "task-20260811-ngan-hang",
       "type": "review_proposal",
       "signalId": "sig-ngan-hang",
-      "context": "Dòng tiền nhóm Ngân hàng đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — VCB (KL×4.68), CTG (KL×1.75). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
+      "context": "Dòng tiền nhóm Ngân hàng đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — TCB (KL×2.66), MBB (KL×1.98). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
       "payload": {
         "score": 8.0,
         "layer": 3,
         "confidence": "high",
-        "summary": "VCB (KL×4.68), CTG (KL×1.75)",
+        "summary": "TCB (KL×2.66), MBB (KL×1.98)",
         "deltaVsYesterday": 2.5,
         "scoreHistory": [
+          8.0,
           5.5,
-          2.5,
           2.5,
           2.5,
           2.5,
@@ -56,119 +149,8 @@
           {
             "name": "Bất động sản",
             "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          }
-        ],
-        "aiSummary": "Ngành Ngân hàng có sự tăng điểm mạnh nhất, từ 5.5 lên 8.0.\nĐây là ngành duy nhất ghi nhận biến động điểm số đáng kể trong ngày.\nNguyên nhân cụ thể của sự tăng điểm ngành Ngân hàng không được tin tức nổi bật làm rõ.\nCác ngành còn lại đều duy trì điểm số ổn định, không có chênh lệch đáng kể.",
-        "aiRecommendation": "Theo dõi sát sao diễn biến và các thông tin tiềm ẩn của ngành Ngân hàng để nắm bắt xu hướng.\nCần thận trọng đánh giá trước mọi quyết định liên quan đến ngành Ngân hàng do thiếu tin tức cụ thể hỗ trợ.",
-        "sectorNotes": {
-          "Ngân hàng": "điểm số tăng mạnh 2.5 điểm nhưng không có tin tức nổi bật nào được cung cấp để giải thích nguyên nhân cụ thể."
-        }
-      },
-      "createdAt": "2026-08-03T08:08:25.832735+07:00",
-      "expiresAt": "2026-08-10T08:08:25.832735+07:00"
-    },
-    {
-      "id": "task-20260810-morning",
-      "type": "morning_feedback",
-      "signalId": null,
-      "context": "Báo cáo sáng 2026-08-10: 6 tin chính sách, 4 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-      "payload": {
-        "score": null,
-        "layer": null,
-        "confidence": null,
-        "summary": "Báo cáo sáng 2026-08-10: 6 tin chính sách, 4 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 0.0,
-        "scoreHistory": [
-          5.5,
-          8.0,
-          6.8,
-          2.5,
-          6.8,
-          6.8,
-          6.8
-        ],
-        "topNews": [
-          {
-            "title": "ADB sẽ cung cấp 200 triệu USD hỗ trợ tín dụng cho doanh nghiệp vừa và nhỏ của Việt Nam",
-            "source": "",
-            "link": "",
-            "sector": "Ngân hàng"
-          },
-          {
-            "title": "Chính phủ ban hành quy hoạch điện VIII, ưu tiên phát triển năng lượng tái tạo",
-            "source": "",
-            "link": "",
-            "sector": "Điện"
-          },
-          {
-            "title": "Bộ Xây dựng trình Chính phủ về đề án phát triển 1 triệu căn nhà ở xã hội",
-            "source": "",
-            "link": "",
-            "sector": "Bất động sản"
-          }
-        ],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 5.5,
-            "scoreYesterday": 2.5,
-            "delta": 3.0
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 5.5,
-            "scoreYesterday": 6.8,
-            "delta": -1.3
+            "scoreYesterday": 5.5,
+            "delta": -3.0
           },
           {
             "name": "BĐS KCN",
@@ -185,22 +167,25 @@
           {
             "name": "Dầu khí",
             "scoreToday": 6.8,
-            "scoreYesterday": 2.5,
-            "delta": 4.3
+            "scoreYesterday": 6.8,
+            "delta": 0.0
           },
           {
             "name": "Công nghệ - VT",
             "scoreToday": 1.2,
-            "scoreYesterday": 2.5,
-            "delta": -1.3
+            "scoreYesterday": 1.2,
+            "delta": 0.0
           }
         ],
-        "aiSummary": null,
-        "aiRecommendation": null,
-        "sectorNotes": null
+        "aiSummary": "Ngành Bất động sản giảm mạnh nhất (-3.0 điểm), cho thấy áp lực tiêu cực đáng kể.\nNgành Ngân hàng có mức tăng điểm tích cực nhất (+2.5 điểm), cải thiện vị thế.\nBất động sản là ngành có biến động lớn nhất về trị tuyệt đối trong ngày hôm nay.\nCác ngành còn lại duy trì sự ổn định, không có thay đổi đáng kể về điểm số.\nKhông có tin tức nổi bật cụ thể được công bố để giải thích chi tiết cho các biến động này.",
+        "aiRecommendation": "Người theo dõi nên tìm hiểu sâu hơn về các yếu tố nội tại và vĩ mô ảnh hưởng đến ngành Bất động sản và Ngân hàng.\nCần thận trọng với ngành Bất động sản và tiếp tục quan sát ngành Ngân hàng để xác định xu hướng bền vững.",
+        "sectorNotes": {
+          "Ngân hàng": "tăng điểm nhờ kỳ vọng vào sự phục hồi kinh tế hoặc thông tin hỗ trợ từ chính sách vĩ mô.",
+          "Bất động sản": "giảm mạnh do áp lực từ việc siết tín dụng, lãi suất hoặc lo ngại về thanh khoản thị trường."
+        }
       },
-      "createdAt": "2026-08-10T07:01:02.163098+07:00",
-      "expiresAt": "2026-08-11T03:01:02.163098+07:00"
+      "createdAt": "2026-08-11T07:02:32.667665+07:00",
+      "expiresAt": "2026-08-18T07:02:32.667665+07:00"
     }
   ]
 }
