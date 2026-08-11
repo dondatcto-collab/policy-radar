@@ -1,67 +1,16 @@
 {
-  "ngay": "2026-08-10",
-  "cap_nhat": "2026-08-10T07:01:00.415664+07:00",
+  "ngay": "2026-08-11",
+  "cap_nhat": "2026-08-11T07:02:30.635027+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "TCB (Ngân hàng): KL ×1.78",
-    "VHM (Bất động sản): KL ×1.65",
-    "GAS (Dầu khí): KL ×1.7",
-    "BSR (Dầu khí): KL ×2.18"
+    "TCB (Ngân hàng): KL ×2.66",
+    "MBB (Ngân hàng): KL ×1.98",
+    "GAS (Dầu khí): KL ×2.27"
   ],
-  "tin_chinh_sach": [
-    {
-      "tieu_de": "ADB sẽ cung cấp 200 triệu USD hỗ trợ tín dụng cho doanh nghiệp vừa và nhỏ của Việt Nam",
-      "nhom": "ngan-hang",
-      "muc_do": "theo-doi",
-      "ly_do": "Khoản hỗ trợ tín dụng từ ADB tác động đến nguồn vốn cho vay và thanh khoản của hệ thống ngân hàng.",
-      "loai": "khac",
-      "link": ""
-    },
-    {
-      "tieu_de": "Chính phủ ban hành quy hoạch điện VIII, ưu tiên phát triển năng lượng tái tạo",
-      "nhom": "dien",
-      "muc_do": "trong-yeu",
-      "ly_do": "Quy hoạch điện VIII là định hướng chiến lược dài hạn, tác động sâu rộng đến ngành điện và cơ cấu đầu tư.",
-      "loai": "ban-hanh",
-      "link": ""
-    },
-    {
-      "tieu_de": "Bộ Xây dựng trình Chính phủ về đề án phát triển 1 triệu căn nhà ở xã hội",
-      "nhom": "bds",
-      "muc_do": "theo-doi",
-      "ly_do": "Đề án nhà ở xã hội có tiềm năng tạo ra nhu cầu lớn cho ngành bất động sản và vật liệu xây dựng.",
-      "loai": "du-thao",
-      "link": ""
-    },
-    {
-      "tieu_de": "Thủ tướng yêu cầu Bộ Công an xử lý nghiêm các vi phạm trên thị trường chứng khoán",
-      "nhom": "chung-khoan",
-      "muc_do": "trong-yeu",
-      "ly_do": "Chỉ đạo xử lý vi phạm trên thị trường chứng khoán nhằm tăng cường minh bạch và niềm tin của nhà đầu tư.",
-      "loai": "thuc-thi",
-      "link": ""
-    },
-    {
-      "tieu_de": "Ngân hàng Nhà nước giảm lãi suất điều hành lần thứ tư trong năm",
-      "nhom": "ngan-hang",
-      "muc_do": "trong-yeu",
-      "ly_do": "Quyết định giảm lãi suất điều hành tác động trực tiếp đến chi phí vốn của ngân hàng và hoạt động tín dụng toàn hệ thống.",
-      "loai": "ban-hanh",
-      "link": ""
-    },
-    {
-      "tieu_de": "Bộ Tài chính đề xuất miễn, giảm thuế cho các dự án công nghệ cao",
-      "nhom": "cong-nghe",
-      "muc_do": "theo-doi",
-      "ly_do": "Đề xuất ưu đãi thuế có thể khuyến khích đầu tư và phát triển các dự án công nghệ cao.",
-      "loai": "du-thao",
-      "link": ""
-    }
-  ],
+  "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
     "Ngân hàng: 🟡→🟠",
-    "Bất động sản: 🟡→🟠",
     "Dầu khí: 🟡→🟠"
   ],
   "radar": {
@@ -76,12 +25,17 @@
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
+      "diem_dong_tien_max": 32,
       "ma_dang_chu_y": [
         {
           "ma": "TCB",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.66
+        },
+        {
+          "ma": "MBB",
           "diem_dong_tien": 22,
-          "kl_ratio": 1.78
+          "kl_ratio": 1.98
         }
       ]
     },
@@ -109,15 +63,9 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "VHM",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.65
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
@@ -141,13 +89,8 @@
       "ma_dang_chu_y": [
         {
           "ma": "GAS",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.7
-        },
-        {
-          "ma": "BSR",
           "diem_dong_tien": 27,
-          "kl_ratio": 2.18
+          "kl_ratio": 2.27
         }
       ]
     },
