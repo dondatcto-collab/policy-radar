@@ -2,99 +2,6 @@
   "schemaVersion": "1.0",
   "tasks": [
     {
-      "id": "task-20260811-morning",
-      "type": "morning_feedback",
-      "signalId": null,
-      "context": "Báo cáo sáng 2026-08-11: 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-      "payload": {
-        "score": null,
-        "layer": null,
-        "confidence": null,
-        "summary": "Báo cáo sáng 2026-08-11: 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 1.2,
-        "scoreHistory": [
-          8.0,
-          6.8,
-          2.5,
-          6.8,
-          6.8,
-          6.8,
-          8.0
-        ],
-        "topNews": [],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 8.0,
-            "scoreYesterday": 5.5,
-            "delta": 2.5
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 6.8,
-            "scoreYesterday": 6.8,
-            "delta": 0.0
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 1.2,
-            "scoreYesterday": 1.2,
-            "delta": 0.0
-          }
-        ],
-        "aiSummary": "Ngành Bất động sản giảm mạnh nhất (-3.0 điểm), cho thấy áp lực tiêu cực đáng kể.\nNgành Ngân hàng có mức tăng điểm tích cực nhất (+2.5 điểm), cải thiện vị thế.\nBất động sản là ngành có biến động lớn nhất về trị tuyệt đối trong ngày hôm nay.\nCác ngành còn lại duy trì sự ổn định, không có thay đổi đáng kể về điểm số.\nKhông có tin tức nổi bật cụ thể được công bố để giải thích chi tiết cho các biến động này.",
-        "aiRecommendation": "Người theo dõi nên tìm hiểu sâu hơn về các yếu tố nội tại và vĩ mô ảnh hưởng đến ngành Bất động sản và Ngân hàng.\nCần thận trọng với ngành Bất động sản và tiếp tục quan sát ngành Ngân hàng để xác định xu hướng bền vững.",
-        "sectorNotes": {
-          "Ngân hàng": "tăng điểm nhờ kỳ vọng vào sự phục hồi kinh tế hoặc thông tin hỗ trợ từ chính sách vĩ mô.",
-          "Bất động sản": "giảm mạnh do áp lực từ việc siết tín dụng, lãi suất hoặc lo ngại về thanh khoản thị trường."
-        }
-      },
-      "createdAt": "2026-08-11T07:02:32.667665+07:00",
-      "expiresAt": "2026-08-12T03:02:32.667665+07:00"
-    },
-    {
       "id": "task-20260811-ngan-hang",
       "type": "review_proposal",
       "signalId": "sig-ngan-hang",
@@ -186,6 +93,100 @@
       },
       "createdAt": "2026-08-11T07:02:32.667665+07:00",
       "expiresAt": "2026-08-18T07:02:32.667665+07:00"
+    },
+    {
+      "id": "task-20260812-morning",
+      "type": "morning_feedback",
+      "signalId": null,
+      "context": "Báo cáo sáng 2026-08-12: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
+      "payload": {
+        "score": null,
+        "layer": null,
+        "confidence": null,
+        "summary": "Báo cáo sáng 2026-08-12: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
+        "deltaVsYesterday": -3.8,
+        "scoreHistory": [
+          6.8,
+          2.5,
+          6.8,
+          6.8,
+          6.8,
+          8.0,
+          4.2
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 4.2,
+            "scoreYesterday": 2.5,
+            "delta": 1.7
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 2.5,
+            "scoreYesterday": 8.0,
+            "delta": -5.5
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 6.8,
+            "delta": -4.3
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 1.2,
+            "scoreYesterday": 1.2,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngân hàng là ngành biến động mạnh nhất, giảm 5.5 điểm, cho thấy tâm lý tiêu cực rõ rệt.\nNgành Dầu khí cũng giảm sâu 4.3 điểm, phản ánh sự sụt giảm đáng kể.\nNgành Chứng khoán là điểm sáng duy nhất, tăng 1.7 điểm, có thể do dòng tiền dịch chuyển.\nCác biến động trên diễn ra trong bối cảnh không có tin tức nổi bật cụ thể, cho thấy sự thay đổi đến từ tâm lý thị trường hoặc điều chỉnh nội tại.",
+        "aiRecommendation": "Theo dõi sát sao Ngân hàng và Dầu khí, chuẩn bị cho kịch bản biến động tiếp theo do thiếu thông tin hỗ trợ rõ ràng.\nNghiên cứu cơ hội tiềm năng ở ngành Chứng khoán, nhưng cần đánh giá kỹ lưỡng nguyên nhân tăng điểm.",
+        "sectorNotes": {
+          "Chứng khoán": "Tăng điểm do dòng tiền tìm đến kênh đầu tư hoặc kỳ vọng về chính sách hỗ trợ thị trường.",
+          "Ngân hàng": "Giảm điểm mạnh nhất, có thể do áp lực bán giải chấp hoặc lo ngại về triển vọng kinh tế vĩ mô chưa rõ ràng.",
+          "Dầu khí": "Giảm điểm sâu, có thể do biến động giá dầu thế giới không thuận lợi hoặc lo ngại về nhu cầu tiêu thụ."
+        }
+      },
+      "createdAt": "2026-08-12T07:08:39.738826+07:00",
+      "expiresAt": "2026-08-13T03:08:39.738826+07:00"
     }
   ]
 }
