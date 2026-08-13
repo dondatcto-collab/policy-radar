@@ -95,38 +95,38 @@
       "expiresAt": "2026-08-18T07:02:32.667665+07:00"
     },
     {
-      "id": "task-20260812-morning",
+      "id": "task-20260813-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-08-12: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
+      "context": "Báo cáo sáng 2026-08-13: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-08-12: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
-        "deltaVsYesterday": -3.8,
+        "summary": "Báo cáo sáng 2026-08-13: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
+        "deltaVsYesterday": -1.7,
         "scoreHistory": [
-          6.8,
           2.5,
           6.8,
           6.8,
           6.8,
           8.0,
-          4.2
+          4.2,
+          2.5
         ],
         "topNews": [],
         "sectors": [
           {
             "name": "Chứng khoán",
-            "scoreToday": 4.2,
-            "scoreYesterday": 2.5,
-            "delta": 1.7
+            "scoreToday": 2.5,
+            "scoreYesterday": 4.2,
+            "delta": -1.7
           },
           {
             "name": "Ngân hàng",
             "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "Thép",
@@ -167,26 +167,25 @@
           {
             "name": "Dầu khí",
             "scoreToday": 2.5,
-            "scoreYesterday": 6.8,
-            "delta": -4.3
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "Công nghệ - VT",
-            "scoreToday": 1.2,
+            "scoreToday": 2.5,
             "scoreYesterday": 1.2,
-            "delta": 0.0
+            "delta": 1.3
           }
         ],
-        "aiSummary": "Ngân hàng là ngành biến động mạnh nhất, giảm 5.5 điểm, cho thấy tâm lý tiêu cực rõ rệt.\nNgành Dầu khí cũng giảm sâu 4.3 điểm, phản ánh sự sụt giảm đáng kể.\nNgành Chứng khoán là điểm sáng duy nhất, tăng 1.7 điểm, có thể do dòng tiền dịch chuyển.\nCác biến động trên diễn ra trong bối cảnh không có tin tức nổi bật cụ thể, cho thấy sự thay đổi đến từ tâm lý thị trường hoặc điều chỉnh nội tại.",
-        "aiRecommendation": "Theo dõi sát sao Ngân hàng và Dầu khí, chuẩn bị cho kịch bản biến động tiếp theo do thiếu thông tin hỗ trợ rõ ràng.\nNghiên cứu cơ hội tiềm năng ở ngành Chứng khoán, nhưng cần đánh giá kỹ lưỡng nguyên nhân tăng điểm.",
+        "aiSummary": "Ngành Chứng khoán giảm mạnh nhất với mức chênh lệch -1.7 điểm.\nNgành Công nghệ - VT ghi nhận sự tăng trưởng tích cực, tăng 1.3 điểm.\nCác ngành còn lại giữ nguyên mức điểm hoặc không có biến động đáng kể.\nBiến động này diễn ra trong bối cảnh không có tin tức nổi bật được cung cấp.",
+        "aiRecommendation": "Người theo dõi nên tìm hiểu sâu nguyên nhân sụt giảm của ngành Chứng khoán và theo dõi các yếu tố hỗ trợ ngành Công nghệ - VT.\nCân nhắc chiến lược phòng thủ hoặc chọn lọc kỹ lưỡng cổ phiếu trong các ngành có biến động.",
         "sectorNotes": {
-          "Chứng khoán": "Tăng điểm do dòng tiền tìm đến kênh đầu tư hoặc kỳ vọng về chính sách hỗ trợ thị trường.",
-          "Ngân hàng": "Giảm điểm mạnh nhất, có thể do áp lực bán giải chấp hoặc lo ngại về triển vọng kinh tế vĩ mô chưa rõ ràng.",
-          "Dầu khí": "Giảm điểm sâu, có thể do biến động giá dầu thế giới không thuận lợi hoặc lo ngại về nhu cầu tiêu thụ."
+          "Chứng khoán": "Điểm số giảm mạnh cho thấy tâm lý tiêu cực hoặc áp lực bán gia tăng, có thể do lo ngại vĩ mô hoặc yếu tố nội tại ngành.",
+          "Công nghệ - VT": "Đà tăng trưởng tích cực phản ánh kỳ vọng vào xu hướng phát triển công nghệ hoặc kết quả kinh doanh khả quan của các doanh nghiệp."
         }
       },
-      "createdAt": "2026-08-12T07:08:39.738826+07:00",
-      "expiresAt": "2026-08-13T03:08:39.738826+07:00"
+      "createdAt": "2026-08-13T07:09:24.461088+07:00",
+      "expiresAt": "2026-08-14T03:09:24.461088+07:00"
     }
   ]
 }
