@@ -1,6 +1,6 @@
 {
-  "ngay": "2026-08-12",
-  "cap_nhat": "2026-08-12T07:08:37.285417+07:00",
+  "ngay": "2026-08-13",
+  "cap_nhat": "2026-08-13T07:09:21.471892+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [],
@@ -11,7 +11,7 @@
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 17,
+      "diem_dong_tien_max": 10,
       "ma_dang_chu_y": []
     },
     "ngan-hang": {
@@ -74,7 +74,7 @@
       "ten": "Công nghệ - VT",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "vang",
-      "diem_dong_tien_max": 5,
+      "diem_dong_tien_max": 10,
       "ma_dang_chu_y": []
     }
   }
