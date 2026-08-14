@@ -1,11 +1,64 @@
 {
-  "ngay": "2026-08-13",
-  "cap_nhat": "2026-08-13T07:09:21.471892+07:00",
+  "ngay": "2026-08-14",
+  "cap_nhat": "2026-08-14T07:09:48.899005+07:00",
   "flags": [],
   "du_lieu_cu": false,
-  "dong_tien_noi_bat": [],
-  "tin_chinh_sach": [],
-  "de_xuat_trang_thai": [],
+  "dong_tien_noi_bat": [
+    "TCB (Ngân hàng): KL ×2.34"
+  ],
+  "tin_chinh_sach": [
+    {
+      "tieu_de": "Tin chính thức Bộ Kế hoạch và Đầu tư: Mở rộng gói tín dụng hỗ trợ lãi suất cho dự án năng lượng tái tạo và môi trường",
+      "nhom": "dien",
+      "muc_do": "trong-yeu",
+      "ly_do": "Ảnh hưởng trực tiếp đến nguồn vốn và hiệu quả đầu tư cho các dự án điện tái tạo.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Đề xuất tăng cường giám sát thị trường trái phiếu doanh nghiệp, bảo vệ nhà đầu tư",
+      "nhom": "chung-khoan",
+      "muc_do": "theo-doi",
+      "ly_do": "Có thể ảnh hưởng đến hoạt động phát hành và giao dịch trái phiếu, tác động lên ngành ngân hàng và chứng khoán.",
+      "loai": "du-thao",
+      "link": ""
+    },
+    {
+      "tieu_de": "TP.HCM chấp thuận quy hoạch chi tiết 1/500 cho dự án khu đô thị sinh thái mới",
+      "nhom": "bds",
+      "muc_do": "trong-yeu",
+      "ly_do": "Mở đường cho việc triển khai dự án bất động sản lớn tại TP.HCM.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Bộ Xây dựng trình Quốc hội dự thảo Luật Nhà ở (sửa đổi) với nhiều điểm mới về sở hữu căn hộ",
+      "nhom": "bds",
+      "muc_do": "trong-yeu",
+      "ly_do": "Quy định mới về sở hữu căn hộ có thể tác động lớn đến thị trường bất động sản.",
+      "loai": "du-thao",
+      "link": ""
+    },
+    {
+      "tieu_de": "EVN đề xuất tăng giá điện bán lẻ bình quân thêm 5% từ tháng sau",
+      "nhom": "dien",
+      "muc_do": "trong-yeu",
+      "ly_do": "Tăng giá điện có thể cải thiện doanh thu cho ngành điện và ảnh hưởng đến chi phí sản xuất toàn nền kinh tế.",
+      "loai": "du-thao",
+      "link": ""
+    },
+    {
+      "tieu_de": "Ngân hàng Nhà nước ban hành Thông tư mới hướng dẫn hoạt động cho vay, kiểm soát nợ xấu",
+      "nhom": "ngan-hang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Tác động trực tiếp đến hoạt động tín dụng, quản lý rủi ro và lợi nhuận của các ngân hàng.",
+      "loai": "ban-hanh",
+      "link": ""
+    }
+  ],
+  "de_xuat_trang_thai": [
+    "Ngân hàng: 🟡→🟠"
+  ],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
@@ -17,9 +70,15 @@
     "ngan-hang": {
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 27,
+      "ma_dang_chu_y": [
+        {
+          "ma": "TCB",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.34
+        }
+      ]
     },
     "thep": {
       "ten": "Thép",
