@@ -1,7 +1,10 @@
 {
-  "ngay": "2026-08-17",
-  "cap_nhat": "2026-08-17T06:47:48.207415+07:00",
-  "flags": [],
+  "ngay": "2026-08-18",
+  "cap_nhat": "2026-08-18T06:49:27.636684+07:00",
+  "flags": [
+    "⚠️ 43 mã lỗi dữ liệu: SSI: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a; VCI: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a; HCM: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a...",
+    "⚠️ Chỉ lấy được 0/43 mã — KHÔNG ra quyết định dựa trên radar hôm nay"
+  ],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
     "SSI (Chứng khoán): KL ×1.56",
