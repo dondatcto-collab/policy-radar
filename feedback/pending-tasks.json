@@ -95,15 +95,15 @@
       "expiresAt": "2026-08-18T07:02:32.667665+07:00"
     },
     {
-      "id": "task-20260817-morning",
+      "id": "task-20260818-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-08-17: 4 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-08-18: 4 dòng tiền nổi bật, 2 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-08-17: 4 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "summary": "Báo cáo sáng 2026-08-18: 4 dòng tiền nổi bật, 2 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
         "deltaVsYesterday": 0.0,
         "scoreHistory": [
           6.8,
@@ -177,17 +177,17 @@
             "delta": 0.0
           }
         ],
-        "aiSummary": "Ngành Bất động sản và Chứng khoán tăng điểm mạnh, cho thấy dòng tiền quay trở lại nhóm tài sản rủi ro.\nNgành Ngân hàng và Xây dựng hạ tầng giảm sâu, có thể do áp lực nợ xấu và lo ngại giải ngân đầu tư công.\nThị trường có sự phân hóa mạnh giữa các nhóm ngành, đặc biệt nhóm Bất động sản dẫn dắt đà tăng.\nKhông có tin tức nổi bật, cho thấy sự biến động chủ yếu đến từ tâm lý thị trường và sự dịch chuyển dòng tiền nội bộ.",
-        "aiRecommendation": "Theo dõi sát diễn biến dòng tiền và các thông tin vĩ mô ảnh hưởng đến Bất động sản và Ngân hàng.\nCân nhắc cơ cấu lại danh mục, có thể chốt lời ở ngành tăng mạnh hoặc hạn chế giải ngân vào ngành giảm sâu.",
+        "aiSummary": "Ngành Bất động sản và Chứng khoán tăng điểm mạnh, dẫn dắt sự lạc quan trở lại thị trường.\nNgành Ngân hàng và Xây dựng hạ tầng giảm điểm sâu, phản ánh lo ngại về tình hình tài chính.\nThị trường chứng kiến sự phân hóa rõ rệt giữa các nhóm ngành nhạy cảm.\nThiếu tin tức cụ thể, nhưng điểm số cho thấy kỳ vọng định giá lại các nhóm ngành.",
+        "aiRecommendation": "Theo dõi sát diễn biến dòng tiền và các chính sách vĩ mô ảnh hưởng đến Bất động sản và Ngân hàng.\nCân nhắc cơ cấu lại danh mục, ưu tiên các ngành có xu hướng tăng điểm rõ ràng.",
         "sectorNotes": {
-          "Chứng khoán": "Tăng điểm mạnh, có thể do dòng tiền quay trở lại thị trường và kỳ vọng thanh khoản cải thiện.",
-          "Ngân hàng": "Giảm sâu nhất, có thể do áp lực nợ xấu, lo ngại về tăng trưởng tín dụng hoặc chính sách tiền tệ.",
-          "Xây dựng hạ tầng": "Giảm điểm, có thể do lo ngại về tiến độ giải ngân đầu tư công hoặc áp lực chi phí.",
-          "Bất động sản": "Tăng điểm mạnh nhất, có thể do kỳ vọng vào chính sách hỗ trợ và sự phục hồi của thị trường."
+          "Chứng khoán": "Tăng điểm mạnh do kỳ vọng thị trường hồi phục và thanh khoản cải thiện.",
+          "Ngân hàng": "Giảm điểm sâu do lo ngại về áp lực nợ xấu hoặc lợi nhuận quý.",
+          "Xây dựng hạ tầng": "Giảm điểm do thị trường thận trọng về tiến độ giải ngân đầu tư công hoặc dòng tiền doanh nghiệp.",
+          "Bất động sản": "Tăng điểm mạnh, phản ánh kỳ vọng chính sách hỗ trợ và tín hiệu hồi phục thị trường."
         }
       },
-      "createdAt": "2026-08-17T06:47:50.631377+07:00",
-      "expiresAt": "2026-08-18T02:47:50.631377+07:00"
+      "createdAt": "2026-08-18T06:49:29.838728+07:00",
+      "expiresAt": "2026-08-19T02:49:29.838728+07:00"
     }
   ]
 }
