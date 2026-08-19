@@ -1,6 +1,6 @@
 {
-  "ngay": "2026-08-19",
-  "cap_nhat": "2026-08-19T06:49:21.011590+07:00",
+  "ngay": "2026-08-20",
+  "cap_nhat": "2026-08-20T06:49:45.657683+07:00",
   "flags": [
     "⚠️ 43 mã lỗi dữ liệu: SSI: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a; VCI: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a; HCM: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a...",
     "⚠️ Chỉ lấy được 0/43 mã — KHÔNG ra quyết định dựa trên radar hôm nay"
