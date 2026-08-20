@@ -2,15 +2,15 @@
   "schemaVersion": "1.0",
   "tasks": [
     {
-      "id": "task-20260820-morning",
+      "id": "task-20260821-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-08-20: 4 dòng tiền nổi bật, 2 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-08-21: 4 dòng tiền nổi bật, 2 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-08-20: 4 dòng tiền nổi bật, 2 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "summary": "Báo cáo sáng 2026-08-21: 4 dòng tiền nổi bật, 2 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
         "deltaVsYesterday": 0.0,
         "scoreHistory": [
           6.8,
@@ -84,17 +84,17 @@
             "delta": 0.0
           }
         ],
-        "aiSummary": "Dòng tiền đang có sự dịch chuyển mạnh mẽ từ nhóm Ngân hàng và Xây dựng hạ tầng sang Bất động sản và Chứng khoán.\nNgành Bất động sản và Chứng khoán dẫn dắt đà tăng điểm hôm nay với mức tăng ấn tượng.\nNgành Ngân hàng và Xây dựng hạ tầng chịu áp lực bán mạnh, cho thấy sự thoái lui của nhà đầu tư.\nThị trường chứng kiến sự phân hóa rõ rệt, với đa số ngành còn lại duy trì trạng thái ổn định.",
-        "aiRecommendation": "Theo dõi sát sao diễn biến dòng tiền và tin tức vĩ mô liên quan đến các ngành biến động mạnh.\nCân nhắc cơ cấu lại danh mục, ưu tiên các ngành có xu hướng tăng điểm tích cực và tiềm năng phục hồi.",
+        "aiSummary": "Ngành Bất động sản và Chứng khoán ghi nhận mức tăng điểm mạnh trong hôm nay.\nNgược lại, ngành Ngân hàng và Xây dựng hạ tầng chịu áp lực giảm điểm đáng kể.\nThị trường có sự phân hóa rõ rệt, dòng tiền có xu hướng luân chuyển giữa các nhóm ngành.\nThiếu tin tức nổi bật, các biến động điểm số chủ yếu phản ánh tâm lý và kỳ vọng của thị trường.",
+        "aiRecommendation": "Theo dõi sát sao các ngành có biến động lớn để nắm bắt xu hướng tiếp theo.\nNghiên cứu thêm các yếu tố vĩ mô và vi mô để làm rõ nguyên nhân sâu xa của sự thay đổi điểm số.",
         "sectorNotes": {
-          "Chứng khoán": "Tăng điểm mạnh nhờ dòng tiền dịch chuyển và kỳ vọng vào sự sôi động trở lại của thị trường chung.",
-          "Ngân hàng": "Giảm mạnh do áp lực từ vấn đề nợ xấu tiềm ẩn và dòng tiền có xu hướng luân chuyển sang các kênh đầu tư khác.",
-          "Xây dựng hạ tầng": "Giảm điểm do có thể liên quan đến kỳ vọng giải ngân đầu tư công chậm hơn dự kiến hoặc dòng tiền rút ra.",
-          "Bất động sản": "Tăng vọt nhờ kỳ vọng vào các chính sách tháo gỡ khó khăn và dòng tiền bắt đáy hoặc tìm kiếm cơ hội phục hồi."
+          "Chứng khoán": "Tăng điểm mạnh, cho thấy tâm lý lạc quan và dòng tiền tích cực đổ vào thị trường.",
+          "Ngân hàng": "Giảm điểm sâu, phản ánh lo ngại của thị trường về triển vọng hoặc các yếu tố bất lợi.",
+          "Xây dựng hạ tầng": "Giảm điểm, thể hiện sự thận trọng của thị trường đối với tiềm năng tăng trưởng ngành.",
+          "Bất động sản": "Tăng điểm mạnh, cho thấy kỳ vọng phục hồi hoặc thông tin hỗ trợ tiềm năng cho ngành."
         }
       },
-      "createdAt": "2026-08-20T06:49:47.812575+07:00",
-      "expiresAt": "2026-08-21T02:49:47.812575+07:00"
+      "createdAt": "2026-08-21T06:52:12.406846+07:00",
+      "expiresAt": "2026-08-22T02:52:12.406846+07:00"
     }
   ]
 }
