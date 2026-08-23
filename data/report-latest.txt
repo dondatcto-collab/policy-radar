@@ -1,5 +1,2 @@
-📡 RADAR 2026-08-21 — trước ATO
-⚠️ 43 mã lỗi dữ liệu: SSI: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a; VCI: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a; HCM: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a...
-⚠️ Chỉ lấy được 0/43 mã — KHÔNG ra quyết định dựa trên radar hôm nay
-💰 Dòng tiền: SSI (Chứng khoán): KL ×1.56 | VHM (Bất động sản): KL ×1.9 | NLG (Bất động sản): KL ×1.65
-🔺 Máy đề xuất: Bất động sản: 🟡→🟠 (cần người duyệt)
+📡 RADAR 2026-08-24 — trước ATO
+💰 Dòng tiền: HCM (Chứng khoán): KL ×1.51 | VND (Chứng khoán): KL ×2.09

@@ -1,32 +1,30 @@
 {
-  "ngay": "2026-08-21",
-  "cap_nhat": "2026-08-21T06:52:10.590634+07:00",
-  "flags": [
-    "⚠️ 43 mã lỗi dữ liệu: SSI: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a; VCI: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a; HCM: UnboundLocalError: cannot access local variable 'hosting_service' where it is not associated with a...",
-    "⚠️ Chỉ lấy được 0/43 mã — KHÔNG ra quyết định dựa trên radar hôm nay"
-  ],
+  "ngay": "2026-08-24",
+  "cap_nhat": "2026-08-24T06:48:29.716683+07:00",
+  "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "SSI (Chứng khoán): KL ×1.56",
-    "VHM (Bất động sản): KL ×1.9",
-    "NLG (Bất động sản): KL ×1.65",
-    "DXG (Bất động sản): KL ×2.58"
+    "HCM (Chứng khoán): KL ×1.51",
+    "VND (Chứng khoán): KL ×2.09"
   ],
   "tin_chinh_sach": [],
-  "de_xuat_trang_thai": [
-    "Bất động sản: 🟡→🟠"
-  ],
+  "de_xuat_trang_thai": [],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
+      "diem_dong_tien_max": 32,
       "ma_dang_chu_y": [
         {
-          "ma": "SSI",
+          "ma": "HCM",
           "diem_dong_tien": 22,
-          "kl_ratio": 1.56
+          "kl_ratio": 1.51
+        },
+        {
+          "ma": "VND",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.09
         }
       ]
     },
@@ -61,25 +59,9 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 27,
-      "ma_dang_chu_y": [
-        {
-          "ma": "VHM",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.9
-        },
-        {
-          "ma": "NLG",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.65
-        },
-        {
-          "ma": "DXG",
-          "diem_dong_tien": 27,
-          "kl_ratio": 2.58
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
@@ -106,7 +88,7 @@
       "ten": "Công nghệ - VT",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
+      "diem_dong_tien_max": 5,
       "ma_dang_chu_y": []
     }
   }
