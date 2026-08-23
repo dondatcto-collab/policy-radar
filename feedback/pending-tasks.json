@@ -2,38 +2,38 @@
   "schemaVersion": "1.0",
   "tasks": [
     {
-      "id": "task-20260821-morning",
+      "id": "task-20260824-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-08-21: 4 dòng tiền nổi bật, 2 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-08-24: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-08-21: 4 dòng tiền nổi bật, 2 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 0.0,
+        "summary": "Báo cáo sáng 2026-08-24: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 1.2,
         "scoreHistory": [
-          6.8,
           6.8,
           8.0,
           4.2,
           2.5,
           6.8,
-          6.8
+          6.8,
+          8.0
         ],
         "topNews": [],
         "sectors": [
           {
             "name": "Chứng khoán",
-            "scoreToday": 5.5,
-            "scoreYesterday": 2.5,
-            "delta": 3.0
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
           },
           {
             "name": "Ngân hàng",
             "scoreToday": 2.5,
-            "scoreYesterday": 6.8,
-            "delta": -4.3
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "Thép",
@@ -44,8 +44,8 @@
           {
             "name": "Xây dựng hạ tầng",
             "scoreToday": 0.0,
-            "scoreYesterday": 2.5,
-            "delta": -2.5
+            "scoreYesterday": 0.0,
+            "delta": 0.0
           },
           {
             "name": "VLXD",
@@ -55,9 +55,9 @@
           },
           {
             "name": "Bất động sản",
-            "scoreToday": 6.8,
-            "scoreYesterday": 2.5,
-            "delta": 4.3
+            "scoreToday": 2.5,
+            "scoreYesterday": 6.8,
+            "delta": -4.3
           },
           {
             "name": "BĐS KCN",
@@ -79,22 +79,21 @@
           },
           {
             "name": "Công nghệ - VT",
-            "scoreToday": 2.5,
+            "scoreToday": 1.2,
             "scoreYesterday": 2.5,
-            "delta": 0.0
+            "delta": -1.3
           }
         ],
-        "aiSummary": "Ngành Bất động sản và Chứng khoán ghi nhận mức tăng điểm mạnh trong hôm nay.\nNgược lại, ngành Ngân hàng và Xây dựng hạ tầng chịu áp lực giảm điểm đáng kể.\nThị trường có sự phân hóa rõ rệt, dòng tiền có xu hướng luân chuyển giữa các nhóm ngành.\nThiếu tin tức nổi bật, các biến động điểm số chủ yếu phản ánh tâm lý và kỳ vọng của thị trường.",
-        "aiRecommendation": "Theo dõi sát sao các ngành có biến động lớn để nắm bắt xu hướng tiếp theo.\nNghiên cứu thêm các yếu tố vĩ mô và vi mô để làm rõ nguyên nhân sâu xa của sự thay đổi điểm số.",
+        "aiSummary": "Ngành Bất động sản suy giảm mạnh nhất (-4.3), cho thấy sự gia tăng lo ngại về thanh khoản và môi trường lãi suất.\nNgành Chứng khoán tăng điểm mạnh (+2.5), phản ánh kỳ vọng tích cực vào dòng tiền và triển vọng thị trường chung.\nNgành Công nghệ - Viễn thông giảm nhẹ (-1.3), có thể do áp lực chốt lời hoặc tâm lý thận trọng.\nCác nhóm ngành còn lại duy trì sự ổn định, không có biến động đáng kể trong phiên giao dịch.",
+        "aiRecommendation": "Cần đặc biệt thận trọng với nhóm ngành Bất động sản, theo dõi sát các chính sách và diễn biến thanh khoản.\nXem xét cơ hội trong nhóm ngành Chứng khoán khi dòng tiền có dấu hiệu tích cực và tâm lý thị trường cải thiện.",
         "sectorNotes": {
-          "Chứng khoán": "Tăng điểm mạnh, cho thấy tâm lý lạc quan và dòng tiền tích cực đổ vào thị trường.",
-          "Ngân hàng": "Giảm điểm sâu, phản ánh lo ngại của thị trường về triển vọng hoặc các yếu tố bất lợi.",
-          "Xây dựng hạ tầng": "Giảm điểm, thể hiện sự thận trọng của thị trường đối với tiềm năng tăng trưởng ngành.",
-          "Bất động sản": "Tăng điểm mạnh, cho thấy kỳ vọng phục hồi hoặc thông tin hỗ trợ tiềm năng cho ngành."
+          "Chứng khoán": "Tăng điểm mạnh do kỳ vọng về sự phục hồi của thị trường và dòng tiền tìm kiếm cơ hội đầu tư.",
+          "Bất động sản": "Giảm sâu do tiếp tục chịu áp lực từ các vấn đề pháp lý, lãi suất cao và khó khăn về thanh khoản.",
+          "Công nghệ - VT": "Giảm điểm nhẹ, có thể do áp lực chốt lời ngắn hạn hoặc sự điều chỉnh của thị trường sau một giai đoạn tăng trưởng."
         }
       },
-      "createdAt": "2026-08-21T06:52:12.406846+07:00",
-      "expiresAt": "2026-08-22T02:52:12.406846+07:00"
+      "createdAt": "2026-08-24T06:48:32.316267+07:00",
+      "expiresAt": "2026-08-25T02:48:32.316267+07:00"
     }
   ]
 }
