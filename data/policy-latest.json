@@ -1,6 +1,87 @@
 {
-  "ngay": "2026-08-24",
-  "cap_nhat": "2026-08-24T06:48:29.676533+07:00",
+  "ngay": "2026-08-25",
+  "cap_nhat": "2026-08-25T06:49:30.753816+07:00",
   "tong_tin_quet": 0,
-  "tin_lien_quan": []
+  "tin_lien_quan": [
+    {
+      "tieu_de": "Chính phủ ban hành Nghị định mới về phát triển nhà ở xã hội, có hiệu lực từ quý 3",
+      "nhom": "bds",
+      "muc_do": "trong-yeu",
+      "ly_do": "Nghị định mới của Chính phủ có hiệu lực sẽ định hình lại chính sách, quy trình và ưu đãi cho phân khúc nhà ở xã hội, tác động trực tiếp đến các doanh nghiệp BĐS.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Bộ GTVT đẩy mạnh giải ngân vốn đầu tư công cho dự án cao tốc Bắc-Nam giai đoạn 2",
+      "nhom": "ha-tang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Việc đẩy mạnh giải ngân vốn đầu tư công cho cao tốc Bắc-Nam trực tiếp tạo công việc, tăng cầu cho các doanh nghiệp xây dựng hạ tầng và vật liệu xây dựng.",
+      "loai": "thuc-thi",
+      "link": ""
+    },
+    {
+      "tieu_de": "Ngân hàng Nhà nước ra thông tư hướng dẫn cho vay phục vụ đời sống, tín dụng tiêu dùng",
+      "nhom": "ngan-hang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Thông tư của NHNN sẽ định hướng và điều chỉnh hoạt động cho vay tiêu dùng, ảnh hưởng đến tăng trưởng tín dụng và lợi nhuận của các ngân hàng.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Giá điện dự kiến điều chỉnh tăng 5% từ tháng 5 theo cơ chế thị trường",
+      "nhom": "dien",
+      "muc_do": "trong-yeu",
+      "ly_do": "Việc điều chỉnh giá điện tăng sẽ tác động trực tiếp đến doanh thu của các doanh nghiệp điện và chi phí sản xuất của các ngành công nghiệp sử dụng điện năng lớn.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Quy hoạch tổng thể phát triển kinh tế - xã hội vùng Đồng bằng sông Cửu Long đến 2030 được phê duyệt",
+      "nhom": "ha-tang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Quy hoạch vùng được phê duyệt sẽ định hướng phát triển hạ tầng, kinh tế và đô thị, mở ra cơ hội đầu tư lớn cho các ngành xây dựng, bất động sản và KCN tại khu vực.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Đề xuất áp dụng cơ chế giá trần cho một số mặt hàng vật liệu xây dựng",
+      "nhom": "vlxd",
+      "muc_do": "trong-yeu",
+      "ly_do": "Đề xuất cơ chế giá trần cho VLXD có thể ảnh hưởng lớn đến biên lợi nhuận của các doanh nghiệp sản xuất VLXD và chi phí đầu vào của các dự án xây dựng, bất động sản.",
+      "loai": "du-thao",
+      "link": ""
+    },
+    {
+      "tieu_de": "Quốc hội thông qua Luật Đất đai (sửa đổi) với nhiều điểm mới về định giá đất",
+      "nhom": "bds",
+      "muc_do": "trong-yeu",
+      "ly_do": "Luật Đất đai sửa đổi với các quy định mới về định giá đất và quyền sử dụng đất sẽ có tác động sâu rộng đến cơ cấu chi phí, quy trình phát triển và giá trị tài sản của các doanh nghiệp bất động sản.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Bộ Tài chính đề xuất sửa đổi Thông tư về giao dịch ký quỹ (margin) chứng khoán",
+      "nhom": "chung-khoan",
+      "muc_do": "trong-yeu",
+      "ly_do": "Việc sửa đổi Thông tư về giao dịch ký quỹ có thể ảnh hưởng lớn đến thanh khoản, rủi ro và hoạt động kinh doanh của các công ty chứng khoán, cũng như hành vi của nhà đầu tư.",
+      "loai": "du-thao",
+      "link": ""
+    },
+    {
+      "tieu_de": "Điện lực Việt Nam sẽ đầu tư lớn vào năng lượng tái tạo trong 5 năm tới",
+      "nhom": "dien",
+      "muc_do": "trong-yeu",
+      "ly_do": "Kế hoạch đầu tư lớn vào năng lượng tái tạo của Điện lực Việt Nam sẽ thúc đẩy nhu cầu thiết bị, vật liệu và công nghệ, tạo cơ hội phát triển cho các doanh nghiệp trong ngành điện và các ngành liên quan.",
+      "loai": "khac",
+      "link": ""
+    },
+    {
+      "tieu_de": "Thủ tướng phê duyệt Quy hoạch điện VIII: ưu tiên phát triển nguồn năng lượng sạch",
+      "nhom": "dien",
+      "muc_do": "trong-yeu",
+      "ly_do": "Quy hoạch điện VIII được phê duyệt sẽ định hướng rõ ràng cho phát triển nguồn điện, đặc biệt ưu tiên năng lượng sạch, tạo khuôn khổ pháp lý và cơ hội đầu tư cho ngành điện và các ngành hỗ trợ.",
+      "loai": "ban-hanh",
+      "link": ""
+    }
+  ]
 }

@@ -1,32 +1,75 @@
 {
-  "ngay": "2026-08-24",
-  "cap_nhat": "2026-08-24T06:48:29.716683+07:00",
+  "ngay": "2026-08-25",
+  "cap_nhat": "2026-08-25T06:49:30.792096+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "HCM (Chứng khoán): KL ×1.51",
-    "VND (Chứng khoán): KL ×2.09"
+    "KDH (Bất động sản): KL ×2.29",
+    "DXG (Bất động sản): KL ×2.32",
+    "PVS (Dầu khí): KL ×2.11",
+    "PVD (Dầu khí): KL ×2.59"
   ],
-  "tin_chinh_sach": [],
-  "de_xuat_trang_thai": [],
+  "tin_chinh_sach": [
+    {
+      "tieu_de": "Chính phủ ban hành Nghị định mới về phát triển nhà ở xã hội, có hiệu lực từ quý 3",
+      "nhom": "bds",
+      "muc_do": "trong-yeu",
+      "ly_do": "Nghị định mới của Chính phủ có hiệu lực sẽ định hình lại chính sách, quy trình và ưu đãi cho phân khúc nhà ở xã hội, tác động trực tiếp đến các doanh nghiệp BĐS.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Bộ GTVT đẩy mạnh giải ngân vốn đầu tư công cho dự án cao tốc Bắc-Nam giai đoạn 2",
+      "nhom": "ha-tang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Việc đẩy mạnh giải ngân vốn đầu tư công cho cao tốc Bắc-Nam trực tiếp tạo công việc, tăng cầu cho các doanh nghiệp xây dựng hạ tầng và vật liệu xây dựng.",
+      "loai": "thuc-thi",
+      "link": ""
+    },
+    {
+      "tieu_de": "Ngân hàng Nhà nước ra thông tư hướng dẫn cho vay phục vụ đời sống, tín dụng tiêu dùng",
+      "nhom": "ngan-hang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Thông tư của NHNN sẽ định hướng và điều chỉnh hoạt động cho vay tiêu dùng, ảnh hưởng đến tăng trưởng tín dụng và lợi nhuận của các ngân hàng.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Giá điện dự kiến điều chỉnh tăng 5% từ tháng 5 theo cơ chế thị trường",
+      "nhom": "dien",
+      "muc_do": "trong-yeu",
+      "ly_do": "Việc điều chỉnh giá điện tăng sẽ tác động trực tiếp đến doanh thu của các doanh nghiệp điện và chi phí sản xuất của các ngành công nghiệp sử dụng điện năng lớn.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Quy hoạch tổng thể phát triển kinh tế - xã hội vùng Đồng bằng sông Cửu Long đến 2030 được phê duyệt",
+      "nhom": "ha-tang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Quy hoạch vùng được phê duyệt sẽ định hướng phát triển hạ tầng, kinh tế và đô thị, mở ra cơ hội đầu tư lớn cho các ngành xây dựng, bất động sản và KCN tại khu vực.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Đề xuất áp dụng cơ chế giá trần cho một số mặt hàng vật liệu xây dựng",
+      "nhom": "vlxd",
+      "muc_do": "trong-yeu",
+      "ly_do": "Đề xuất cơ chế giá trần cho VLXD có thể ảnh hưởng lớn đến biên lợi nhuận của các doanh nghiệp sản xuất VLXD và chi phí đầu vào của các dự án xây dựng, bất động sản.",
+      "loai": "du-thao",
+      "link": ""
+    }
+  ],
+  "de_xuat_trang_thai": [
+    "Bất động sản: 🟡→🟠",
+    "Dầu khí: 🟡→🟠"
+  ],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
-      "ma_dang_chu_y": [
-        {
-          "ma": "HCM",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.51
-        },
-        {
-          "ma": "VND",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.09
-        }
-      ]
+      "diem_dong_tien_max": 17,
+      "ma_dang_chu_y": []
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
@@ -59,9 +102,20 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 32,
+      "ma_dang_chu_y": [
+        {
+          "ma": "KDH",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.29
+        },
+        {
+          "ma": "DXG",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.32
+        }
+      ]
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
@@ -80,15 +134,26 @@
     "dau-khi": {
       "ten": "Dầu khí",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 27,
+      "ma_dang_chu_y": [
+        {
+          "ma": "PVS",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.11
+        },
+        {
+          "ma": "PVD",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.59
+        }
+      ]
     },
     "cong-nghe": {
       "ten": "Công nghệ - VT",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "vang",
-      "diem_dong_tien_max": 5,
+      "diem_dong_tien_max": 10,
       "ma_dang_chu_y": []
     }
   }
