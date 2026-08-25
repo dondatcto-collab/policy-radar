@@ -2,120 +2,6 @@
   "schemaVersion": "1.0",
   "tasks": [
     {
-      "id": "task-20260825-morning",
-      "type": "morning_feedback",
-      "signalId": null,
-      "context": "Báo cáo sáng 2026-08-25: 6 tin chính sách, 4 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-      "payload": {
-        "score": null,
-        "layer": null,
-        "confidence": null,
-        "summary": "Báo cáo sáng 2026-08-25: 6 tin chính sách, 4 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 0.0,
-        "scoreHistory": [
-          8.0,
-          4.2,
-          2.5,
-          6.8,
-          6.8,
-          8.0,
-          8.0
-        ],
-        "topNews": [
-          {
-            "title": "Chính phủ ban hành Nghị định mới về phát triển nhà ở xã hội, có hiệu lực từ quý 3",
-            "source": "",
-            "link": "",
-            "sector": "Bất động sản"
-          },
-          {
-            "title": "Bộ GTVT đẩy mạnh giải ngân vốn đầu tư công cho dự án cao tốc Bắc-Nam giai đoạn 2",
-            "source": "",
-            "link": "",
-            "sector": "Xây dựng hạ tầng"
-          },
-          {
-            "title": "Ngân hàng Nhà nước ra thông tư hướng dẫn cho vay phục vụ đời sống, tín dụng tiêu dùng",
-            "source": "",
-            "link": "",
-            "sector": "Ngân hàng"
-          }
-        ],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 4.2,
-            "scoreYesterday": 8.0,
-            "delta": -3.8
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 6.8,
-            "scoreYesterday": 2.5,
-            "delta": 4.3
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 2.5,
-            "scoreYesterday": 1.2,
-            "delta": 1.3
-          }
-        ],
-        "aiSummary": "Bất động sản tăng mạnh nhất (+5.5), được hỗ trợ bởi kỳ vọng vào Nghị định mới về nhà ở xã hội.\nChứng khoán giảm sâu nhất (-3.8), có thể do áp lực chốt lời sau đà tăng mạnh hôm qua.\nDầu khí ghi nhận mức tăng đáng kể (+4.3), phản ánh triển vọng tích cực hoặc diễn biến giá dầu toàn cầu.\nNgành Công nghệ - VT cũng tăng điểm nhẹ (+1.3), duy trì xu hướng tăng trưởng.",
-        "aiRecommendation": "Theo dõi sát các chính sách hỗ trợ ngành Bất động sản để tìm cơ hội đầu tư vào các phân khúc phù hợp.\nThận trọng với các ngành có biến động lớn, ưu tiên đánh giá yếu tố cơ bản và xu hướng dài hạn.",
-        "sectorNotes": {
-          "Chứng khoán": "Điểm số giảm mạnh có thể do áp lực điều chỉnh và chốt lời sau mức tăng cao từ phiên trước.",
-          "Bất động sản": "Tăng điểm mạnh nhờ kỳ vọng tích cực từ Nghị định mới của Chính phủ về phát triển nhà ở xã hội.",
-          "Dầu khí": "Điểm số tăng tích cực có thể do diễn biến giá dầu thế giới hoặc kỳ vọng về triển vọng ngành.",
-          "Công nghệ - VT": "Đà tăng nhẹ, cho thấy sự quan tâm ổn định hoặc tích cực từ thị trường."
-        }
-      },
-      "createdAt": "2026-08-25T06:49:33.625908+07:00",
-      "expiresAt": "2026-08-26T02:49:33.625908+07:00"
-    },
-    {
       "id": "task-20260825-bds",
       "type": "review_proposal",
       "signalId": "sig-bds",
@@ -216,6 +102,100 @@
       },
       "createdAt": "2026-08-25T06:49:33.625908+07:00",
       "expiresAt": "2026-09-01T06:49:33.625908+07:00"
+    },
+    {
+      "id": "task-20260826-morning",
+      "type": "morning_feedback",
+      "signalId": null,
+      "context": "Báo cáo sáng 2026-08-26: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "payload": {
+        "score": null,
+        "layer": null,
+        "confidence": null,
+        "summary": "Báo cáo sáng 2026-08-26: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": -2.5,
+        "scoreHistory": [
+          4.2,
+          2.5,
+          6.8,
+          6.8,
+          8.0,
+          8.0,
+          5.5
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 5.5,
+            "scoreYesterday": 4.2,
+            "delta": 1.3
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 2.5,
+            "scoreYesterday": 8.0,
+            "delta": -5.5
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 6.8,
+            "delta": -4.3
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Bất động sản giảm mạnh nhất (-5.5), cho thấy tâm lý lo ngại rủi ro của thị trường.\nNgành Dầu khí giảm đáng kể (-4.3), phản ánh sự thận trọng của nhà đầu tư.\nNgành Chứng khoán tăng tích cực (+1.3), có thể do dòng tiền tìm kiếm cơ hội ngắn hạn.\nThị trường đang có sự phân hóa rõ rệt giữa các nhóm ngành.",
+        "aiRecommendation": "Ưu tiên quản trị rủi ro và cân nhắc kỹ các quyết định đầu tư trong giai đoạn biến động.\nTheo dõi sát diễn biến thị trường và dòng tiền để tìm kiếm cơ hội ở các ngành tiềm năng.",
+        "sectorNotes": {
+          "Chứng khoán": "Dòng tiền tìm kiếm cơ hội trong bối cảnh thị trường có sự phân hóa.",
+          "Bất động sản": "Áp lực bán mạnh do tâm lý lo ngại về triển vọng phục hồi của ngành.",
+          "Dầu khí": "Thị trường phản ứng thận trọng với các yếu tố vĩ mô và giá dầu thế giới."
+        }
+      },
+      "createdAt": "2026-08-26T06:50:46.550771+07:00",
+      "expiresAt": "2026-08-27T02:50:46.550771+07:00"
     }
   ]
 }
