@@ -1,33 +1,45 @@
 {
-  "ngay": "2026-08-26",
-  "cap_nhat": "2026-08-26T06:50:44.381334+07:00",
+  "ngay": "2026-08-27",
+  "cap_nhat": "2026-08-27T11:40:12.096966+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "VCI (Chứng khoán): KL ×1.8"
+    "TCB (Ngân hàng): KL ×2.6",
+    "CTG (Ngân hàng): KL ×1.52",
+    "PVS (Dầu khí): KL ×2.35",
+    "FPT (Công nghệ - VT): KL ×1.71"
   ],
   "tin_chinh_sach": [],
-  "de_xuat_trang_thai": [],
+  "de_xuat_trang_thai": [
+    "Ngân hàng: 🟡→🟠",
+    "Dầu khí: 🟡→🟠",
+    "Công nghệ - VT: 🟡→🟠"
+  ],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "VCI",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.8
-        }
-      ]
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 27,
+      "ma_dang_chu_y": [
+        {
+          "ma": "TCB",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.6
+        },
+        {
+          "ma": "CTG",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.52
+        }
+      ]
     },
     "thep": {
       "ten": "Thép",
@@ -54,7 +66,7 @@
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
+      "diem_dong_tien_max": 17,
       "ma_dang_chu_y": []
     },
     "bds-kcn": {
@@ -74,16 +86,28 @@
     "dau-khi": {
       "ten": "Dầu khí",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 27,
+      "ma_dang_chu_y": [
+        {
+          "ma": "PVS",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.35
+        }
+      ]
     },
     "cong-nghe": {
       "ten": "Công nghệ - VT",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "FPT",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.71
+        }
+      ]
     }
   }
 }
