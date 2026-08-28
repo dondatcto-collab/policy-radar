@@ -1,3 +1,2 @@
-📡 RADAR 2026-08-27 — trước ATO
-💰 Dòng tiền: TCB (Ngân hàng): KL ×2.6 | CTG (Ngân hàng): KL ×1.52 | PVS (Dầu khí): KL ×2.35
-🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Dầu khí: 🟡→🟠 | Công nghệ - VT: 🟡→🟠 (cần người duyệt)
+📡 RADAR 2026-08-28 — trước ATO
+⚠️ Lọc tin: Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
