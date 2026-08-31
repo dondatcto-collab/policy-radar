@@ -1,7 +1,6 @@
 {
-  "ngay": "2026-08-28",
-  "cap_nhat": "2026-08-28T14:02:40.059737+07:00",
+  "ngay": "2026-08-31",
+  "cap_nhat": "2026-08-31T08:32:06.898799+07:00",
   "tong_tin_quet": 0,
-  "tin_lien_quan": [],
-  "ghi_chu": "Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+  "tin_lien_quan": []
 }
