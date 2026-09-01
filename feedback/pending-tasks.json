@@ -2,201 +2,6 @@
   "schemaVersion": "1.0",
   "tasks": [
     {
-      "id": "task-20260825-bds",
-      "type": "review_proposal",
-      "signalId": "sig-bds",
-      "context": "Dòng tiền nhóm Bất động sản đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — KDH (KL×2.29), DXG (KL×2.32). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
-      "payload": {
-        "score": 8.0,
-        "layer": 3,
-        "confidence": "high",
-        "summary": "KDH (KL×2.29), DXG (KL×2.32)",
-        "deltaVsYesterday": 5.5,
-        "scoreHistory": [
-          2.5,
-          2.5,
-          2.5,
-          2.5,
-          6.8,
-          2.5,
-          8.0
-        ],
-        "topNews": [
-          {
-            "title": "Chính phủ ban hành Nghị định mới về phát triển nhà ở xã hội, có hiệu lực từ quý 3",
-            "source": "",
-            "link": "",
-            "sector": "Bất động sản"
-          }
-        ],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 4.2,
-            "scoreYesterday": 8.0,
-            "delta": -3.8
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 6.8,
-            "scoreYesterday": 2.5,
-            "delta": 4.3
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 2.5,
-            "scoreYesterday": 1.2,
-            "delta": 1.3
-          }
-        ],
-        "aiSummary": "Bất động sản tăng mạnh nhất (+5.5), được hỗ trợ bởi kỳ vọng vào Nghị định mới về nhà ở xã hội.\nChứng khoán giảm sâu nhất (-3.8), có thể do áp lực chốt lời sau đà tăng mạnh hôm qua.\nDầu khí ghi nhận mức tăng đáng kể (+4.3), phản ánh triển vọng tích cực hoặc diễn biến giá dầu toàn cầu.\nNgành Công nghệ - VT cũng tăng điểm nhẹ (+1.3), duy trì xu hướng tăng trưởng.",
-        "aiRecommendation": "Theo dõi sát các chính sách hỗ trợ ngành Bất động sản để tìm cơ hội đầu tư vào các phân khúc phù hợp.\nThận trọng với các ngành có biến động lớn, ưu tiên đánh giá yếu tố cơ bản và xu hướng dài hạn.",
-        "sectorNotes": {
-          "Chứng khoán": "Điểm số giảm mạnh có thể do áp lực điều chỉnh và chốt lời sau mức tăng cao từ phiên trước.",
-          "Bất động sản": "Tăng điểm mạnh nhờ kỳ vọng tích cực từ Nghị định mới của Chính phủ về phát triển nhà ở xã hội.",
-          "Dầu khí": "Điểm số tăng tích cực có thể do diễn biến giá dầu thế giới hoặc kỳ vọng về triển vọng ngành.",
-          "Công nghệ - VT": "Đà tăng nhẹ, cho thấy sự quan tâm ổn định hoặc tích cực từ thị trường."
-        }
-      },
-      "createdAt": "2026-08-25T06:49:33.625908+07:00",
-      "expiresAt": "2026-09-01T06:49:33.625908+07:00"
-    },
-    {
-      "id": "task-20260831-morning",
-      "type": "morning_feedback",
-      "signalId": null,
-      "context": "Báo cáo sáng 2026-08-31: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-      "payload": {
-        "score": null,
-        "layer": null,
-        "confidence": null,
-        "summary": "Báo cáo sáng 2026-08-31: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 3.8,
-        "scoreHistory": [
-          6.8,
-          8.0,
-          8.0,
-          5.5,
-          6.8,
-          4.2,
-          8.0
-        ],
-        "topNews": [],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 8.0,
-            "scoreYesterday": 4.2,
-            "delta": 3.8
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 5.5,
-            "scoreYesterday": 2.5,
-            "delta": 3.0
-          }
-        ],
-        "aiSummary": "Ngành Ngân hàng ghi nhận mức tăng điểm mạnh nhất, cho thấy tâm lý tích cực vượt trội.\nNgành Công nghệ - Viễn thông cũng có sự cải thiện đáng kể về điểm số.\nCác ngành còn lại hầu hết giữ nguyên điểm số, cho thấy sự ổn định hoặc thiếu động lực.\nMặc dù không có tin tức nổi bật được cung cấp, điểm số cho thấy sự dịch chuyển đáng chú ý trong hai nhóm ngành này.",
-        "aiRecommendation": "Theo dõi sát sao diễn biến và các yếu tố tiềm ẩn ảnh hưởng đến Ngân hàng và Công nghệ - Viễn thông.\nXem xét lại danh mục đầu tư, cân nhắc phân bổ nguồn lực dựa trên sự dịch chuyển điểm số ngành.",
-        "sectorNotes": {
-          "Ngân hàng": "Điểm số hôm nay tăng vọt từ 4.2 lên 8.0 cho thấy sự cải thiện mạnh mẽ trong đánh giá, có thể do kỳ vọng về lợi nhuận hoặc triển vọng vĩ mô tích cực hơn.",
-          "Công nghệ - VT": "Sự tăng điểm đáng kể từ 2.5 lên 5.5 phản ánh một cái nhìn lạc quan hơn về ngành, có thể liên quan đến các dự án mới hoặc xu hướng công nghệ."
-        }
-      },
-      "createdAt": "2026-08-31T08:32:09.456603+07:00",
-      "expiresAt": "2026-09-01T04:32:09.456603+07:00"
-    },
-    {
       "id": "task-20260831-ngan-hang",
       "type": "review_proposal",
       "signalId": "sig-ngan-hang",
@@ -288,6 +93,96 @@
       },
       "createdAt": "2026-08-31T08:32:09.456603+07:00",
       "expiresAt": "2026-09-07T08:32:09.456603+07:00"
+    },
+    {
+      "id": "task-20260901-morning",
+      "type": "morning_feedback",
+      "signalId": null,
+      "context": "Báo cáo sáng 2026-09-01: 2 dòng tiền nổi bật, 1 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "payload": {
+        "score": null,
+        "layer": null,
+        "confidence": null,
+        "summary": "Báo cáo sáng 2026-09-01: 2 dòng tiền nổi bật, 1 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 0.0,
+        "scoreHistory": [
+          8.0,
+          8.0,
+          5.5,
+          6.8,
+          4.2,
+          8.0,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 8.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 5.5,
+            "scoreYesterday": 5.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": null,
+        "aiRecommendation": null,
+        "sectorNotes": null
+      },
+      "createdAt": "2026-09-01T09:00:11.713019+07:00",
+      "expiresAt": "2026-09-02T05:00:11.713019+07:00"
     }
   ]
 }
