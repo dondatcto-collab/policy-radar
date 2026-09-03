@@ -1,4 +1,3 @@
-📡 RADAR 2026-09-01 — trước ATO
-⚠️ Lọc tin: Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
+📡 RADAR 2026-09-03 — trước ATO
 💰 Dòng tiền: STB (Ngân hàng): KL ×3.06 | FPT (Công nghệ - VT): KL ×1.71
 🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Công nghệ - VT: 🟡→🟠 (cần người duyệt)

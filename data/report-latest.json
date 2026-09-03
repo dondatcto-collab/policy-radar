@@ -1,9 +1,7 @@
 {
-  "ngay": "2026-09-01",
-  "cap_nhat": "2026-09-01T09:00:09.297251+07:00",
-  "flags": [
-    "⚠️ Lọc tin: Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
-  ],
+  "ngay": "2026-09-03",
+  "cap_nhat": "2026-09-03T08:21:44.751150+07:00",
+  "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
     "STB (Ngân hàng): KL ×3.06",
