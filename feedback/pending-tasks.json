@@ -95,22 +95,22 @@
       "expiresAt": "2026-09-07T08:32:09.456603+07:00"
     },
     {
-      "id": "task-20260901-morning",
+      "id": "task-20260903-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-09-01: 2 dòng tiền nổi bật, 1 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-09-03: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-01: 2 dòng tiền nổi bật, 1 cảnh báo hệ thống. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "summary": "Báo cáo sáng 2026-09-03: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
         "deltaVsYesterday": 0.0,
         "scoreHistory": [
-          8.0,
           8.0,
           5.5,
           6.8,
           4.2,
+          8.0,
           8.0,
           8.0
         ],
@@ -177,12 +177,12 @@
             "delta": 0.0
           }
         ],
-        "aiSummary": null,
-        "aiRecommendation": null,
+        "aiSummary": "Không có ngành nào ghi nhận sự thay đổi điểm số so với hôm qua.\nTất cả các ngành đều duy trì điểm số ổn định, cho thấy thị trường thiếu động lực rõ rệt.\nChưa có tin tức nổi bật nào được công bố để tác động đến điểm số ngành.\nCác ngành như Ngân hàng duy trì mức điểm cao (8.0), trong khi nhiều ngành khác ở mức thấp (2.5 hoặc 0.0).\nThị trường đang trong giai đoạn trầm lắng, chờ đợi các yếu tố vĩ mô hoặc tin tức mới.",
+        "aiRecommendation": "Tiếp tục theo dõi sát sao diễn biến thị trường và các tin tức kinh tế vĩ mô sắp tới.\nDuy trì quan sát các ngành có điểm số thấp để tìm kiếm cơ hội nếu có tín hiệu phục hồi.",
         "sectorNotes": null
       },
-      "createdAt": "2026-09-01T09:00:11.713019+07:00",
-      "expiresAt": "2026-09-02T05:00:11.713019+07:00"
+      "createdAt": "2026-09-03T08:21:47.407027+07:00",
+      "expiresAt": "2026-09-04T04:21:47.407027+07:00"
     }
   ]
 }
