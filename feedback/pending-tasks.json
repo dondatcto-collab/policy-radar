@@ -95,26 +95,45 @@
       "expiresAt": "2026-09-07T08:32:09.456603+07:00"
     },
     {
-      "id": "task-20260903-morning",
+      "id": "task-20260907-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-09-03: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-09-07: 6 tin chính sách, 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-03: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 0.0,
+        "summary": "Báo cáo sáng 2026-09-07: 6 tin chính sách, 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 2.5,
         "scoreHistory": [
-          8.0,
-          5.5,
           6.8,
           4.2,
           8.0,
           8.0,
+          8.0,
+          5.5,
           8.0
         ],
-        "topNews": [],
+        "topNews": [
+          {
+            "title": "Hà Nội công bố kế hoạch phát triển nhà ở xã hội 2024-2030",
+            "source": "",
+            "link": "",
+            "sector": "Bất động sản"
+          },
+          {
+            "title": "TP.HCM đề xuất lập sàn giao dịch bất động sản",
+            "source": "",
+            "link": "",
+            "sector": "Bất động sản"
+          },
+          {
+            "title": "Giá điện dự kiến điều chỉnh tăng trong quý II/2024",
+            "source": "",
+            "link": "",
+            "sector": "Điện"
+          }
+        ],
         "sectors": [
           {
             "name": "Chứng khoán",
@@ -124,8 +143,8 @@
           },
           {
             "name": "Ngân hàng",
-            "scoreToday": 8.0,
-            "scoreYesterday": 8.0,
+            "scoreToday": 5.5,
+            "scoreYesterday": 5.5,
             "delta": 0.0
           },
           {
@@ -148,9 +167,9 @@
           },
           {
             "name": "Bất động sản",
-            "scoreToday": 2.5,
+            "scoreToday": 8.0,
             "scoreYesterday": 2.5,
-            "delta": 0.0
+            "delta": 5.5
           },
           {
             "name": "BĐS KCN",
@@ -161,28 +180,145 @@
           {
             "name": "Điện",
             "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
+            "scoreYesterday": 5.5,
+            "delta": -3.0
           },
           {
             "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Bất động sản tăng điểm mạnh nhất (+5.5) nhờ các thông tin hỗ trợ từ chính sách và đề xuất mới.\nNgành Điện và Dầu khí cùng giảm điểm đáng kể (-3.0), phản ánh tâm lý thận trọng trong nhóm năng lượng.\nTin tức về kế hoạch tăng giá điện dự kiến đã ảnh hưởng tiêu cực đến ngành Điện.\nCác ngành còn lại giữ ổn định, không có biến động lớn về điểm số.",
+        "aiRecommendation": "Theo dõi sát ngành Bất động sản để nắm bắt cơ hội từ các động thái chính sách hỗ trợ.\nXem xét lại rủi ro và danh mục đối với nhóm ngành Điện và Dầu khí trước các thông tin tiêu cực về năng lượng.",
+        "sectorNotes": {
+          "Bất động sản": "Tăng mạnh nhờ tin tức về kế hoạch phát triển nhà ở xã hội ở Hà Nội và đề xuất sàn giao dịch bất động sản tại TP.HCM.",
+          "Điện": "Giảm điểm do thông tin dự kiến điều chỉnh tăng giá điện trong quý II/2024, gây lo ngại về chính sách và chi phí.",
+          "Dầu khí": "Giảm điểm có thể do tâm lý chung của nhóm ngành năng lượng hoặc thiếu thông tin hỗ trợ tích cực."
+        }
+      },
+      "createdAt": "2026-09-07T08:16:51.292364+07:00",
+      "expiresAt": "2026-09-08T04:16:51.292364+07:00"
+    },
+    {
+      "id": "task-20260907-bds",
+      "type": "review_proposal",
+      "signalId": "sig-bds",
+      "context": "Dòng tiền nhóm Bất động sản đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — VHM (KL×1.96), DXG (KL×2.36). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
+      "payload": {
+        "score": 8.0,
+        "layer": 3,
+        "confidence": "high",
+        "summary": "VHM (KL×1.96), DXG (KL×2.36)",
+        "deltaVsYesterday": 5.5,
+        "scoreHistory": [
+          4.2,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          8.0
+        ],
+        "topNews": [
+          {
+            "title": "Hà Nội công bố kế hoạch phát triển nhà ở xã hội 2024-2030",
+            "source": "",
+            "link": "",
+            "sector": "Bất động sản"
+          },
+          {
+            "title": "TP.HCM đề xuất lập sàn giao dịch bất động sản",
+            "source": "",
+            "link": "",
+            "sector": "Bất động sản"
+          },
+          {
+            "title": "Thủ tướng yêu cầu tháo gỡ khó khăn cho thị trường bất động sản",
+            "source": "",
+            "link": "",
+            "sector": "Bất động sản"
+          }
+        ],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
             "scoreToday": 2.5,
             "scoreYesterday": 2.5,
             "delta": 0.0
           },
           {
-            "name": "Công nghệ - VT",
+            "name": "Ngân hàng",
             "scoreToday": 5.5,
             "scoreYesterday": 5.5,
             "delta": 0.0
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           }
         ],
-        "aiSummary": "Không có ngành nào ghi nhận sự thay đổi điểm số so với hôm qua.\nTất cả các ngành đều duy trì điểm số ổn định, cho thấy thị trường thiếu động lực rõ rệt.\nChưa có tin tức nổi bật nào được công bố để tác động đến điểm số ngành.\nCác ngành như Ngân hàng duy trì mức điểm cao (8.0), trong khi nhiều ngành khác ở mức thấp (2.5 hoặc 0.0).\nThị trường đang trong giai đoạn trầm lắng, chờ đợi các yếu tố vĩ mô hoặc tin tức mới.",
-        "aiRecommendation": "Tiếp tục theo dõi sát sao diễn biến thị trường và các tin tức kinh tế vĩ mô sắp tới.\nDuy trì quan sát các ngành có điểm số thấp để tìm kiếm cơ hội nếu có tín hiệu phục hồi.",
-        "sectorNotes": null
+        "aiSummary": "Ngành Bất động sản tăng điểm mạnh nhất (+5.5) nhờ các thông tin hỗ trợ từ chính sách và đề xuất mới.\nNgành Điện và Dầu khí cùng giảm điểm đáng kể (-3.0), phản ánh tâm lý thận trọng trong nhóm năng lượng.\nTin tức về kế hoạch tăng giá điện dự kiến đã ảnh hưởng tiêu cực đến ngành Điện.\nCác ngành còn lại giữ ổn định, không có biến động lớn về điểm số.",
+        "aiRecommendation": "Theo dõi sát ngành Bất động sản để nắm bắt cơ hội từ các động thái chính sách hỗ trợ.\nXem xét lại rủi ro và danh mục đối với nhóm ngành Điện và Dầu khí trước các thông tin tiêu cực về năng lượng.",
+        "sectorNotes": {
+          "Bất động sản": "Tăng mạnh nhờ tin tức về kế hoạch phát triển nhà ở xã hội ở Hà Nội và đề xuất sàn giao dịch bất động sản tại TP.HCM.",
+          "Điện": "Giảm điểm do thông tin dự kiến điều chỉnh tăng giá điện trong quý II/2024, gây lo ngại về chính sách và chi phí.",
+          "Dầu khí": "Giảm điểm có thể do tâm lý chung của nhóm ngành năng lượng hoặc thiếu thông tin hỗ trợ tích cực."
+        }
       },
-      "createdAt": "2026-09-03T08:21:47.407027+07:00",
-      "expiresAt": "2026-09-04T04:21:47.407027+07:00"
+      "createdAt": "2026-09-07T08:16:51.292364+07:00",
+      "expiresAt": "2026-09-14T08:16:51.292364+07:00"
     }
   ]
 }
