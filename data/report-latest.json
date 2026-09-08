@@ -1,87 +1,38 @@
 {
-  "ngay": "2026-09-07",
-  "cap_nhat": "2026-09-07T08:16:25.150434+07:00",
+  "ngay": "2026-09-08",
+  "cap_nhat": "2026-09-08T08:20:49.626047+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "STB (Ngân hàng): KL ×1.68",
-    "VHM (Bất động sản): KL ×1.96",
-    "DXG (Bất động sản): KL ×2.36"
+    "HCM (Chứng khoán): KL ×1.7",
+    "VHM (Bất động sản): KL ×1.55",
+    "PVD (Dầu khí): KL ×1.82"
   ],
-  "tin_chinh_sach": [
-    {
-      "tieu_de": "Hà Nội công bố kế hoạch phát triển nhà ở xã hội 2024-2030",
-      "nhom": "bds",
-      "muc_do": "trong-yeu",
-      "ly_do": "Kế hoạch này định hướng phát triển nhà ở xã hội, ảnh hưởng đến nguồn cung và cơ cấu thị trường BĐS Hà Nội.",
-      "loai": "ban-hanh",
-      "link": ""
-    },
-    {
-      "tieu_de": "TP.HCM đề xuất lập sàn giao dịch bất động sản",
-      "nhom": "bds",
-      "muc_do": "theo-doi",
-      "ly_do": "Đề xuất này có thể minh bạch hóa thị trường BĐS, thay đổi cách thức giao dịch và định giá tài sản.",
-      "loai": "du-thao",
-      "link": ""
-    },
-    {
-      "tieu_de": "Giá điện dự kiến điều chỉnh tăng trong quý II/2024",
-      "nhom": "dien",
-      "muc_do": "trong-yeu",
-      "ly_do": "Điều chỉnh giá điện có tác động trực tiếp đến doanh thu ngành điện và chi phí sản xuất của các ngành khác.",
-      "loai": "du-thao",
-      "link": ""
-    },
-    {
-      "tieu_de": "Bộ Giao thông Vận tải phê duyệt quy hoạch chi tiết sân bay quốc tế Long Thành giai đoạn 1",
-      "nhom": "ha-tang",
-      "muc_do": "trong-yeu",
-      "ly_do": "Việc phê duyệt quy hoạch chi tiết là bước quan trọng để triển khai dự án lớn, thúc đẩy ngành hạ tầng và VLXD.",
-      "loai": "ban-hanh",
-      "link": ""
-    },
-    {
-      "tieu_de": "Chính phủ ban hành nghị định mới về phát triển công nghiệp hỗ trợ",
-      "nhom": "cong-nghe",
-      "muc_do": "theo-doi",
-      "ly_do": "Nghị định thúc đẩy phát triển các ngành công nghiệp phụ trợ, có thể tạo cơ hội cho các doanh nghiệp công nghệ liên quan đến sản xuất.",
-      "loai": "ban-hanh",
-      "link": ""
-    },
-    {
-      "tieu_de": "Thủ tướng yêu cầu tháo gỡ khó khăn cho thị trường bất động sản",
-      "nhom": "bds",
-      "muc_do": "theo-doi",
-      "ly_do": "Chỉ đạo của Thủ tướng thể hiện cam kết hỗ trợ thị trường BĐS, kỳ vọng có các chính sách cụ thể hơn được ban hành sau đó.",
-      "loai": "khac",
-      "link": ""
-    }
-  ],
+  "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
-    "Ngân hàng: 🟡→🟠",
-    "Bất động sản: 🟡→🟠"
+    "Bất động sản: 🟡→🟠",
+    "Dầu khí: 🟡→🟠"
   ],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "HCM",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.7
+        }
+      ]
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "STB",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.68
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "thep": {
       "ten": "Thép",
@@ -108,17 +59,12 @@
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
+      "diem_dong_tien_max": 22,
       "ma_dang_chu_y": [
         {
           "ma": "VHM",
           "diem_dong_tien": 22,
-          "kl_ratio": 1.96
-        },
-        {
-          "ma": "DXG",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.36
+          "kl_ratio": 1.55
         }
       ]
     },
@@ -139,9 +85,15 @@
     "dau-khi": {
       "ten": "Dầu khí",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "PVD",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.82
+        }
+      ]
     },
     "cong-nghe": {
       "ten": "Công nghệ - VT",
