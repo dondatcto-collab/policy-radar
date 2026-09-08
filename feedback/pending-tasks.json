@@ -2,212 +2,6 @@
   "schemaVersion": "1.0",
   "tasks": [
     {
-      "id": "task-20260831-ngan-hang",
-      "type": "review_proposal",
-      "signalId": "sig-ngan-hang",
-      "context": "Dòng tiền nhóm Ngân hàng đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — STB (KL×3.06). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
-      "payload": {
-        "score": 8.0,
-        "layer": 3,
-        "confidence": "high",
-        "summary": "STB (KL×3.06)",
-        "deltaVsYesterday": 3.8,
-        "scoreHistory": [
-          2.5,
-          2.5,
-          2.5,
-          2.5,
-          6.8,
-          4.2,
-          8.0
-        ],
-        "topNews": [],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 8.0,
-            "scoreYesterday": 4.2,
-            "delta": 3.8
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 5.5,
-            "scoreYesterday": 2.5,
-            "delta": 3.0
-          }
-        ],
-        "aiSummary": "Ngành Ngân hàng ghi nhận mức tăng điểm mạnh nhất, cho thấy tâm lý tích cực vượt trội.\nNgành Công nghệ - Viễn thông cũng có sự cải thiện đáng kể về điểm số.\nCác ngành còn lại hầu hết giữ nguyên điểm số, cho thấy sự ổn định hoặc thiếu động lực.\nMặc dù không có tin tức nổi bật được cung cấp, điểm số cho thấy sự dịch chuyển đáng chú ý trong hai nhóm ngành này.",
-        "aiRecommendation": "Theo dõi sát sao diễn biến và các yếu tố tiềm ẩn ảnh hưởng đến Ngân hàng và Công nghệ - Viễn thông.\nXem xét lại danh mục đầu tư, cân nhắc phân bổ nguồn lực dựa trên sự dịch chuyển điểm số ngành.",
-        "sectorNotes": {
-          "Ngân hàng": "Điểm số hôm nay tăng vọt từ 4.2 lên 8.0 cho thấy sự cải thiện mạnh mẽ trong đánh giá, có thể do kỳ vọng về lợi nhuận hoặc triển vọng vĩ mô tích cực hơn.",
-          "Công nghệ - VT": "Sự tăng điểm đáng kể từ 2.5 lên 5.5 phản ánh một cái nhìn lạc quan hơn về ngành, có thể liên quan đến các dự án mới hoặc xu hướng công nghệ."
-        }
-      },
-      "createdAt": "2026-08-31T08:32:09.456603+07:00",
-      "expiresAt": "2026-09-07T08:32:09.456603+07:00"
-    },
-    {
-      "id": "task-20260907-morning",
-      "type": "morning_feedback",
-      "signalId": null,
-      "context": "Báo cáo sáng 2026-09-07: 6 tin chính sách, 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-      "payload": {
-        "score": null,
-        "layer": null,
-        "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-07: 6 tin chính sách, 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 2.5,
-        "scoreHistory": [
-          6.8,
-          4.2,
-          8.0,
-          8.0,
-          8.0,
-          5.5,
-          8.0
-        ],
-        "topNews": [
-          {
-            "title": "Hà Nội công bố kế hoạch phát triển nhà ở xã hội 2024-2030",
-            "source": "",
-            "link": "",
-            "sector": "Bất động sản"
-          },
-          {
-            "title": "TP.HCM đề xuất lập sàn giao dịch bất động sản",
-            "source": "",
-            "link": "",
-            "sector": "Bất động sản"
-          },
-          {
-            "title": "Giá điện dự kiến điều chỉnh tăng trong quý II/2024",
-            "source": "",
-            "link": "",
-            "sector": "Điện"
-          }
-        ],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 5.5,
-            "scoreYesterday": 5.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          }
-        ],
-        "aiSummary": "Ngành Bất động sản tăng điểm mạnh nhất (+5.5) nhờ các thông tin hỗ trợ từ chính sách và đề xuất mới.\nNgành Điện và Dầu khí cùng giảm điểm đáng kể (-3.0), phản ánh tâm lý thận trọng trong nhóm năng lượng.\nTin tức về kế hoạch tăng giá điện dự kiến đã ảnh hưởng tiêu cực đến ngành Điện.\nCác ngành còn lại giữ ổn định, không có biến động lớn về điểm số.",
-        "aiRecommendation": "Theo dõi sát ngành Bất động sản để nắm bắt cơ hội từ các động thái chính sách hỗ trợ.\nXem xét lại rủi ro và danh mục đối với nhóm ngành Điện và Dầu khí trước các thông tin tiêu cực về năng lượng.",
-        "sectorNotes": {
-          "Bất động sản": "Tăng mạnh nhờ tin tức về kế hoạch phát triển nhà ở xã hội ở Hà Nội và đề xuất sàn giao dịch bất động sản tại TP.HCM.",
-          "Điện": "Giảm điểm do thông tin dự kiến điều chỉnh tăng giá điện trong quý II/2024, gây lo ngại về chính sách và chi phí.",
-          "Dầu khí": "Giảm điểm có thể do tâm lý chung của nhóm ngành năng lượng hoặc thiếu thông tin hỗ trợ tích cực."
-        }
-      },
-      "createdAt": "2026-09-07T08:16:51.292364+07:00",
-      "expiresAt": "2026-09-08T04:16:51.292364+07:00"
-    },
-    {
       "id": "task-20260907-bds",
       "type": "review_proposal",
       "signalId": "sig-bds",
@@ -319,6 +113,101 @@
       },
       "createdAt": "2026-09-07T08:16:51.292364+07:00",
       "expiresAt": "2026-09-14T08:16:51.292364+07:00"
+    },
+    {
+      "id": "task-20260908-morning",
+      "type": "morning_feedback",
+      "signalId": null,
+      "context": "Báo cáo sáng 2026-09-08: 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "payload": {
+        "score": null,
+        "layer": null,
+        "confidence": null,
+        "summary": "Báo cáo sáng 2026-09-08: 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": -2.5,
+        "scoreHistory": [
+          4.2,
+          8.0,
+          8.0,
+          8.0,
+          5.5,
+          8.0,
+          5.5
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 5.5,
+            "scoreYesterday": 2.5,
+            "delta": 3.0
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 5.5,
+            "scoreYesterday": 8.0,
+            "delta": -2.5
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 5.5,
+            "scoreYesterday": 2.5,
+            "delta": 3.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Chứng khoán và Dầu khí tăng điểm mạnh nhất (+3.0), cho thấy tâm lý tích cực hoặc kỳ vọng về vĩ mô.\nNgành Ngân hàng và Bất động sản giảm điểm sâu nhất (-3.0 và -2.5), phản ánh lo ngại về triển vọng hoặc thách thức hiện tại.\nThị trường có sự phân hóa rõ rệt và luân chuyển dòng tiền mạnh giữa các ngành trụ cột, đặc biệt là nhóm tài chính.\nMặc dù không có tin tức nổi bật, biến động lớn cho thấy thị trường đang điều chỉnh kỳ vọng về lợi nhuận và rủi ro.",
+        "aiRecommendation": "Theo dõi sát diễn biến dòng tiền và các yếu tố vĩ mô để đánh giá xu hướng tiếp theo của nhóm ngành biến động mạnh.\nCân nhắc cơ cấu lại danh mục, ưu tiên các ngành đang có dấu hiệu tích cực và thận trọng với nhóm ngành gặp áp lực.",
+        "sectorNotes": {
+          "Chứng khoán": "Tăng điểm do kỳ vọng thị trường chung tích cực và sự luân chuyển dòng tiền.",
+          "Ngân hàng": "Giảm mạnh do lo ngại về chất lượng tài sản, tăng trưởng tín dụng chậm lại hoặc áp lực lãi suất.",
+          "Bất động sản": "Tiếp tục suy yếu do những khó khăn dai dẳng về pháp lý, nguồn vốn và tâm lý thị trường.",
+          "Dầu khí": "Tăng điểm do kỳ vọng giá dầu thế giới phục hồi hoặc triển vọng tích cực từ các dự án năng lượng."
+        }
+      },
+      "createdAt": "2026-09-08T08:20:51.525176+07:00",
+      "expiresAt": "2026-09-09T04:20:51.525176+07:00"
     }
   ]
 }
