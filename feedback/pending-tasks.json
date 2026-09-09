@@ -115,38 +115,57 @@
       "expiresAt": "2026-09-14T08:16:51.292364+07:00"
     },
     {
-      "id": "task-20260908-morning",
+      "id": "task-20260909-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-09-08: 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-09-09: 6 tin chính sách, 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-08: 3 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": -2.5,
+        "summary": "Báo cáo sáng 2026-09-09: 6 tin chính sách, 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 0.0,
         "scoreHistory": [
-          4.2,
           8.0,
           8.0,
           8.0,
           5.5,
           8.0,
+          5.5,
           5.5
         ],
-        "topNews": [],
+        "topNews": [
+          {
+            "title": "Sửa Luật Đất đai (sửa đổi): Vướng mắc giao đất, cho thuê đất vẫn còn đó",
+            "source": "",
+            "link": "",
+            "sector": "Bất động sản"
+          },
+          {
+            "title": "TP.HCM sẽ ưu tiên đấu giá quyền khai thác các dự án năng lượng tái tạo, xử lý rác",
+            "source": "",
+            "link": "",
+            "sector": "Điện"
+          },
+          {
+            "title": "Bình Phước: Khởi công cao tốc Gia Nghĩa (Đắk Nông) - Chơn Thành (Bình Phước) vào cuối năm 2024",
+            "source": "",
+            "link": "",
+            "sector": "Xây dựng hạ tầng"
+          }
+        ],
         "sectors": [
           {
             "name": "Chứng khoán",
-            "scoreToday": 5.5,
-            "scoreYesterday": 2.5,
-            "delta": 3.0
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
           },
           {
             "name": "Ngân hàng",
             "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "Thép",
@@ -168,9 +187,9 @@
           },
           {
             "name": "Bất động sản",
-            "scoreToday": 5.5,
-            "scoreYesterday": 8.0,
-            "delta": -2.5
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
           },
           {
             "name": "BĐS KCN",
@@ -187,8 +206,8 @@
           {
             "name": "Dầu khí",
             "scoreToday": 5.5,
-            "scoreYesterday": 2.5,
-            "delta": 3.0
+            "scoreYesterday": 5.5,
+            "delta": 0.0
           },
           {
             "name": "Công nghệ - VT",
@@ -197,17 +216,15 @@
             "delta": 0.0
           }
         ],
-        "aiSummary": "Ngành Chứng khoán và Dầu khí tăng điểm mạnh nhất (+3.0), cho thấy tâm lý tích cực hoặc kỳ vọng về vĩ mô.\nNgành Ngân hàng và Bất động sản giảm điểm sâu nhất (-3.0 và -2.5), phản ánh lo ngại về triển vọng hoặc thách thức hiện tại.\nThị trường có sự phân hóa rõ rệt và luân chuyển dòng tiền mạnh giữa các ngành trụ cột, đặc biệt là nhóm tài chính.\nMặc dù không có tin tức nổi bật, biến động lớn cho thấy thị trường đang điều chỉnh kỳ vọng về lợi nhuận và rủi ro.",
-        "aiRecommendation": "Theo dõi sát diễn biến dòng tiền và các yếu tố vĩ mô để đánh giá xu hướng tiếp theo của nhóm ngành biến động mạnh.\nCân nhắc cơ cấu lại danh mục, ưu tiên các ngành đang có dấu hiệu tích cực và thận trọng với nhóm ngành gặp áp lực.",
+        "aiSummary": "Ngành Chứng khoán và Bất động sản suy giảm mạnh nhất hôm nay với chênh lệch -3.0 điểm.\nĐiểm số Bất động sản giảm sâu do vướng mắc liên quan đến sửa đổi Luật Đất đai.\nThị trường chứng khoán bị ảnh hưởng bởi tâm lý tiêu cực lan tỏa từ ngành Bất động sản.\nCác ngành khác như Ngân hàng, Thép, Dầu khí duy trì ổn định, không có biến động đáng kể.",
+        "aiRecommendation": "Người theo dõi nên cực kỳ thận trọng với nhóm ngành Bất động sản và Chứng khoán, theo dõi sát diễn biến chính sách.\nCân nhắc tìm kiếm các cơ hội ở các ngành có điểm số ổn định, chờ đợi tín hiệu phục hồi rõ ràng hơn từ nhóm ngành biến động.",
         "sectorNotes": {
-          "Chứng khoán": "Tăng điểm do kỳ vọng thị trường chung tích cực và sự luân chuyển dòng tiền.",
-          "Ngân hàng": "Giảm mạnh do lo ngại về chất lượng tài sản, tăng trưởng tín dụng chậm lại hoặc áp lực lãi suất.",
-          "Bất động sản": "Tiếp tục suy yếu do những khó khăn dai dẳng về pháp lý, nguồn vốn và tâm lý thị trường.",
-          "Dầu khí": "Tăng điểm do kỳ vọng giá dầu thế giới phục hồi hoặc triển vọng tích cực từ các dự án năng lượng."
+          "Chứng khoán": "bảng điểm giảm mạnh phản ánh tâm lý thị trường chung tiêu cực, đặc biệt khi các ngành trọng yếu như Bất động sản gặp khó khăn.",
+          "Bất động sản": "điểm số giảm mạnh do những vướng mắc tiếp diễn trong sửa đổi Luật Đất đai, đặc biệt về vấn đề giao đất và cho thuê đất."
         }
       },
-      "createdAt": "2026-09-08T08:20:51.525176+07:00",
-      "expiresAt": "2026-09-09T04:20:51.525176+07:00"
+      "createdAt": "2026-09-09T08:26:12.904522+07:00",
+      "expiresAt": "2026-09-10T04:26:12.904522+07:00"
     }
   ]
 }
