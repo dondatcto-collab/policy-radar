@@ -115,51 +115,32 @@
       "expiresAt": "2026-09-14T08:16:51.292364+07:00"
     },
     {
-      "id": "task-20260909-morning",
+      "id": "task-20260910-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-09-09: 6 tin chính sách, 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-09-10: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-09: 6 tin chính sách, 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "summary": "Báo cáo sáng 2026-09-10: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
         "deltaVsYesterday": 0.0,
         "scoreHistory": [
           8.0,
           8.0,
-          8.0,
           5.5,
           8.0,
+          5.5,
           5.5,
           5.5
         ],
-        "topNews": [
-          {
-            "title": "Sửa Luật Đất đai (sửa đổi): Vướng mắc giao đất, cho thuê đất vẫn còn đó",
-            "source": "",
-            "link": "",
-            "sector": "Bất động sản"
-          },
-          {
-            "title": "TP.HCM sẽ ưu tiên đấu giá quyền khai thác các dự án năng lượng tái tạo, xử lý rác",
-            "source": "",
-            "link": "",
-            "sector": "Điện"
-          },
-          {
-            "title": "Bình Phước: Khởi công cao tốc Gia Nghĩa (Đắk Nông) - Chơn Thành (Bình Phước) vào cuối năm 2024",
-            "source": "",
-            "link": "",
-            "sector": "Xây dựng hạ tầng"
-          }
-        ],
+        "topNews": [],
         "sectors": [
           {
             "name": "Chứng khoán",
             "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "Ngân hàng",
@@ -187,9 +168,9 @@
           },
           {
             "name": "Bất động sản",
-            "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
+            "scoreToday": 5.5,
+            "scoreYesterday": 2.5,
+            "delta": 3.0
           },
           {
             "name": "BĐS KCN",
@@ -216,15 +197,14 @@
             "delta": 0.0
           }
         ],
-        "aiSummary": "Ngành Chứng khoán và Bất động sản suy giảm mạnh nhất hôm nay với chênh lệch -3.0 điểm.\nĐiểm số Bất động sản giảm sâu do vướng mắc liên quan đến sửa đổi Luật Đất đai.\nThị trường chứng khoán bị ảnh hưởng bởi tâm lý tiêu cực lan tỏa từ ngành Bất động sản.\nCác ngành khác như Ngân hàng, Thép, Dầu khí duy trì ổn định, không có biến động đáng kể.",
-        "aiRecommendation": "Người theo dõi nên cực kỳ thận trọng với nhóm ngành Bất động sản và Chứng khoán, theo dõi sát diễn biến chính sách.\nCân nhắc tìm kiếm các cơ hội ở các ngành có điểm số ổn định, chờ đợi tín hiệu phục hồi rõ ràng hơn từ nhóm ngành biến động.",
+        "aiSummary": "Ngành Bất động sản ghi nhận mức tăng điểm mạnh nhất với chênh lệch +3.0.\nĐây là ngành duy nhất có biến động lớn, các ngành còn lại đều ổn định hoặc không đổi.\nSự tăng điểm của Bất động sản có thể phản ánh kỳ vọng tích cực hoặc dòng tiền quan tâm trở lại.\nNguyên nhân cụ thể cho sự tăng điểm này không được cung cấp trong tin tức.",
+        "aiRecommendation": "Theo dõi sát các thông tin liên quan đến ngành Bất động sản để hiểu rõ nguyên nhân tăng điểm.\nCân nhắc rà soát các cổ phiếu ngành Bất động sản tiềm năng trong danh mục.",
         "sectorNotes": {
-          "Chứng khoán": "bảng điểm giảm mạnh phản ánh tâm lý thị trường chung tiêu cực, đặc biệt khi các ngành trọng yếu như Bất động sản gặp khó khăn.",
-          "Bất động sản": "điểm số giảm mạnh do những vướng mắc tiếp diễn trong sửa đổi Luật Đất đai, đặc biệt về vấn đề giao đất và cho thuê đất."
+          "Bất động sản": "Tăng điểm mạnh, phản ánh tâm lý tích cực hoặc dòng tiền quan tâm trở lại dù thiếu tin tức cụ thể."
         }
       },
-      "createdAt": "2026-09-09T08:26:12.904522+07:00",
-      "expiresAt": "2026-09-10T04:26:12.904522+07:00"
+      "createdAt": "2026-09-10T08:22:17.271289+07:00",
+      "expiresAt": "2026-09-11T04:22:17.271289+07:00"
     }
   ]
 }
