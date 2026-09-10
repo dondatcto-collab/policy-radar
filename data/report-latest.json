@@ -1,62 +1,15 @@
 {
-  "ngay": "2026-09-09",
-  "cap_nhat": "2026-09-09T08:26:10.668108+07:00",
+  "ngay": "2026-09-10",
+  "cap_nhat": "2026-09-10T08:22:14.748252+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "PVD (Dầu khí): KL ×1.62"
+    "VHM (Bất động sản): KL ×1.96",
+    "BSR (Dầu khí): KL ×1.6"
   ],
-  "tin_chinh_sach": [
-    {
-      "tieu_de": "Sửa Luật Đất đai (sửa đổi): Vướng mắc giao đất, cho thuê đất vẫn còn đó",
-      "nhom": "bds",
-      "muc_do": "trong-yeu",
-      "ly_do": "Việc sửa đổi Luật Đất đai có tác động sâu rộng đến toàn ngành bất động sản, đặc biệt về quy trình giao và cho thuê đất.",
-      "loai": "du-thao",
-      "link": ""
-    },
-    {
-      "tieu_de": "TP.HCM sẽ ưu tiên đấu giá quyền khai thác các dự án năng lượng tái tạo, xử lý rác",
-      "nhom": "dien",
-      "muc_do": "theo-doi",
-      "ly_do": "Chính sách ưu tiên đấu giá các dự án năng lượng tái tạo tại TP.HCM tạo cơ hội cho ngành điện và phát triển hạ tầng xanh.",
-      "loai": "thuc-thi",
-      "link": ""
-    },
-    {
-      "tieu_de": "Bình Phước: Khởi công cao tốc Gia Nghĩa (Đắk Nông) - Chơn Thành (Bình Phước) vào cuối năm 2024",
-      "nhom": "ha-tang",
-      "muc_do": "trong-yeu",
-      "ly_do": "Dự án cao tốc lớn được khởi công sẽ thúc đẩy ngành xây dựng hạ tầng và tạo nhu cầu vật liệu.",
-      "loai": "thuc-thi",
-      "link": ""
-    },
-    {
-      "tieu_de": "Lộ trình sửa đổi Nghị định 24 về quản lý thị trường vàng có thể tác động đến thị trường chứng khoán?",
-      "nhom": "chung-khoan",
-      "muc_do": "theo-doi",
-      "ly_do": "Việc sửa đổi Nghị định 24 về thị trường vàng có thể ảnh hưởng đến dòng tiền và tâm lý đầu tư trên thị trường chứng khoán.",
-      "loai": "du-thao",
-      "link": ""
-    },
-    {
-      "tieu_de": "Góp ý quy hoạch điện VIII: Cần chính sách cho dự án điện mặt trời, điện gió",
-      "nhom": "dien",
-      "muc_do": "trong-yeu",
-      "ly_do": "Quy hoạch điện VIII và các chính sách liên quan đến điện mặt trời, điện gió có vai trò định hướng phát triển ngành điện trong dài hạn.",
-      "loai": "du-thao",
-      "link": ""
-    },
-    {
-      "tieu_de": "PVN chuẩn bị đấu thầu gói thầu tỷ đô cho dự án Lô B - Ô Môn",
-      "nhom": "dau-khi",
-      "muc_do": "trong-yeu",
-      "ly_do": "Hoạt động đấu thầu gói thầu tỷ đô cho dự án Lô B - Ô Môn là bước triển khai quan trọng, thúc đẩy ngành dầu khí.",
-      "loai": "thuc-thi",
-      "link": ""
-    }
-  ],
+  "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
+    "Bất động sản: 🟡→🟠",
     "Dầu khí: 🟡→🟠"
   ],
   "radar": {
@@ -98,9 +51,15 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "VHM",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.96
+        }
+      ]
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
@@ -123,9 +82,9 @@
       "diem_dong_tien_max": 22,
       "ma_dang_chu_y": [
         {
-          "ma": "PVD",
+          "ma": "BSR",
           "diem_dong_tien": 22,
-          "kl_ratio": 1.62
+          "kl_ratio": 1.6
         }
       ]
     },
