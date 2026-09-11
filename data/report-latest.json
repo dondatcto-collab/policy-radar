@@ -1,16 +1,16 @@
 {
-  "ngay": "2026-09-10",
-  "cap_nhat": "2026-09-10T08:22:14.748252+07:00",
+  "ngay": "2026-09-11",
+  "cap_nhat": "2026-09-11T08:23:01.445029+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "VHM (Bất động sản): KL ×1.96",
-    "BSR (Dầu khí): KL ×1.6"
+    "VHM (Bất động sản): KL ×2.19",
+    "FPT (Công nghệ - VT): KL ×2.23"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
     "Bất động sản: 🟡→🟠",
-    "Dầu khí: 🟡→🟠"
+    "Công nghệ - VT: 🟡→🟠"
   ],
   "radar": {
     "chung-khoan": {
@@ -52,12 +52,12 @@
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
+      "diem_dong_tien_max": 32,
       "ma_dang_chu_y": [
         {
           "ma": "VHM",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.96
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.19
         }
       ]
     },
@@ -78,22 +78,22 @@
     "dau-khi": {
       "ten": "Dầu khí",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "BSR",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.6
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "cong-nghe": {
       "ten": "Công nghệ - VT",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 32,
+      "ma_dang_chu_y": [
+        {
+          "ma": "FPT",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.23
+        }
+      ]
     }
   }
 }
