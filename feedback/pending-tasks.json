@@ -115,24 +115,24 @@
       "expiresAt": "2026-09-14T08:16:51.292364+07:00"
     },
     {
-      "id": "task-20260910-morning",
+      "id": "task-20260911-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-09-10: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-09-11: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-10: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 0.0,
+        "summary": "Báo cáo sáng 2026-09-11: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 2.5,
         "scoreHistory": [
           8.0,
-          8.0,
           5.5,
           8.0,
           5.5,
           5.5,
-          5.5
+          5.5,
+          8.0
         ],
         "topNews": [],
         "sectors": [
@@ -168,9 +168,9 @@
           },
           {
             "name": "Bất động sản",
-            "scoreToday": 5.5,
-            "scoreYesterday": 2.5,
-            "delta": 3.0
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
           },
           {
             "name": "BĐS KCN",
@@ -186,25 +186,121 @@
           },
           {
             "name": "Dầu khí",
-            "scoreToday": 5.5,
+            "scoreToday": 2.5,
             "scoreYesterday": 5.5,
-            "delta": 0.0
+            "delta": -3.0
           },
           {
             "name": "Công nghệ - VT",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          }
+        ],
+        "aiSummary": "Ngành Công nghệ - Viễn thông tăng mạnh nhất, cho thấy sự lạc quan của thị trường về triển vọng ngành.\nNgành Dầu khí giảm sâu nhất, phản ánh tâm lý thận trọng hoặc áp lực bán mạnh.\nNgành Bất động sản cải thiện đáng kể, dấu hiệu cho thấy dòng tiền đang tìm đến nhóm ngành này.\nCác ngành trụ cột khác như Ngân hàng, Chứng khoán duy trì trạng thái đi ngang.\nThị trường có sự phân hóa rõ rệt, tập trung vào một số nhóm ngành có biến động lớn.",
+        "aiRecommendation": "Theo dõi sát các yếu tố hỗ trợ và rủi ro đối với ngành Công nghệ và Bất động sản để đánh giá tiềm năng tiếp diễn.\nCẩn trọng với ngành Dầu khí và xem xét kỹ các yếu tố vĩ mô ảnh hưởng đến triển vọng ngắn hạn.",
+        "sectorNotes": {
+          "Bất động sản": "Tăng điểm phản ánh kỳ vọng vào các chính sách hỗ trợ và tín hiệu phục hồi của thị trường sau giai đoạn khó khăn.",
+          "Dầu khí": "Giảm điểm do có thể chịu áp lực từ biến động giá dầu thế giới hoặc những lo ngại về triển vọng nhu cầu.",
+          "Công nghệ - VT": "Tăng điểm mạnh cho thấy tâm lý lạc quan của nhà đầu tư vào tiềm năng tăng trưởng và xu hướng số hóa."
+        }
+      },
+      "createdAt": "2026-09-11T08:23:04.411771+07:00",
+      "expiresAt": "2026-09-12T04:23:04.411771+07:00"
+    },
+    {
+      "id": "task-20260911-cong-nghe",
+      "type": "review_proposal",
+      "signalId": "sig-cong-nghe",
+      "context": "Dòng tiền nhóm Công nghệ - VT đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — FPT (KL×2.23). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
+      "payload": {
+        "score": 8.0,
+        "layer": 3,
+        "confidence": "high",
+        "summary": "FPT (KL×2.23)",
+        "deltaVsYesterday": 5.5,
+        "scoreHistory": [
+          5.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
             "scoreToday": 2.5,
             "scoreYesterday": 2.5,
             "delta": 0.0
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 8.0,
+            "scoreYesterday": 5.5,
+            "delta": 2.5
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
           }
         ],
-        "aiSummary": "Ngành Bất động sản ghi nhận mức tăng điểm mạnh nhất với chênh lệch +3.0.\nĐây là ngành duy nhất có biến động lớn, các ngành còn lại đều ổn định hoặc không đổi.\nSự tăng điểm của Bất động sản có thể phản ánh kỳ vọng tích cực hoặc dòng tiền quan tâm trở lại.\nNguyên nhân cụ thể cho sự tăng điểm này không được cung cấp trong tin tức.",
-        "aiRecommendation": "Theo dõi sát các thông tin liên quan đến ngành Bất động sản để hiểu rõ nguyên nhân tăng điểm.\nCân nhắc rà soát các cổ phiếu ngành Bất động sản tiềm năng trong danh mục.",
+        "aiSummary": "Ngành Công nghệ - Viễn thông tăng mạnh nhất, cho thấy sự lạc quan của thị trường về triển vọng ngành.\nNgành Dầu khí giảm sâu nhất, phản ánh tâm lý thận trọng hoặc áp lực bán mạnh.\nNgành Bất động sản cải thiện đáng kể, dấu hiệu cho thấy dòng tiền đang tìm đến nhóm ngành này.\nCác ngành trụ cột khác như Ngân hàng, Chứng khoán duy trì trạng thái đi ngang.\nThị trường có sự phân hóa rõ rệt, tập trung vào một số nhóm ngành có biến động lớn.",
+        "aiRecommendation": "Theo dõi sát các yếu tố hỗ trợ và rủi ro đối với ngành Công nghệ và Bất động sản để đánh giá tiềm năng tiếp diễn.\nCẩn trọng với ngành Dầu khí và xem xét kỹ các yếu tố vĩ mô ảnh hưởng đến triển vọng ngắn hạn.",
         "sectorNotes": {
-          "Bất động sản": "Tăng điểm mạnh, phản ánh tâm lý tích cực hoặc dòng tiền quan tâm trở lại dù thiếu tin tức cụ thể."
+          "Bất động sản": "Tăng điểm phản ánh kỳ vọng vào các chính sách hỗ trợ và tín hiệu phục hồi của thị trường sau giai đoạn khó khăn.",
+          "Dầu khí": "Giảm điểm do có thể chịu áp lực từ biến động giá dầu thế giới hoặc những lo ngại về triển vọng nhu cầu.",
+          "Công nghệ - VT": "Tăng điểm mạnh cho thấy tâm lý lạc quan của nhà đầu tư vào tiềm năng tăng trưởng và xu hướng số hóa."
         }
       },
-      "createdAt": "2026-09-10T08:22:17.271289+07:00",
-      "expiresAt": "2026-09-11T04:22:17.271289+07:00"
+      "createdAt": "2026-09-11T08:23:04.411771+07:00",
+      "expiresAt": "2026-09-18T08:23:04.411771+07:00"
     }
   ]
 }
