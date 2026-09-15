@@ -1,3 +1,3 @@
-📡 RADAR 2026-09-14 — trước ATO
-💰 Dòng tiền: VCI (Chứng khoán): KL ×2.05 | MBB (Ngân hàng): KL ×1.7 | CTG (Ngân hàng): KL ×1.68
-🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Bất động sản: 🟡→🟠 | Dầu khí: 🟡→🟠 (cần người duyệt)
+📡 RADAR 2026-09-15 — trước ATO
+💰 Dòng tiền: VND (Chứng khoán): KL ×1.89 | MBB (Ngân hàng): KL ×1.52 | POW (Điện): KL ×1.96
+🔺 Máy đề xuất: Ngân hàng: 🟡→🟠 | Điện: 🟡→🟠 (cần người duyệt)

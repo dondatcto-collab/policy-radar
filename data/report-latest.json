@@ -1,35 +1,29 @@
 {
-  "ngay": "2026-09-14",
-  "cap_nhat": "2026-09-14T08:28:49.890435+07:00",
+  "ngay": "2026-09-15",
+  "cap_nhat": "2026-09-15T08:48:22.972967+07:00",
   "flags": [],
   "du_lieu_cu": false,
   "dong_tien_noi_bat": [
-    "VCI (Chứng khoán): KL ×2.05",
-    "MBB (Ngân hàng): KL ×1.7",
-    "CTG (Ngân hàng): KL ×1.68",
-    "STB (Ngân hàng): KL ×2.54",
-    "NLG (Bất động sản): KL ×1.69",
-    "PVS (Dầu khí): KL ×1.96",
-    "PVD (Dầu khí): KL ×2.75",
-    "BSR (Dầu khí): KL ×1.83"
+    "VND (Chứng khoán): KL ×1.89",
+    "MBB (Ngân hàng): KL ×1.52",
+    "POW (Điện): KL ×1.96"
   ],
   "tin_chinh_sach": [],
   "de_xuat_trang_thai": [
     "Ngân hàng: 🟡→🟠",
-    "Bất động sản: 🟡→🟠",
-    "Dầu khí: 🟡→🟠"
+    "Điện: 🟡→🟠"
   ],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
+      "diem_dong_tien_max": 22,
       "ma_dang_chu_y": [
         {
-          "ma": "VCI",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.05
+          "ma": "VND",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.89
         }
       ]
     },
@@ -37,22 +31,12 @@
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
+      "diem_dong_tien_max": 22,
       "ma_dang_chu_y": [
         {
           "ma": "MBB",
           "diem_dong_tien": 22,
-          "kl_ratio": 1.7
-        },
-        {
-          "ma": "CTG",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.68
-        },
-        {
-          "ma": "STB",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.54
+          "kl_ratio": 1.52
         }
       ]
     },
@@ -80,15 +64,9 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "NLG",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.69
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
@@ -100,32 +78,22 @@
     "dien": {
       "ten": "Điện",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 22,
+      "ma_dang_chu_y": [
+        {
+          "ma": "POW",
+          "diem_dong_tien": 22,
+          "kl_ratio": 1.96
+        }
+      ]
     },
     "dau-khi": {
       "ten": "Dầu khí",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
-      "ma_dang_chu_y": [
-        {
-          "ma": "PVS",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.96
-        },
-        {
-          "ma": "PVD",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.75
-        },
-        {
-          "ma": "BSR",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.83
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 17,
+      "ma_dang_chu_y": []
     },
     "cong-nghe": {
       "ten": "Công nghệ - VT",
