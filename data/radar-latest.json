@@ -5,25 +5,19 @@
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "VND",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.89
-        }
-      ]
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
+      "diem_dong_tien_max": 32,
       "ma_dang_chu_y": [
         {
-          "ma": "MBB",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.52
+          "ma": "VCB",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.11
         }
       ]
     },
@@ -65,22 +59,37 @@
     "dien": {
       "ten": "Điện",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "POW",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.96
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "dau-khi": {
       "ten": "Dầu khí",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 17,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 32,
+      "ma_dang_chu_y": [
+        {
+          "ma": "GAS",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.23
+        },
+        {
+          "ma": "PVS",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.62
+        },
+        {
+          "ma": "PVD",
+          "diem_dong_tien": 32,
+          "kl_ratio": 3.11
+        },
+        {
+          "ma": "BSR",
+          "diem_dong_tien": 27,
+          "kl_ratio": 2.3
+        }
+      ]
     },
     "cong-nghe": {
       "ten": "Công nghệ - VT",
