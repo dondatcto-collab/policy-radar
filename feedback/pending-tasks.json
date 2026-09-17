@@ -288,21 +288,21 @@
       "expiresAt": "2026-09-21T08:28:52.430094+07:00"
     },
     {
-      "id": "task-20260916-morning",
+      "id": "task-20260917-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-09-16: 5 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-09-17: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-16: 5 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "summary": "Báo cáo sáng 2026-09-17: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
         "deltaVsYesterday": 0.0,
         "scoreHistory": [
+          5.5,
+          5.5,
+          5.5,
           8.0,
-          5.5,
-          5.5,
-          5.5,
           8.0,
           8.0,
           8.0
@@ -312,14 +312,14 @@
           {
             "name": "Chứng khoán",
             "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "Ngân hàng",
-            "scoreToday": 8.0,
+            "scoreToday": 2.5,
             "scoreYesterday": 8.0,
-            "delta": 0.0
+            "delta": -5.5
           },
           {
             "name": "Thép",
@@ -342,8 +342,8 @@
           {
             "name": "Bất động sản",
             "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "BĐS KCN",
@@ -370,15 +370,14 @@
             "delta": 0.0
           }
         ],
-        "aiSummary": "Ngành Chứng khoán giảm điểm mạnh nhất, cho thấy tâm lý thận trọng và áp lực bán chốt lời trên thị trường.\nNgành Bất động sản tiếp tục xu hướng suy yếu, phản ánh những thách thức về dòng tiền và pháp lý kéo dài.\nCác ngành còn lại đa phần giữ nguyên mức điểm thấp hoặc ổn định, thiếu động lực tăng trưởng rõ rệt.\nSự thiếu vắng tin tức nổi bật có thể khiến thị trường phản ứng mạnh với các biến động nội tại của từng ngành.",
-        "aiRecommendation": "Người theo dõi nên duy trì quan sát chặt chẽ các diễn biến vĩ mô và vi mô, đặc biệt ở các ngành nhạy cảm.\nCân nhắc cơ cấu lại danh mục, giảm tỷ trọng ở các ngành có biến động tiêu cực mạnh nếu đang nắm giữ.",
+        "aiSummary": "Ngành Ngân hàng ghi nhận mức sụt giảm điểm số mạnh nhất, từ 8.0 xuống 2.5.\nMức giảm này xảy ra mà không có tin tức nổi bật nào được công bố để giải thích nguyên nhân.\nCác ngành còn lại duy trì mức điểm ổn định, cho thấy không có biến động chung trên thị trường.",
+        "aiRecommendation": "Tiếp tục theo dõi chặt chẽ các tin tức và diễn biến liên quan đến ngành Ngân hàng để tìm hiểu nguyên nhân suy yếu.\nGiữ thái độ thận trọng với nhóm ngành Ngân hàng cho đến khi có thông tin rõ ràng hơn về triển vọng.",
         "sectorNotes": {
-          "Chứng khoán": "Giảm mạnh do áp lực chốt lời sau giai đoạn tăng điểm trước đó và lo ngại về thanh khoản thị trường chung.",
-          "Bất động sản": "Tiếp tục giảm điểm do những khó khăn kéo dài về pháp lý, nguồn vốn và nhu cầu thị trường chưa phục hồi mạnh mẽ."
+          "Ngân hàng": "Điểm số sụt giảm mạnh từ 8.0 xuống 2.5, cho thấy tâm lý tiêu cực đột ngột hoặc lo ngại ngầm về ngành này dù không có tin tức nổi bật được công bố."
         }
       },
-      "createdAt": "2026-09-16T08:34:47.945342+07:00",
-      "expiresAt": "2026-09-17T04:34:47.945342+07:00"
+      "createdAt": "2026-09-17T08:38:52.314476+07:00",
+      "expiresAt": "2026-09-18T04:38:52.314476+07:00"
     }
   ]
 }
