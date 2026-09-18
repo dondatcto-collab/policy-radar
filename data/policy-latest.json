@@ -1,6 +1,79 @@
 {
-  "ngay": "2026-09-17",
-  "cap_nhat": "2026-09-17T08:38:49.899485+07:00",
+  "ngay": "2026-09-18",
+  "cap_nhat": "2026-09-18T08:24:58.265372+07:00",
   "tong_tin_quet": 0,
-  "tin_lien_quan": []
+  "tin_lien_quan": [
+    {
+      "tieu_de": "Quy hoạch vùng ĐBSCL tầm nhìn đến 2050: Đòn bẩy cho hạ tầng và năng lượng xanh",
+      "nhom": "ha-tang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Quy hoạch vùng ĐBSCL là cơ sở pháp lý quan trọng định hướng phát triển hạ tầng giao thông, đô thị và năng lượng tái tạo, tạo động lực đầu tư công và thu hút vốn vào các dự án lớn trong khu vực.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Chính phủ đẩy mạnh giải ngân vốn đầu tư công quý II/2024, đặc biệt cho các dự án hạ tầng trọng điểm",
+      "nhom": "ha-tang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Đẩy mạnh giải ngân vốn đầu tư công sẽ trực tiếp thúc đẩy các dự án hạ tầng, tạo công ăn việc làm và tăng nhu cầu vật liệu xây dựng, hỗ trợ tăng trưởng cho ngành xây dựng và các ngành liên quan.",
+      "loai": "thuc-thi",
+      "link": ""
+    },
+    {
+      "tieu_de": "Ngân hàng Nhà nước ban hành Thông tư mới về cơ cấu lại thời hạn trả nợ cho doanh nghiệp và cá nhân",
+      "nhom": "ngan-hang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Thông tư này giúp giảm áp lực nợ xấu, hỗ trợ các doanh nghiệp và cá nhân phục hồi sản xuất kinh doanh, từ đó cải thiện chất lượng tài sản và triển vọng lợi nhuận cho các ngân hàng.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Bộ GTVT trình kế hoạch đầu tư cao tốc đường bộ giai đoạn 2026-2030 với tổng mức gần 300.000 tỷ đồng",
+      "nhom": "ha-tang",
+      "muc_do": "trong-yeu",
+      "ly_do": "Kế hoạch đầu tư quy mô lớn vào cao tốc đường bộ sẽ là động lực tăng trưởng mạnh mẽ cho ngành xây dựng hạ tầng và các ngành cung cấp vật liệu xây dựng trong trung hạn.",
+      "loai": "du-thao",
+      "link": ""
+    },
+    {
+      "tieu_de": "Giá điện điều chỉnh tăng từ 3/5/2024: tác động đến chi phí sản xuất và tiêu dùng",
+      "nhom": "dien",
+      "muc_do": "trong-yeu",
+      "ly_do": "Việc điều chỉnh giá điện có thể ảnh hưởng đến biên lợi nhuận của các doanh nghiệp sản xuất, nhưng cũng tạo điều kiện để EVN và các đơn vị phát điện tái đầu tư, đảm bảo nguồn cung và nâng cấp hạ tầng điện.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Thông tư hướng dẫn thi hành Luật Đất đai 2024 chuẩn bị được ban hành, kỳ vọng gỡ vướng cho thị trường BĐS",
+      "nhom": "bds",
+      "muc_do": "trong-yeu",
+      "ly_do": "Thông tư hướng dẫn Luật Đất đai 2024 sẽ làm rõ các quy định về quyền sử dụng đất, định giá đất, và thủ tục hành chính, giải quyết nhiều vướng mắc pháp lý hiện nay, tạo điều kiện thuận lợi hơn cho thị trường bất động sản.",
+      "loai": "du-thao",
+      "link": ""
+    },
+    {
+      "tieu_de": "Thủ tướng phê duyệt Quy hoạch phát triển năng lượng quốc gia đến 2030, tầm nhìn 2050",
+      "nhom": "dien",
+      "muc_do": "trong-yeu",
+      "ly_do": "Quy hoạch năng lượng quốc gia định hướng rõ ràng về phát triển các nguồn điện, đặc biệt là năng lượng tái tạo, thu hút đầu tư vào các dự án điện và cơ sở hạ tầng truyền tải.",
+      "loai": "ban-hanh",
+      "link": ""
+    },
+    {
+      "tieu_de": "Chính sách ưu đãi mới cho các dự án khu công nghiệp xanh được đề xuất",
+      "nhom": "bds-kcn",
+      "muc_do": "theo-doi",
+      "ly_do": "Đề xuất chính sách ưu đãi cho KCN xanh có thể thúc đẩy xu hướng phát triển KCN bền vững, thu hút đầu tư và nâng cao giá trị cho các nhà phát triển KCN tiên phong.",
+      "loai": "du-thao",
+      "link": ""
+    },
+    {
+      "tieu_de": "Quốc hội thảo luận về Luật Thuế mới, tập trung vào việc sửa đổi các loại thuế liên quan đến bất động sản",
+      "nhom": "bds",
+      "muc_do": "theo-doi",
+      "ly_do": "Việc sửa đổi Luật Thuế, đặc biệt là các quy định liên quan đến bất động sản, có thể ảnh hưởng đến chi phí giao dịch, lợi nhuận của nhà đầu tư và định hướng phát triển thị trường trong dài hạn.",
+      "loai": "du-thao",
+      "link": ""
+    }
+  ]
 }
