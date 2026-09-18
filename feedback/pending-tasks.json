@@ -2,100 +2,6 @@
   "schemaVersion": "1.0",
   "tasks": [
     {
-      "id": "task-20260911-cong-nghe",
-      "type": "review_proposal",
-      "signalId": "sig-cong-nghe",
-      "context": "Dòng tiền nhóm Công nghệ - VT đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — FPT (KL×2.23). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
-      "payload": {
-        "score": 8.0,
-        "layer": 3,
-        "confidence": "high",
-        "summary": "FPT (KL×2.23)",
-        "deltaVsYesterday": 5.5,
-        "scoreHistory": [
-          5.5,
-          2.5,
-          2.5,
-          2.5,
-          2.5,
-          2.5,
-          8.0
-        ],
-        "topNews": [],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 8.0,
-            "scoreYesterday": 5.5,
-            "delta": 2.5
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          }
-        ],
-        "aiSummary": "Ngành Công nghệ - Viễn thông tăng mạnh nhất, cho thấy sự lạc quan của thị trường về triển vọng ngành.\nNgành Dầu khí giảm sâu nhất, phản ánh tâm lý thận trọng hoặc áp lực bán mạnh.\nNgành Bất động sản cải thiện đáng kể, dấu hiệu cho thấy dòng tiền đang tìm đến nhóm ngành này.\nCác ngành trụ cột khác như Ngân hàng, Chứng khoán duy trì trạng thái đi ngang.\nThị trường có sự phân hóa rõ rệt, tập trung vào một số nhóm ngành có biến động lớn.",
-        "aiRecommendation": "Theo dõi sát các yếu tố hỗ trợ và rủi ro đối với ngành Công nghệ và Bất động sản để đánh giá tiềm năng tiếp diễn.\nCẩn trọng với ngành Dầu khí và xem xét kỹ các yếu tố vĩ mô ảnh hưởng đến triển vọng ngắn hạn.",
-        "sectorNotes": {
-          "Bất động sản": "Tăng điểm phản ánh kỳ vọng vào các chính sách hỗ trợ và tín hiệu phục hồi của thị trường sau giai đoạn khó khăn.",
-          "Dầu khí": "Giảm điểm do có thể chịu áp lực từ biến động giá dầu thế giới hoặc những lo ngại về triển vọng nhu cầu.",
-          "Công nghệ - VT": "Tăng điểm mạnh cho thấy tâm lý lạc quan của nhà đầu tư vào tiềm năng tăng trưởng và xu hướng số hóa."
-        }
-      },
-      "createdAt": "2026-09-11T08:23:04.411771+07:00",
-      "expiresAt": "2026-09-18T08:23:04.411771+07:00"
-    },
-    {
       "id": "task-20260914-ngan-hang",
       "type": "review_proposal",
       "signalId": "sig-ngan-hang",
@@ -288,38 +194,57 @@
       "expiresAt": "2026-09-21T08:28:52.430094+07:00"
     },
     {
-      "id": "task-20260917-morning",
+      "id": "task-20260918-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-09-17: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-09-18: 6 tin chính sách, 5 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-17: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "summary": "Báo cáo sáng 2026-09-18: 6 tin chính sách, 5 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
         "deltaVsYesterday": 0.0,
         "scoreHistory": [
           5.5,
           5.5,
-          5.5,
+          8.0,
           8.0,
           8.0,
           8.0,
           8.0
         ],
-        "topNews": [],
+        "topNews": [
+          {
+            "title": "Quy hoạch vùng ĐBSCL tầm nhìn đến 2050: Đòn bẩy cho hạ tầng và năng lượng xanh",
+            "source": "",
+            "link": "",
+            "sector": "Xây dựng hạ tầng"
+          },
+          {
+            "title": "Chính phủ đẩy mạnh giải ngân vốn đầu tư công quý II/2024, đặc biệt cho các dự án hạ tầng trọng điểm",
+            "source": "",
+            "link": "",
+            "sector": "Xây dựng hạ tầng"
+          },
+          {
+            "title": "Ngân hàng Nhà nước ban hành Thông tư mới về cơ cấu lại thời hạn trả nợ cho doanh nghiệp và cá nhân",
+            "source": "",
+            "link": "",
+            "sector": "Ngân hàng"
+          }
+        ],
         "sectors": [
           {
             "name": "Chứng khoán",
-            "scoreToday": 2.5,
+            "scoreToday": 8.0,
             "scoreYesterday": 2.5,
-            "delta": 0.0
+            "delta": 5.5
           },
           {
             "name": "Ngân hàng",
-            "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
+            "scoreToday": 5.5,
+            "scoreYesterday": 2.5,
+            "delta": 3.0
           },
           {
             "name": "Thép",
@@ -359,9 +284,9 @@
           },
           {
             "name": "Dầu khí",
-            "scoreToday": 8.0,
+            "scoreToday": 5.5,
             "scoreYesterday": 8.0,
-            "delta": 0.0
+            "delta": -2.5
           },
           {
             "name": "Công nghệ - VT",
@@ -370,14 +295,16 @@
             "delta": 0.0
           }
         ],
-        "aiSummary": "Ngành Ngân hàng ghi nhận mức sụt giảm điểm số mạnh nhất, từ 8.0 xuống 2.5.\nMức giảm này xảy ra mà không có tin tức nổi bật nào được công bố để giải thích nguyên nhân.\nCác ngành còn lại duy trì mức điểm ổn định, cho thấy không có biến động chung trên thị trường.",
-        "aiRecommendation": "Tiếp tục theo dõi chặt chẽ các tin tức và diễn biến liên quan đến ngành Ngân hàng để tìm hiểu nguyên nhân suy yếu.\nGiữ thái độ thận trọng với nhóm ngành Ngân hàng cho đến khi có thông tin rõ ràng hơn về triển vọng.",
+        "aiSummary": "Ngành Chứng khoán dẫn đầu đà tăng (+5.5), phản ánh tâm lý thị trường lạc quan nhờ chính sách hỗ trợ.\nNgân hàng tăng điểm mạnh (+3.0) nhờ Thông tư mới của NHNN giúp giảm áp lực nợ xấu.\nNgành Dầu khí ghi nhận sự sụt giảm (-2.5), có thể do dòng tiền dịch chuyển sang các nhóm ngành được hỗ trợ.\nCác tin tức về quy hoạch hạ tầng và giải ngân đầu tư công chưa tác động rõ rệt đến điểm số ngành liên quan.",
+        "aiRecommendation": "Theo dõi chặt chẽ tác động thực tế của chính sách hỗ trợ đến nhóm ngân hàng và chứng khoán.\nCân nhắc chiến lược phân bổ lại vốn, ưu tiên các ngành được hưởng lợi trực tiếp từ chính sách vĩ mô.",
         "sectorNotes": {
-          "Ngân hàng": "Điểm số sụt giảm mạnh từ 8.0 xuống 2.5, cho thấy tâm lý tiêu cực đột ngột hoặc lo ngại ngầm về ngành này dù không có tin tức nổi bật được công bố."
+          "Chứng khoán": "Điểm số tăng vọt nhờ tâm lý thị trường hưng phấn sau chính sách mới của NHNN hỗ trợ tái cơ cấu nợ, kích thích dòng tiền và kỳ vọng tích cực cho ngành tài chính.",
+          "Ngân hàng": "Tăng điểm mạnh nhờ Thông tư mới của Ngân hàng Nhà nước về cơ cấu lại thời hạn trả nợ, giúp giảm áp lực nợ xấu và củng cố niềm tin vào hệ thống ngân hàng.",
+          "Dầu khí": "Điểm số giảm do không có tin tức hỗ trợ và có thể dòng tiền đang có xu hướng dịch chuyển sang các nhóm ngành hưởng lợi từ chính sách tài chính vĩ mô."
         }
       },
-      "createdAt": "2026-09-17T08:38:52.314476+07:00",
-      "expiresAt": "2026-09-18T04:38:52.314476+07:00"
+      "createdAt": "2026-09-18T08:25:01.108839+07:00",
+      "expiresAt": "2026-09-19T04:25:01.108839+07:00"
     }
   ]
 }
