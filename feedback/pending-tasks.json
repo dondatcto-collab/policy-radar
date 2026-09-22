@@ -2,288 +2,6 @@
   "schemaVersion": "1.0",
   "tasks": [
     {
-      "id": "task-20260914-ngan-hang",
-      "type": "review_proposal",
-      "signalId": "sig-ngan-hang",
-      "context": "Dòng tiền nhóm Ngân hàng đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — MBB (KL×1.7), CTG (KL×1.68), STB (KL×2.54). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
-      "payload": {
-        "score": 8.0,
-        "layer": 3,
-        "confidence": "high",
-        "summary": "MBB (KL×1.7), CTG (KL×1.68), STB (KL×2.54)",
-        "deltaVsYesterday": 5.5,
-        "scoreHistory": [
-          5.5,
-          5.5,
-          2.5,
-          2.5,
-          2.5,
-          2.5,
-          8.0
-        ],
-        "topNews": [],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 5.5,
-            "scoreYesterday": 8.0,
-            "delta": -2.5
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
-          }
-        ],
-        "aiSummary": "Các ngành Chứng khoán, Ngân hàng và Dầu khí tăng điểm mạnh mẽ, thu hút dòng tiền tích cực.\nNgành Công nghệ - Viễn thông giảm sâu nhất, có thể do hoạt động chốt lời và chuyển hướng dòng vốn.\nNgành Bất động sản tiếp tục xu hướng giảm, phản ánh những khó khăn hiện hữu trên thị trường.\nThị trường đang có sự phân hóa mạnh, cho thấy dòng tiền luân chuyển rõ rệt giữa các nhóm ngành.",
-        "aiRecommendation": "Theo dõi sát diễn biến dòng tiền để điều chỉnh danh mục, ưu tiên các ngành đang có đà tăng trưởng.\nCẩn trọng với các ngành đã tăng nóng hoặc đang đối mặt rủi ro, cân nhắc chốt lời hoặc giảm tỷ trọng.",
-        "sectorNotes": {
-          "Chứng khoán": "Tăng điểm mạnh mẽ phản ánh tâm lý thị trường tích cực và kỳ vọng vào sự phục hồi của nền kinh tế.",
-          "Ngân hàng": "Đà tăng mạnh cho thấy niềm tin vào hệ thống tài chính và triển vọng kinh doanh của các ngân hàng.",
-          "Bất động sản": "Giảm điểm cho thấy ngành vẫn đang đối mặt với nhiều thách thức về pháp lý và thanh khoản.",
-          "Dầu khí": "Tăng mạnh nhờ kỳ vọng vào giá dầu thế giới và các dự án lớn sắp triển khai.",
-          "Công nghệ - VT": "Giảm sâu có thể do áp lực chốt lời sau giai đoạn tăng trưởng hoặc lo ngại về định giá."
-        }
-      },
-      "createdAt": "2026-09-14T08:28:52.430094+07:00",
-      "expiresAt": "2026-09-21T08:28:52.430094+07:00"
-    },
-    {
-      "id": "task-20260914-dau-khi",
-      "type": "review_proposal",
-      "signalId": "sig-dau-khi",
-      "context": "Dòng tiền nhóm Dầu khí đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — PVS (KL×1.96), PVD (KL×2.75), BSR (KL×1.83). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
-      "payload": {
-        "score": 8.0,
-        "layer": 3,
-        "confidence": "high",
-        "summary": "PVS (KL×1.96), PVD (KL×2.75), BSR (KL×1.83)",
-        "deltaVsYesterday": 5.5,
-        "scoreHistory": [
-          5.5,
-          2.5,
-          5.5,
-          5.5,
-          5.5,
-          2.5,
-          8.0
-        ],
-        "topNews": [],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 5.5,
-            "scoreYesterday": 8.0,
-            "delta": -2.5
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
-          }
-        ],
-        "aiSummary": "Các ngành Chứng khoán, Ngân hàng và Dầu khí tăng điểm mạnh mẽ, thu hút dòng tiền tích cực.\nNgành Công nghệ - Viễn thông giảm sâu nhất, có thể do hoạt động chốt lời và chuyển hướng dòng vốn.\nNgành Bất động sản tiếp tục xu hướng giảm, phản ánh những khó khăn hiện hữu trên thị trường.\nThị trường đang có sự phân hóa mạnh, cho thấy dòng tiền luân chuyển rõ rệt giữa các nhóm ngành.",
-        "aiRecommendation": "Theo dõi sát diễn biến dòng tiền để điều chỉnh danh mục, ưu tiên các ngành đang có đà tăng trưởng.\nCẩn trọng với các ngành đã tăng nóng hoặc đang đối mặt rủi ro, cân nhắc chốt lời hoặc giảm tỷ trọng.",
-        "sectorNotes": {
-          "Chứng khoán": "Tăng điểm mạnh mẽ phản ánh tâm lý thị trường tích cực và kỳ vọng vào sự phục hồi của nền kinh tế.",
-          "Ngân hàng": "Đà tăng mạnh cho thấy niềm tin vào hệ thống tài chính và triển vọng kinh doanh của các ngân hàng.",
-          "Bất động sản": "Giảm điểm cho thấy ngành vẫn đang đối mặt với nhiều thách thức về pháp lý và thanh khoản.",
-          "Dầu khí": "Tăng mạnh nhờ kỳ vọng vào giá dầu thế giới và các dự án lớn sắp triển khai.",
-          "Công nghệ - VT": "Giảm sâu có thể do áp lực chốt lời sau giai đoạn tăng trưởng hoặc lo ngại về định giá."
-        }
-      },
-      "createdAt": "2026-09-14T08:28:52.430094+07:00",
-      "expiresAt": "2026-09-21T08:28:52.430094+07:00"
-    },
-    {
-      "id": "task-20260921-morning",
-      "type": "morning_feedback",
-      "signalId": null,
-      "context": "Báo cáo sáng 2026-09-21: 7 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-      "payload": {
-        "score": null,
-        "layer": null,
-        "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-21: 7 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 0.0,
-        "scoreHistory": [
-          5.5,
-          8.0,
-          8.0,
-          8.0,
-          8.0,
-          8.0,
-          8.0
-        ],
-        "topNews": [],
-        "sectors": [
-          {
-            "name": "Chứng khoán",
-            "scoreToday": 5.5,
-            "scoreYesterday": 8.0,
-            "delta": -2.5
-          },
-          {
-            "name": "Ngân hàng",
-            "scoreToday": 8.0,
-            "scoreYesterday": 5.5,
-            "delta": 2.5
-          },
-          {
-            "name": "Thép",
-            "scoreToday": 5.5,
-            "scoreYesterday": 2.5,
-            "delta": 3.0
-          },
-          {
-            "name": "Xây dựng hạ tầng",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "VLXD",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Bất động sản",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          },
-          {
-            "name": "BĐS KCN",
-            "scoreToday": 0.0,
-            "scoreYesterday": 0.0,
-            "delta": 0.0
-          },
-          {
-            "name": "Điện",
-            "scoreToday": 2.5,
-            "scoreYesterday": 2.5,
-            "delta": 0.0
-          },
-          {
-            "name": "Dầu khí",
-            "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
-          },
-          {
-            "name": "Công nghệ - VT",
-            "scoreToday": 8.0,
-            "scoreYesterday": 2.5,
-            "delta": 5.5
-          }
-        ],
-        "aiSummary": "Ngành Bất động sản và Công nghệ - VT tăng điểm mạnh nhất (+5.5), cho thấy dòng tiền tích cực dịch chuyển vào nhóm này.\nThép (+3.0) và Ngân hàng (+2.5) cũng phục hồi ấn tượng, được hưởng lợi từ sự luân chuyển của dòng tiền.\nChứng khoán (-2.5) và Dầu khí (-3.0) giảm điểm đáng kể do áp lực bán hoặc lo ngại riêng của ngành.\nThị trường ghi nhận sự phân hóa mạnh mẽ giữa các nhóm ngành, cho thấy sự tái cơ cấu danh mục của nhà đầu tư.",
-        "aiRecommendation": "Theo dõi chặt chẽ dòng tiền và các yếu tố vĩ mô tác động đến từng ngành để đưa ra quyết định đầu tư.\nCân nhắc cơ cấu danh mục, ưu tiên các ngành có triển vọng tăng trưởng rõ ràng và dấu hiệu dòng tiền ủng hộ.\n\nGIẢI THÍCH NGÀNH:\nChứng khoán: Áp lực chốt lời sau giai đoạn tăng trưởng hoặc lo ngại về thanh khoản thị trường chung.\nNgân hàng: Dòng tiền quay trở lại kỳ vọng vào lợi nhuận cuối năm và tín hiệu tích cực từ chính sách.\nThép: Tâm lý tích cực trở lại nhờ kỳ vọng phục hồi sản xuất công nghiệp và đầu tư công.\nBất động sản: Hưởng lợi từ tâm lý thị trường tích cực và kỳ vọng về chính sách hỗ trợ sắp tới.\nDầu khí: Có thể do lo ngại biến động giá dầu thế giới hoặc áp lực bán trong ngắn hạn.\nCông nghệ - VT: Hút dòng tiền mạnh mẽ nhờ triển vọng tăng trưởng dài hạn và xu hướng chuyển đổi số.",
-        "sectorNotes": null
-      },
-      "createdAt": "2026-09-21T08:28:50.156881+07:00",
-      "expiresAt": "2026-09-22T04:28:50.156881+07:00"
-    },
-    {
       "id": "task-20260921-bds",
       "type": "review_proposal",
       "signalId": "sig-bds",
@@ -462,6 +180,100 @@
       },
       "createdAt": "2026-09-21T08:28:50.156881+07:00",
       "expiresAt": "2026-09-28T08:28:50.156881+07:00"
+    },
+    {
+      "id": "task-20260922-morning",
+      "type": "morning_feedback",
+      "signalId": null,
+      "context": "Báo cáo sáng 2026-09-22: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "payload": {
+        "score": null,
+        "layer": null,
+        "confidence": null,
+        "summary": "Báo cáo sáng 2026-09-22: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 0.0,
+        "scoreHistory": [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 5.5,
+            "scoreYesterday": 5.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 2.5,
+            "scoreYesterday": 8.0,
+            "delta": -5.5
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 2.5,
+            "scoreYesterday": 5.5,
+            "delta": -3.0
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 8.0,
+            "scoreYesterday": 8.0,
+            "delta": 0.0
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 8.0,
+            "delta": -5.5
+          }
+        ],
+        "aiSummary": "Ngân hàng và Công nghệ - VT là hai ngành giảm điểm mạnh nhất, cùng mức -5.5.\nNgành Thép cũng ghi nhận mức sụt giảm đáng kể với chênh lệch -3.0.\nPhần lớn các ngành khác như Chứng khoán, Bất động sản và Điện giữ nguyên điểm.\nDiễn biến tiêu cực tập trung ở các nhóm ngành trụ cột mà không có tin tức nổi bật đi kèm.",
+        "aiRecommendation": "Cần theo dõi sát các yếu tố vĩ mô và dòng tiền thị trường trước khi đưa ra quyết định đầu tư.\nHạn chế mở vị thế mới hoặc xem xét điều chỉnh danh mục đối với các ngành giảm sâu.",
+        "sectorNotes": {
+          "Ngân hàng": "Sụt giảm mạnh mẽ có thể do áp lực bán chốt lời hoặc tâm lý thị trường không tích cực.",
+          "Thép": "Mức giảm đáng kể mà không có tin tức nổi bật cụ thể nào được công bố.",
+          "Công nghệ - VT": "Giảm điểm sâu có thể đến từ việc điều chỉnh chung của nhóm ngành hoặc lo ngại về triển vọng."
+        }
+      },
+      "createdAt": "2026-09-22T08:45:56.722935+07:00",
+      "expiresAt": "2026-09-23T04:45:56.722935+07:00"
     }
   ]
 }
