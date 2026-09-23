@@ -1,29 +1,20 @@
 {
-  "ngay": "2026-09-22",
-  "cap_nhat": "2026-09-22T08:45:53.830183+07:00",
-  "flags": [],
+  "ngay": "2026-09-23",
+  "cap_nhat": "2026-09-23T08:43:06.210513+07:00",
+  "flags": [
+    "⚠️ Lọc tin: Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+  ],
   "du_lieu_cu": false,
-  "dong_tien_noi_bat": [
-    "SSI (Chứng khoán): KL ×1.56",
-    "VHM (Bất động sản): KL ×2.04"
-  ],
+  "dong_tien_noi_bat": [],
   "tin_chinh_sach": [],
-  "de_xuat_trang_thai": [
-    "Bất động sản: 🟡→🟠"
-  ],
+  "de_xuat_trang_thai": [],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
       "trang_thai_nguoi_duyet": "cam",
       "de_xuat_may": "cam",
-      "diem_dong_tien_max": 22,
-      "ma_dang_chu_y": [
-        {
-          "ma": "SSI",
-          "diem_dong_tien": 22,
-          "kl_ratio": 1.56
-        }
-      ]
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "ngan-hang": {
       "ten": "Ngân hàng",
@@ -56,15 +47,9 @@
     "bds": {
       "ten": "Bất động sản",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "cam",
-      "diem_dong_tien_max": 32,
-      "ma_dang_chu_y": [
-        {
-          "ma": "VHM",
-          "diem_dong_tien": 32,
-          "kl_ratio": 2.04
-        }
-      ]
+      "de_xuat_may": "vang",
+      "diem_dong_tien_max": 10,
+      "ma_dang_chu_y": []
     },
     "bds-kcn": {
       "ten": "BĐS KCN",
