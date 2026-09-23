@@ -182,16 +182,16 @@
       "expiresAt": "2026-09-28T08:28:50.156881+07:00"
     },
     {
-      "id": "task-20260922-morning",
+      "id": "task-20260923-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-09-22: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+      "context": "Báo cáo sáng 2026-09-23: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-22: 2 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
-        "deltaVsYesterday": 0.0,
+        "summary": "Báo cáo sáng 2026-09-23: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
+        "deltaVsYesterday": -5.5,
         "scoreHistory": [
           8.0,
           8.0,
@@ -199,15 +199,15 @@
           8.0,
           8.0,
           8.0,
-          8.0
+          2.5
         ],
         "topNews": [],
         "sectors": [
           {
             "name": "Chứng khoán",
-            "scoreToday": 5.5,
+            "scoreToday": 2.5,
             "scoreYesterday": 5.5,
-            "delta": 0.0
+            "delta": -3.0
           },
           {
             "name": "Ngân hàng",
@@ -235,9 +235,9 @@
           },
           {
             "name": "Bất động sản",
-            "scoreToday": 8.0,
+            "scoreToday": 2.5,
             "scoreYesterday": 8.0,
-            "delta": 0.0
+            "delta": -5.5
           },
           {
             "name": "BĐS KCN",
@@ -264,16 +264,12 @@
             "delta": -5.5
           }
         ],
-        "aiSummary": "Ngân hàng và Công nghệ - VT là hai ngành giảm điểm mạnh nhất, cùng mức -5.5.\nNgành Thép cũng ghi nhận mức sụt giảm đáng kể với chênh lệch -3.0.\nPhần lớn các ngành khác như Chứng khoán, Bất động sản và Điện giữ nguyên điểm.\nDiễn biến tiêu cực tập trung ở các nhóm ngành trụ cột mà không có tin tức nổi bật đi kèm.",
-        "aiRecommendation": "Cần theo dõi sát các yếu tố vĩ mô và dòng tiền thị trường trước khi đưa ra quyết định đầu tư.\nHạn chế mở vị thế mới hoặc xem xét điều chỉnh danh mục đối với các ngành giảm sâu.",
-        "sectorNotes": {
-          "Ngân hàng": "Sụt giảm mạnh mẽ có thể do áp lực bán chốt lời hoặc tâm lý thị trường không tích cực.",
-          "Thép": "Mức giảm đáng kể mà không có tin tức nổi bật cụ thể nào được công bố.",
-          "Công nghệ - VT": "Giảm điểm sâu có thể đến từ việc điều chỉnh chung của nhóm ngành hoặc lo ngại về triển vọng."
-        }
+        "aiSummary": null,
+        "aiRecommendation": null,
+        "sectorNotes": null
       },
-      "createdAt": "2026-09-22T08:45:56.722935+07:00",
-      "expiresAt": "2026-09-23T04:45:56.722935+07:00"
+      "createdAt": "2026-09-23T08:43:08.957816+07:00",
+      "expiresAt": "2026-09-24T04:43:08.957816+07:00"
     }
   ]
 }
