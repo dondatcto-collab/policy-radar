@@ -182,44 +182,44 @@
       "expiresAt": "2026-09-28T08:28:50.156881+07:00"
     },
     {
-      "id": "task-20260923-morning",
+      "id": "task-20260924-morning",
       "type": "morning_feedback",
       "signalId": null,
-      "context": "Báo cáo sáng 2026-09-23: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
+      "context": "Báo cáo sáng 2026-09-24: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
       "payload": {
         "score": null,
         "layer": null,
         "confidence": null,
-        "summary": "Báo cáo sáng 2026-09-23: không có tin chính sách hay dòng tiền nổi bật nào. Xác nhận đây đúng là ngày yên tĩnh, không phải bộ lọc bỏ sót tin.",
-        "deltaVsYesterday": -5.5,
+        "summary": "Báo cáo sáng 2026-09-24: 1 dòng tiền nổi bật. Tin có đáng chú ý, có đúng trọng tâm ngành theo dõi không?",
+        "deltaVsYesterday": 5.5,
         "scoreHistory": [
           8.0,
           8.0,
           8.0,
           8.0,
           8.0,
-          8.0,
-          2.5
+          2.5,
+          8.0
         ],
         "topNews": [],
         "sectors": [
           {
             "name": "Chứng khoán",
             "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "Ngân hàng",
-            "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
           },
           {
             "name": "Thép",
             "scoreToday": 2.5,
-            "scoreYesterday": 5.5,
-            "delta": -3.0
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "Xây dựng hạ tầng",
@@ -236,8 +236,8 @@
           {
             "name": "Bất động sản",
             "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           },
           {
             "name": "BĐS KCN",
@@ -260,16 +260,110 @@
           {
             "name": "Công nghệ - VT",
             "scoreToday": 2.5,
-            "scoreYesterday": 8.0,
-            "delta": -5.5
+            "scoreYesterday": 2.5,
+            "delta": 0.0
           }
         ],
-        "aiSummary": null,
-        "aiRecommendation": null,
-        "sectorNotes": null
+        "aiSummary": "Ngành Ngân hàng ghi nhận biến động mạnh nhất, tăng vọt từ 2.5 lên 8.0 điểm trong hôm nay.\nMức tăng điểm đáng kể này thể hiện sự quan tâm hoặc kỳ vọng tích cực cao vào nhóm ngành Ngân hàng.\nTất cả các ngành còn lại đều duy trì mức điểm không đổi so với hôm qua, cho thấy sự ổn định tương đối.\nKhông có tin tức nổi bật cụ thể được cung cấp để lý giải nguyên nhân tăng điểm mạnh của ngành Ngân hàng.\nThị trường cho thấy sự phân hóa rõ rệt, với dòng tiền và sự chú ý tập trung vào nhóm Ngân hàng.",
+        "aiRecommendation": "Nhà đầu tư nên tìm hiểu sâu hơn về các yếu tố vĩ mô và thông tin nội tại ngành Ngân hàng để đánh giá động lực tăng điểm.\nCân nhắc điều chỉnh danh mục đầu tư dựa trên sự biến động và phân hóa của thị trường, đặc biệt với nhóm Ngân hàng.",
+        "sectorNotes": {
+          "Ngân hàng": "Mức tăng điểm đột biến có thể xuất phát từ kỳ vọng về kết quả kinh doanh tích cực, chính sách hỗ trợ ngành hoặc dòng tiền lớn đổ vào."
+        }
       },
-      "createdAt": "2026-09-23T08:43:08.957816+07:00",
-      "expiresAt": "2026-09-24T04:43:08.957816+07:00"
+      "createdAt": "2026-09-24T08:36:50.017698+07:00",
+      "expiresAt": "2026-09-25T04:36:50.017698+07:00"
+    },
+    {
+      "id": "task-20260924-ngan-hang",
+      "type": "review_proposal",
+      "signalId": "sig-ngan-hang",
+      "context": "Dòng tiền nhóm Ngân hàng đạt 8.0/10 (mức Khỏe, ngưỡng ≥7) — TCB (KL×2.54). Trạng thái hiện tại 🟡, máy đề xuất 🟠. Mở knowledge/ kiểm tra chân chính sách trước khi cân nhắc sửa config/radar.json.",
+      "payload": {
+        "score": 8.0,
+        "layer": 3,
+        "confidence": "high",
+        "summary": "TCB (KL×2.54)",
+        "deltaVsYesterday": 5.5,
+        "scoreHistory": [
+          8.0,
+          8.0,
+          2.5,
+          5.5,
+          8.0,
+          2.5,
+          8.0
+        ],
+        "topNews": [],
+        "sectors": [
+          {
+            "name": "Chứng khoán",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Ngân hàng",
+            "scoreToday": 8.0,
+            "scoreYesterday": 2.5,
+            "delta": 5.5
+          },
+          {
+            "name": "Thép",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Xây dựng hạ tầng",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "VLXD",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Bất động sản",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "BĐS KCN",
+            "scoreToday": 0.0,
+            "scoreYesterday": 0.0,
+            "delta": 0.0
+          },
+          {
+            "name": "Điện",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Dầu khí",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          },
+          {
+            "name": "Công nghệ - VT",
+            "scoreToday": 2.5,
+            "scoreYesterday": 2.5,
+            "delta": 0.0
+          }
+        ],
+        "aiSummary": "Ngành Ngân hàng ghi nhận biến động mạnh nhất, tăng vọt từ 2.5 lên 8.0 điểm trong hôm nay.\nMức tăng điểm đáng kể này thể hiện sự quan tâm hoặc kỳ vọng tích cực cao vào nhóm ngành Ngân hàng.\nTất cả các ngành còn lại đều duy trì mức điểm không đổi so với hôm qua, cho thấy sự ổn định tương đối.\nKhông có tin tức nổi bật cụ thể được cung cấp để lý giải nguyên nhân tăng điểm mạnh của ngành Ngân hàng.\nThị trường cho thấy sự phân hóa rõ rệt, với dòng tiền và sự chú ý tập trung vào nhóm Ngân hàng.",
+        "aiRecommendation": "Nhà đầu tư nên tìm hiểu sâu hơn về các yếu tố vĩ mô và thông tin nội tại ngành Ngân hàng để đánh giá động lực tăng điểm.\nCân nhắc điều chỉnh danh mục đầu tư dựa trên sự biến động và phân hóa của thị trường, đặc biệt với nhóm Ngân hàng.",
+        "sectorNotes": {
+          "Ngân hàng": "Mức tăng điểm đột biến có thể xuất phát từ kỳ vọng về kết quả kinh doanh tích cực, chính sách hỗ trợ ngành hoặc dòng tiền lớn đổ vào."
+        }
+      },
+      "createdAt": "2026-09-24T08:36:50.017698+07:00",
+      "expiresAt": "2026-10-01T08:36:50.017698+07:00"
     }
   ]
 }
