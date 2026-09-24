@@ -1,13 +1,15 @@
 {
-  "ngay": "2026-09-23",
-  "cap_nhat": "2026-09-23T08:43:06.210513+07:00",
-  "flags": [
-    "⚠️ Lọc tin: Lỗi Gemini: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
-  ],
+  "ngay": "2026-09-24",
+  "cap_nhat": "2026-09-24T08:36:47.188560+07:00",
+  "flags": [],
   "du_lieu_cu": false,
-  "dong_tien_noi_bat": [],
+  "dong_tien_noi_bat": [
+    "TCB (Ngân hàng): KL ×2.54"
+  ],
   "tin_chinh_sach": [],
-  "de_xuat_trang_thai": [],
+  "de_xuat_trang_thai": [
+    "Ngân hàng: 🟡→🟠"
+  ],
   "radar": {
     "chung-khoan": {
       "ten": "Chứng khoán",
@@ -19,9 +21,15 @@
     "ngan-hang": {
       "ten": "Ngân hàng",
       "trang_thai_nguoi_duyet": "vang",
-      "de_xuat_may": "vang",
-      "diem_dong_tien_max": 10,
-      "ma_dang_chu_y": []
+      "de_xuat_may": "cam",
+      "diem_dong_tien_max": 32,
+      "ma_dang_chu_y": [
+        {
+          "ma": "TCB",
+          "diem_dong_tien": 32,
+          "kl_ratio": 2.54
+        }
+      ]
     },
     "thep": {
       "ten": "Thép",
